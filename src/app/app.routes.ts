@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { ContactformComponent } from './contactform/contactform.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 export const routes: Routes = [
-     {path:"", component: ContactformComponent}
+     {path:"", component: MainContentComponent}
 ];
