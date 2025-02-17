@@ -1,0 +1,17 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    position: relative;
+    top:10px;
+    padding: 19px 72px 19px 72px;
+
+    >a{
+        color:#fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        font-family:'Bricolage Grotesque';
+        
+    }
+}
