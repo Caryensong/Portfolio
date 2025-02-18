@@ -1,9 +1,40 @@
-section{
+section {
     height: 100vh;
     width: 100%;
     background-image: url('./../../../../public/assets/img/bg_myStack.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    div {
+        display: flex;
+        align-items: center;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 50px;
+
+            p {
+                color: #fff;
+                padding-bottom: 10px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            h1 {
+                color: #fff;
+                font-size: 64px;
+                font-weight: 700;
+            }
+        }
+        div{
+            
+            height: 144px;
+        }
+    }
 }
