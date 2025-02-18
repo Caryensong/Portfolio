@@ -1,15 +1,43 @@
-section{
+section {
     height: 100vh;
     width: 100%;
     background-image: url('./../../../../public/assets/img/background_hero.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    
 
-        >div{
+
+    >section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        
+        >.top_title{
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+
         }
+        img {
+            width: 145px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+         img.my_pic{
+            width: 203px;
+            height: 244px;
+            transform: rotate(8deg);
+        }
+
+        span {
+            font-size: 128px;
+            font-weight: 700;
+            font-family: 'Bricolage Grotesque';
+            color: #fff;
+        }
+    }
+
+
 }
