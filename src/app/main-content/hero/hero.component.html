@@ -4,7 +4,15 @@
     <div class="content">
     <div class="headline">
     <div class="top_title">
-        <img src="./assets/toggle/helloworld.png" alt="Hello">
+        <button 
+        [ngClass]="{'hovered': isHovered}" 
+        (mouseover)="changeButtonState(true)" 
+        (mouseout)="changeButtonState(false)">
+        {{ isHovered ? "I'M CARYEN SONG" : "Hello World" }}
+    </button>
+    
+    
+
         <div>
             <span>F</span>
             <span>r</span>
