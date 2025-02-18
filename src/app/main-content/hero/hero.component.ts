@@ -26,22 +26,25 @@ export class HeroComponent {
   links:{
     name:string;
     image:string;
+    http:string;
   }[]=[
     {
     name:"LinkedIn",
     image:"./assets/icons/linkedIn.svg",
+    http:"https://www.linkedin.com/in/caryen-song-b6b913317/",
   },
   {
     name:"Github",
     image:"./assets/icons/Github.svg",
+    http:"https://github.com/Caryensong",
   },
   {
     name:"Mail",
     image:"./assets/icons/mail.svg",
+    http:"mailto:caryensong@googlemail.com",
   },
-
   ];
-  
+
   changeLinkHoverState(hover: boolean) {
     this.isLinkHovered = hover;
   }

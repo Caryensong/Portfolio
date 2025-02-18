@@ -45,12 +45,14 @@
     <button class="contact_btn">Get in Touch</button>
 </div>
 </div>
-<div class="link_content" 
-(mouseover)="changeLinkHoverState(true)" 
-(mouseout)="changeLinkHoverState(false)">>
+<div class="link_content">
     @for(link of links; track $index){
-        <img src={{link.image}} alt="{{link.name}}"
-        [ngClass]="{'hovered': isLinkHovered}">
+        <div class="image-wrapper">
+            <a href="{{link.http}}" target="_blank"><img src="{{link.image}}" alt="{{link.name}}"></a>
+            <div class="overlay"></div>
+        </div>
     }
 </div>
+
+
 </section>
