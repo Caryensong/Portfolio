@@ -45,7 +45,9 @@ section {
             width: 203px;
             height: 244px;
             transform: rotate(8deg);
-        }
+            transition: opacity 225ms ease-in-out;
+            
+    }
 
         span {
             font-size: 128px;

@@ -16,7 +16,12 @@
             <span>d</span>
         </div>
     </div>
-       <img class="my_pic" src="./assets/img/me_BW.png" alt="ME">
+    <img class="my_pic" 
+    [src]="imageSrc" 
+    (mouseover)="changeImage(true)" 
+    (mouseout)="changeImage(false)" 
+    alt="ME">
+
     </div>
 
     <div class="sub_title">
