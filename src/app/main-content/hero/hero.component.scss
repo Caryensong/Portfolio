@@ -45,11 +45,11 @@ section {
             font-weight: 500;
             color: #fff;
             background-color: transparent;
-            overflow: hidden;
             white-space: nowrap;
             transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
-            z-index: 1; 
+            z-index: 1;
         
+            // Hintergrund des Buttons (von der Mitte aus)
             &::before {
                 content: "";
                 position: absolute;
@@ -57,6 +57,7 @@ section {
                 left: 50%;
                 width: 100%;
                 height: 100%;
+                border-radius: 100px;
                 background-color: #3355ff; 
                 transform: translateX(-50%) scaleX(0); 
                 transform-origin: center;
@@ -64,14 +65,36 @@ section {
                 z-index: -1;
             }
         
+            // Bild, das über dem Button herausrollt
+            .hand-image {
+                content: "";
+                position: absolute;
+                top: -35px;  // Positioniert das Bild oberhalb des Buttons
+                left: 50%;
+                width: 35px;  // Anfangsgröße des Bildes
+                height: 35px; // Anfangsgröße des Bildes
+                background-image: url('./../../../../public/assets/icons/waving_hand.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: translateX(18px) scale(0) rotate(0deg); ; // Startet unsichtbar
+                transition: transform 0.6s ease-in-out; // Langsame Animation
+                z-index: 0; // Das Bild liegt über dem Button
+            }
+        
             &.hovered {
-                width: 220px; 
+                width: 200px;
             }
         
             &.hovered::before {
-                transform: translateX(-50%) scaleX(1);
+                transform: translateX(-50%) scaleX(1);  // Hintergrund wächst von der Mitte nach außen
+            }
+        
+            &.hovered .hand-image {
+                transform: translateX(70px) scale(1) rotate(360deg);  // Bild wird sichtbar und wächst
             }
         }
+        
+        
         
         img.my_pic {
             width: 203px;
