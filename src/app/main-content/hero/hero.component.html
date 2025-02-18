@@ -12,9 +12,6 @@
         <div class="hand-image"></div>
     </button>
     
-    
-    
-
         <div>
             <span>F</span>
             <span>r</span>
@@ -47,5 +44,13 @@
     </div>  
     <button class="contact_btn">Get in Touch</button>
 </div>
+</div>
+<div class="link_content" 
+(mouseover)="changeLinkHoverState(true)" 
+(mouseout)="changeLinkHoverState(false)">>
+    @for(link of links; track $index){
+        <img src={{link.image}} alt="{{link.name}}"
+        [ngClass]="{'hovered': isLinkHovered}">
+    }
 </div>
 </section>

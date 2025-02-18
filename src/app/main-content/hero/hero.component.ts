@@ -13,6 +13,7 @@ export class HeroComponent {
   imageSrc: string = './assets/img/me_BW.png'; 
   buttonText: string = 'Hello World';
   isHovered: boolean = false;
+  isLinkHovered: boolean = false; 
 
   changeImage(hover: boolean) {
     this.imageSrc = hover ? './assets/img/me.png' : './assets/img/me_BW.png';
@@ -20,6 +21,29 @@ export class HeroComponent {
 
   changeButtonState(hover: boolean) {
     this.isHovered = hover;
+  }
+
+  links:{
+    name:string;
+    image:string;
+  }[]=[
+    {
+    name:"LinkedIn",
+    image:"./assets/icons/linkedIn.svg",
+  },
+  {
+    name:"Github",
+    image:"./assets/icons/Github.svg",
+  },
+  {
+    name:"Mail",
+    image:"./assets/icons/mail.svg",
+  },
+
+  ];
+  
+  changeLinkHoverState(hover: boolean) {
+    this.isLinkHovered = hover;
   }
   
   

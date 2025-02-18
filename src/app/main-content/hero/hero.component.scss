@@ -49,7 +49,6 @@ section {
             transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
             z-index: 1;
 
-            // Hintergrund des Buttons (von der Mitte aus)
             &::before {
                 content: "";
                 position: absolute;
@@ -68,17 +67,16 @@ section {
             .hand-image {
                 content: "";
                 position: absolute;
-                top: -35px; 
+                top: -35px;
                 left: 50%;
-                width: 35px; 
-                height: 35px; // Anfangsgröße des Bildes
+                width: 35px;
+                height: 35px; 
                 background-image: url('./../../../../public/assets/icons/waving_hand.png');
                 background-size: contain;
                 background-repeat: no-repeat;
                 transform: translateX(18px) scale(0) rotate(0deg);
-                ; // Startet unsichtbar
-                transition: transform 0.6s ease-in-out; // Langsame Animation
-                z-index: 0; // Das Bild liegt über dem Button
+                transition: transform 0.6s ease-in-out;
+                z-index: 0; 
             }
 
             &.hovered {
@@ -86,11 +84,11 @@ section {
             }
 
             &.hovered::before {
-                transform: translateX(-50%) scaleX(1); // Hintergrund wächst von der Mitte nach außen
+                transform: translateX(-50%) scaleX(1);
             }
 
             &.hovered .hand-image {
-                transform: translateX(70px) scale(1) rotate(360deg); // Bild wird sichtbar und wächst
+                transform: translateX(70px) scale(1) rotate(360deg);
             }
         }
 
@@ -107,13 +105,40 @@ section {
             font-family: 'Bricolage Grotesque';
             color: #fff;
         }
+
         .contact_btn {
-            box-shadow: 3px 4px 0 0 #ffffff; 
+            box-shadow: 3px 4px 0 0 #ffffff;
             transition: border-color 225ms ease-in-out, box-shadow 0.3s ease-in-out;
             cursor: pointer;
-             &:hover {
-                 box-shadow: 0 0 0 0;
-                 background-color: #f77954;
-             }
+
+            &:hover {
+                box-shadow: 0 0 0 0;
+                background-color: #f77954;
+            }
+        }
+    }
+
+    .link_content{
+        padding:10px 72px;
+        display: flex;
+        align-items: flex-start;
+        
+        img{
+            cursor: pointer;
+            border: 1px solid #fff;
+            margin-bottom: 8px;
+            padding: 3px;
+            border-radius: 100%;
+            position: relative;
+            overflow: hidden; 
+            background-color: transparent;
+            white-space: nowrap;
+            transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
+            z-index: 1;
+            
+        &:hover{
+            background-color: #3355ff;
+        } 
+    }
+    }
 }
-    }}
