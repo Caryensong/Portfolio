@@ -6,26 +6,42 @@ section {
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
-
-    >section {
+    >div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 100px;
-        
-        >.top_title{
+
+        .content {
+            width: 860px;
+            height: 490px;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .headline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .top_title {
             display: flex;
             flex-direction: column;
 
         }
+
         img {
             width: 145px;
             height: 80px;
             cursor: pointer;
         }
 
-         img.my_pic{
+        img.my_pic {
             width: 203px;
             height: 244px;
             transform: rotate(8deg);
