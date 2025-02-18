@@ -48,7 +48,7 @@ section {
             white-space: nowrap;
             transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
             z-index: 1;
-        
+
             // Hintergrund des Buttons (von der Mitte aus)
             &::before {
                 content: "";
@@ -58,51 +58,48 @@ section {
                 width: 100%;
                 height: 100%;
                 border-radius: 100px;
-                background-color: #3355ff; 
-                transform: translateX(-50%) scaleX(0); 
+                background-color: #3355ff;
+                transform: translateX(-50%) scaleX(0);
                 transform-origin: center;
                 transition: transform 225ms ease-in-out;
                 z-index: -1;
             }
-        
-            // Bild, das über dem Button herausrollt
+
             .hand-image {
                 content: "";
                 position: absolute;
-                top: -35px;  // Positioniert das Bild oberhalb des Buttons
+                top: -35px; 
                 left: 50%;
-                width: 35px;  // Anfangsgröße des Bildes
+                width: 35px; 
                 height: 35px; // Anfangsgröße des Bildes
                 background-image: url('./../../../../public/assets/icons/waving_hand.png');
                 background-size: contain;
                 background-repeat: no-repeat;
-                transform: translateX(18px) scale(0) rotate(0deg); ; // Startet unsichtbar
+                transform: translateX(18px) scale(0) rotate(0deg);
+                ; // Startet unsichtbar
                 transition: transform 0.6s ease-in-out; // Langsame Animation
                 z-index: 0; // Das Bild liegt über dem Button
             }
-        
+
             &.hovered {
                 width: 200px;
             }
-        
+
             &.hovered::before {
-                transform: translateX(-50%) scaleX(1);  // Hintergrund wächst von der Mitte nach außen
+                transform: translateX(-50%) scaleX(1); // Hintergrund wächst von der Mitte nach außen
             }
-        
+
             &.hovered .hand-image {
-                transform: translateX(70px) scale(1) rotate(360deg);  // Bild wird sichtbar und wächst
+                transform: translateX(70px) scale(1) rotate(360deg); // Bild wird sichtbar und wächst
             }
         }
-        
-        
-        
+
         img.my_pic {
             width: 203px;
             height: 244px;
             transform: rotate(8deg);
             transition: opacity 225ms ease-in-out;
-            
-    }
+        }
 
         span {
             font-size: 128px;
@@ -110,11 +107,13 @@ section {
             font-family: 'Bricolage Grotesque';
             color: #fff;
         }
-        img.get_in_touch{
-            width: 156px;
-            height: 44px;
-        }
-    }
-
-
+        .contact_btn {
+            box-shadow: 3px 4px 0 0 #ffffff; 
+            transition: border-color 225ms ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+             &:hover {
+                 box-shadow: 0 0 0 0;
+                 background-color: #f77954;
+             }
 }
+    }}
