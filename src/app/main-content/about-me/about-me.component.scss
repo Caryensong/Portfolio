@@ -3,8 +3,8 @@ section {
     height: 720px;
     display: flex;
     flex-direction: row;
-   justify-content: space-around;
-   align-items: center;
+    justify-content: space-around;
+    align-items: center;
     padding: 10px 72px;
     gap: 50px;
 
@@ -17,42 +17,44 @@ section {
         display: flex;
         flex-direction: column;
 
-        p{
+        p {
             font-size: 20px;
             padding-bottom: 30px;
             font-weight: 500;
         }
-        span{
+
+        span {
             font-size: 20px;
-            padding-top: 30px;
+            padding-top: 35px;
             padding-bottom: 30px;
         }
-        h1{
+
+        h1 {
             font-size: 64px;
             font-weight: 700;
         }
 
-        div{
+        div {
             display: flex;
-           align-items: flex-end;
+            align-items: flex-end;
 
-            button{
+            button {
                 box-shadow: 2px 3px 0 0 #000;
                 transition: border-color 225ms ease-in-out, box-shadow 125ms ease-in-out;
                 cursor: pointer;
-                    position: relative;
-                    width: 154px;
-                    height: 40px;
-                    border: 1px solid #000;
-                    border-radius: 100px;
-                    font-family: 'Bricolage Grotesque';
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #000;
-                    background-color: transparent;
-                    white-space: nowrap;
-                    transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
-    
+                position: relative;
+                width: 154px;
+                height: 40px;
+                border: 1px solid #000;
+                border-radius: 100px;
+                font-family: 'Bricolage Grotesque';
+                font-size: 18px;
+                font-weight: 500;
+                color: #000;
+                background-color: transparent;
+                white-space: nowrap;
+                transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
+
                 &:hover {
                     box-shadow: 0 0 0 0;
                     background-color: #f77954;
@@ -61,6 +63,44 @@ section {
                 }
             }
         }
-        
+    }
+
+    .blueline_content {
+        width: 300px;
+        height: 30px;
+
+        @keyframes drawLeftToRight {
+            0% {
+                clip-path: inset(0 100% 0 0);
+                /* Unsichtbar, links */
+                opacity: 0;
+            }
+
+            10% {
+                clip-path: inset(0 0 0 0);
+                /* Sofort sichtbar */
+                opacity: 1;
+            }
+
+            90% {
+                clip-path: inset(0 0 0 0);
+                /* Bleibt sichtbar */
+                opacity: 1;
+            }
+
+            100% {
+                clip-path: inset(0 100% 0 0);
+                /* Zurückfahren */
+                opacity: 1;
+            }
+        }
+
+        .hover-image {
+            width: 300px;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+            animation: drawLeftToRight 4s ease-in-out forwards;
+        }
     }
 }

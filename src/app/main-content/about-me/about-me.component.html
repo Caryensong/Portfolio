@@ -1,14 +1,17 @@
 <section class="fontBricolageG">
     <img src="./assets/img/Location.svg" alt="Location">
-    <div>
+    <div (mouseover)="showImage()">
         <p>WHO'S CARYEN?</p>
 
         <h1>About me</h1>
-
-        <span>Hi there! I'm Caryen, a frontend developer passionate about 
-            creating intuitive and efficient digital experiences. With a 
-            natural problem-solving mindset and a keen eye for detail, I 
-            specialize in transforming complex concepts into visually 
+        <div class="blueline_content">
+            @if(showAnimation && isHovered){
+            <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">}
+        </div>
+        <span>Hi there! I'm Caryen, a frontend developer passionate about
+            creating intuitive and efficient digital experiences. With a
+            natural problem-solving mindset and a keen eye for detail, I
+            specialize in transforming complex concepts into visually
             appealing and functional web solutions.
             <br><br>
             Let’s collaborate and build something remarkable together!
