@@ -71,25 +71,21 @@ section {
         @keyframes drawLeftToRight {
             0% {
                 clip-path: inset(0 100% 0 0);
-                /* Unsichtbar, links */
                 opacity: 0;
             }
 
             10% {
                 clip-path: inset(0 0 0 0);
-                /* Sofort sichtbar */
                 opacity: 1;
             }
 
             90% {
                 clip-path: inset(0 0 0 0);
-                /* Bleibt sichtbar */
                 opacity: 1;
             }
 
             100% {
                 clip-path: inset(0 100% 0 0);
-                /* Zurückfahren */
                 opacity: 1;
             }
         }

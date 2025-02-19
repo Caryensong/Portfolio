@@ -3,4 +3,20 @@
         <p>IN THEIR WORDS:</p>
         <h1>Colleagues' Thoughts</h1>
     </div>
+
+    <div class="card-container">
+        @for(card of cards; track $index){
+        <div class="card" [ngStyle]="{'background-image': 'url(' + card.image + ')'}">
+            <p>{{card.text}}</p>
+            <div class="person-content">
+                <div>
+                    <strong>{{card.name}}</strong><br>
+                    <span>{{card.job}}</span>
+                </div>
+                <button><a href="{{card.linkedIn}}"></a> Profile</button>
+            </div>
+        </div>
+        }
+    </div>
+
 </section>
