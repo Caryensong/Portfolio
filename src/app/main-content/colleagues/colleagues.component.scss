@@ -1,0 +1,12 @@
+section{
+    display: flex;
+    padding: 19px 72px;
+    gap: 50px;
+    justify-content: flex-end;
+    
+    div{
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+    }
+}
