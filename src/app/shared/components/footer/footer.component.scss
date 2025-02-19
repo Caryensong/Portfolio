@@ -1,0 +1,26 @@
+section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    top:60px;
+>div{
+    width: 100%;
+    
+    img{
+        width: 40px;
+    }
+    h4{
+        color: #fff;
+    }
+}
+.links_content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+}
