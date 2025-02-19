@@ -4,6 +4,15 @@
         <p>MY STACK</p>
         <h1>Skill set</h1>
     </div>
-    <div><img src="./assets/img/skill.svg" alt="skill"></div>
+    <div><img class="text" src="./assets/img/skill.svg" alt="skill"></div>
+</div>
+
+<div class="skills_content">
+    @for(skill of skills; track $index){
+        <div>
+            <img src="{{skill.icon}}" alt="{{skill.name}}">
+            <p>{{skill.name}}</p>
+        </div>
+    }
 </div>
 </section>
