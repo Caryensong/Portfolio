@@ -1,4 +1,4 @@
-section{
+section {
     height: 100vh;
     width: 100%;
     background-image: url('./../../../../public/assets/img/footer_bg.png');
@@ -7,57 +7,132 @@ section{
     background-position: 50% 50%;
     padding: 120px 72px 0 72px;
 
-    >div {
+    div {
         display: flex;
-        gap: 50px;
-       
 
         >div {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+            flex-direction: column;
+            width: 50%;
 
-        p {
-            color: #fff;
-            padding-bottom: 10px;
-            font-weight: 500;
-            font-size: 20px;
+            p {
+                color: #fff;
+                padding-bottom: 10px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            h1 {
+                color: #fff;
+                font-size: 64px;
+                font-weight: 700;
+            }
+
+            span {
+                color: #fff;
+            }
         }
 
-        h1 {
-            color: #fff;
-            font-size: 64px;
-            font-weight: 700;
-        }
+        .contact_container {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
 
-        span{
-            color: #fff;
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                width: 100%;
+
+                label {
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 500;
+                    padding-left: 20px;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 0;
+                    border-bottom: 1px solid #f7c518;
+                    color: #c37706;
+                    font-size: 16px;
+                    background-color: transparent;
+                    outline: none;
+                    position: relative;
+                    padding-left: 20px;
+
+                    &::placeholder {
+                        color: #ffffff92;
+                        font-family: 'Bricolage Grotesque';
+                        font-size: 18px;
+                        
+                    }
+
+                    &:focus {
+                        border-bottom: 1px solid #3355ff;
+                        border-top: 1px solid #3355ff;
+                        margin-top: -60px;
+                        padding-top: 68px;
+                    }
+
+                }
+
+                .check_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start; // Sorgt dafür, dass alles links ausgerichtet ist
+                
+                    label {
+                        display: flex;
+                        align-items: center; // Sorgt dafür, dass Checkbox & Text nebeneinander sind
+                        font-size: 14px;
+                        gap: 8px; // Fügt Abstand zwischen Checkbox und Text hinzu
+                    }
+                
+                    input[type="checkbox"] {
+                        width: 16px;
+                        height: 16px;
+                        cursor: pointer;
+                    }
+                
+                    input[type="submit"] {
+                        margin-left: auto; 
+                        box-shadow: 2px 3px 0 0 #6a6a6a;
+                        transition: border-color 225ms ease-in-out, box-shadow 225ms ease-in-out;
+                        cursor: pointer;
+                        position: relative;
+                        width: 154px;
+                        height: 40px;
+                        border: 1px solid #6a6a6a;
+                        border-radius: 100px;
+                        font-family: 'Bricolage Grotesque';
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #6a6a6a;
+                        background-color: transparent;
+                        white-space: nowrap;
+                        transition: width 100ms ease-in-out, color 100ms ease-in-out;
+                        align-self: flex-start; // Damit das Submit-Button links bleibt
+                        margin-top: 10px; // Fügt Abstand zum Label hinzu
+                    }
+                
+                    input[type="submit"]:hover {
+                        box-shadow: 0 0 0 0;
+                        background-color: #f77954;
+                        position: relative;
+                        top: 3px;
+                        border: 1px solid #fff;
+                        color: #fff;
+                    }
+                }
+                
+            }
+
         }
     }
-    }
-    
 }
-input[type=text],[type=mail],select, textarea{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing:border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize:vertical;
-    }
-    
-    input[type=submit]{
-        background-color:#04AA6D;
-        color: white;
-        padding: 12px 20px;
-        border:none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    
-    input[type=submit]:hover{
-    background-color: #45a049
-    }
-    

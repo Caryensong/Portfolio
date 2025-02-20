@@ -16,27 +16,30 @@
         </div>
 
         <div class="contact_container">
-            <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm" >
+            <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
 
                 <label for="name">Whats's your name?</label>
                 <input [(ngModel)]="contactData.name" type="text" id="name" placeholder="Your name goes here" required>
 
                 <label for="name">Whats's your email?</label>
-                <input [(ngModel)]="contactData.email" type="text" id="email" placeholder="yourmail@email.com" required  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                >
+                <input [(ngModel)]="contactData.email" type="text" id="email" placeholder="yourmail@email.com" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
                 <label for="message">How can I help you?</label>
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="6" name="message" id="message" placeholder="Hello Caryen, I am interested in..."></textarea>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="6" name="message" id="message"
+                    placeholder="Hello Caryen, I am interested in..."></textarea>
                 @if(!message.valid && message.touched){
-                    <span>Please enter a message</span>
-                } 
-                <div>
-                <input type="checkbox" name="check" id="check">
-                <input type="submit" value="Send">
-            </div>
-            </form>
-           
+                <span>Please enter a message</span>
+                }
+                <div class="check_box">
+                    <label>
+                        <input type="checkbox" name="check" id="check">
+                        Please accept the privacy policy.
+                    </label>
 
+                    <input type="submit" value="Send">
+                </div>
+            </form>
         </div>
 
     </div>
