@@ -121,8 +121,26 @@ section {
                         margin-top: -60px;
                         padding-top: 68px;
                     }
-
                 }
+
+                textarea {
+                    scrollbar-width: thin;
+                    scrollbar-color: #f7c518 transparent;
+                
+                    &::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+                
+                    &::-webkit-scrollbar-thumb {
+                        background: #f7c518; 
+                        border-radius: 10px; 
+                    }
+                
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #c37706;
+                    }
+                }
+                
 
                 .check_box {
                     display: flex;
