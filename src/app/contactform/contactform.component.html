@@ -1,5 +1,5 @@
 <div class="container">
-    <form (ngSubmit)="onSumit(contactForm)" #contactForm="ngForm">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <label for="name">Name</label>
         <input [(ngModel)]="contactData.name" type="text" id="name" placeholder="Your name..." required>
 
