@@ -1,18 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactform',
-  imports: [FormsModule],
+  standalone:true,
+  imports: [CommonModule, FooterComponent, FormsModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
-
 contactData={
-  name: "",
+  name:"",
   email:"",
-  message: "",
+  message:"",
 }
 
 mailTest = true;
@@ -48,3 +50,4 @@ onSubmit(ngForm: NgForm) {
 }
 
 }
+

@@ -14,8 +14,10 @@
                 highlighting the value and skills you can bring to the table.
             </span>
         </div>
+
         <div class="contact_container">
-            <form (ngSubmit)="onSubmit(contactForm-me)" #contactFrom-me="ngForm ">
+            <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm" >
+
                 <label for="name">Whats's your name?</label>
                 <input [(ngModel)]="contactData.name" type="text" id="name" placeholder="Your name goes here" required>
 
@@ -25,7 +27,7 @@
 
                 <label for="message">How can I help you?</label>
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="6" name="message" id="message" placeholder="Hello Caryen, I am interested in..."></textarea>
-                @if(!message.valid && message.touched && !message.disabled){
+                @if(!message.valid && message.touched){
                     <span>Please enter a message</span>
                 } 
                 <div>
