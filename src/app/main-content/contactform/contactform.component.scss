@@ -9,32 +9,74 @@ section {
 
     div {
         display: flex;
+        align-items: end;
 
         >div {
             flex-direction: column;
             width: 50%;
+
 
             p {
                 color: #fff;
                 padding-bottom: 10px;
                 font-weight: 500;
                 font-size: 20px;
+                    text-align: left;
+                    align-self: flex-start;
+                
             }
 
             h1 {
                 color: #fff;
                 font-size: 64px;
                 font-weight: 700;
+                padding-bottom: 45px;
             }
 
             span {
                 color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .line {
+                width: 300px;
+                height: 45px;
+                padding-top: 60px;
+
+                @keyframes drawLeftToRight {
+                    0% {
+                        clip-path: inset(0 100% 0 0);
+                        opacity: 0;
+                    }
+
+                    10% {
+                        clip-path: inset(0 0 0 0);
+                        opacity: 1;
+                    }
+
+                    90% {
+                        clip-path: inset(0 0 0 0);
+                        opacity: 1;
+                    }
+
+                    100% {
+                        clip-path: inset(0 100% 0 0);
+                        opacity: 1;
+                    }
+                }
+
+                .hover-image {
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out;
+                    animation: drawLeftToRight 4s ease-in-out forwards;
+                }
             }
         }
 
         .contact_container {
             width: 50%;
-            padding: 20px;
+            padding-left: 20px;
             display: flex;
             align-items: flex-start;
 
@@ -70,7 +112,7 @@ section {
                         color: #ffffff92;
                         font-family: 'Bricolage Grotesque';
                         font-size: 18px;
-                        
+
                     }
 
                     &:focus {
@@ -85,27 +127,55 @@ section {
                 .check_box {
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start; // Sorgt dafür, dass alles links ausgerichtet ist
-                
+                    align-items: flex-start;
+
+
                     label {
                         display: flex;
-                        align-items: center; // Sorgt dafür, dass Checkbox & Text nebeneinander sind
+                        align-items: center;
                         font-size: 14px;
-                        gap: 8px; // Fügt Abstand zwischen Checkbox und Text hinzu
+                        gap: 8px;
+                        padding-left: 0px;
                     }
-                
+
                     input[type="checkbox"] {
-                        width: 16px;
-                        height: 16px;
+                        width: 20px;
+                        height: 20px;
                         cursor: pointer;
+                        border: 2px solid #3355ff;
+                        background-color: transparent;
+                        appearance: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        border-radius: 2px;
+                        padding: 0;
+
+                        &:checked {
+                            background-color: transparent;
+                            border-color: #3355ff;
+                        }
+
+                        &:checked::after {
+                            content: "✔";
+                            font-size: 14px;
+                            color: #f7c518;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-weight: bold;
+                        }
                     }
-                
+
+
                     input[type="submit"] {
-                        margin-left: auto; 
+                        margin-left: auto;
+                        margin-top: 10px;
+                        cursor: pointer;
                         box-shadow: 2px 3px 0 0 #6a6a6a;
                         transition: border-color 225ms ease-in-out, box-shadow 225ms ease-in-out;
-                        cursor: pointer;
-                        position: relative;
                         width: 154px;
                         height: 40px;
                         border: 1px solid #6a6a6a;
@@ -115,12 +185,10 @@ section {
                         font-weight: 500;
                         color: #6a6a6a;
                         background-color: transparent;
-                        white-space: nowrap;
                         transition: width 100ms ease-in-out, color 100ms ease-in-out;
-                        align-self: flex-start; // Damit das Submit-Button links bleibt
-                        margin-top: 10px; // Fügt Abstand zum Label hinzu
+
                     }
-                
+
                     input[type="submit"]:hover {
                         box-shadow: 0 0 0 0;
                         background-color: #f77954;
@@ -130,7 +198,7 @@ section {
                         color: #fff;
                     }
                 }
-                
+
             }
 
         }

@@ -11,6 +11,21 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
+  isHovered:boolean = false;
+  showAnimation: boolean = false;
+
+  showImage() {
+    if (!this.showAnimation) { 
+      this.isHovered = true;
+      this.showAnimation = true;
+      
+      setTimeout(() => {
+        this.isHovered = false;
+        this.showAnimation = false;
+      }, 4000);
+    }
+  }
+
 contactData={
   name:"",
   email:"",
