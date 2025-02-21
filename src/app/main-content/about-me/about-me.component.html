@@ -1,4 +1,4 @@
-<section class="fontBricolageG">
+<section id="aboutMe" class="fontBricolageG">
     <div><img src="./assets/img/Location.svg" alt="Location"></div>
     <div (mouseover)="showImage()">
         <p>WHO'S CARYEN?</p>
@@ -7,9 +7,9 @@
         <div class="blueline_content">
             @if(showAnimation && isHovered){
             <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
-        }@else{
+            }@else{
             <img class="hover-image" src="./assets/toggle/blueline_Default.svg" alt="Blueline">
-        }
+            }
         </div>
         <span>Hi there! I'm Caryen, a frontend developer passionate about
             creating intuitive and efficient digital experiences. With a
@@ -19,6 +19,10 @@
             <br><br>
             Let’s collaborate and build something remarkable together!
         </span>
-        <div class="button-container"><button>Let'talk</button></div>
+        <div class="button-container">
+            <a href="#contact">
+                <button>Let'talk</button>
+            </a>
+        </div>
     </div>
 </section>

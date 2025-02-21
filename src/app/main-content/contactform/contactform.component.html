@@ -1,4 +1,4 @@
-<section class="fontBricolageG">
+<section id="contact" class="fontBricolageG">
     <div (mouseover)="showImage()">
         <div>
             <p >CONTACT ME</p>
@@ -29,14 +29,14 @@
             <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
 
                 <label for="name">Whats's your name?</label>
-                <input [(ngModel)]="contactData.name" type="text" id="name" placeholder="Your name goes here" required>
+                <input class="input_contact" [(ngModel)]="contactData.name" type="text" id="name" placeholder="Your name goes here" required>
 
                 <label for="name">Whats's your email?</label>
-                <input [(ngModel)]="contactData.email" type="text" id="email" placeholder="yourmail@email.com" required
+                <input class="input_contact" [(ngModel)]="contactData.email" type="text" id="email" placeholder="yourmail@email.com" required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
                 <label for="message">How can I help you?</label>
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="6" name="message" id="message"
+                <textarea class="input_contact" #message="ngModel" [(ngModel)]="contactData.message" minlength="6" name="message" id="message"
                     placeholder="Hello Caryen, I am interested in..."></textarea>
                 @if(!message.valid && message.touched){
                 <span>Please enter a message</span>
