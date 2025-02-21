@@ -10,6 +10,8 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    padding: 10px 72px;
     
     .main-container{
         // width: 100%;    
@@ -26,12 +28,12 @@ section {
         justify-content: center;
 
         .content {
-            width: 860px;
+            width: 1440px;
             height: 490px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
         }
 
         .headline {
@@ -131,6 +133,13 @@ section {
                 top: 3px;
             }
         }
+    }
+
+    .subline{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 100px;
     }
 
     .link_content {
