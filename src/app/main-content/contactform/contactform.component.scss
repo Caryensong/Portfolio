@@ -1,7 +1,7 @@
 section {
     height: 100vh;
     width: 100%;
-    background-image: url('./../../../../public/assets/img/footer_bg.png');
+    background-image: url('./assets/img/footer_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -10,6 +10,8 @@ section {
     div {
         display: flex;
         align-items: end;
+        max-width: 1440px;
+        width: 100%;
 
         >div {
             flex-direction: column;
@@ -210,8 +212,8 @@ section {
                     input[type="submit"]:hover {
                         box-shadow: 0 0 0 0;
                         background-color: #f77954;
-                        position: relative;
-                        top: 3px;
+                         position: relative;
+                         top: 3px;
                         border: 1px solid #fff;
                         color: #fff;
                     }

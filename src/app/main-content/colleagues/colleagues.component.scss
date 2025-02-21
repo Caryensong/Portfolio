@@ -11,6 +11,8 @@ section{
         display: flex;
         align-items: end;
         flex-direction: column;
+        max-width: 1440px;
+        width: 100%;
 
         p{
             font-size: 20px;

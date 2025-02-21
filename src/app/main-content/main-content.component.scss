@@ -1,0 +1,22 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    div {
+        display: flex;  
+        justify-content: center;
+        width: 100dvw;
+        height: 1000px;
+        background-image: url('./../../../public/assets/img/background_hero.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+    }
+}
