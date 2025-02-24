@@ -1,1 +1,58 @@
-<p>game works!</p>
+<section class="fontBricolageG">
+
+    <div>
+        <app-header></app-header>
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">Go Back</a></div>
+
+        <div class="container" (mouseover)="showImage()">
+
+            <div class="content-left">
+                <h1>Last Human Standing Game</h1>
+                <div class="blueline_content">
+                    @if(showAnimation && isHovered){
+                    <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
+                    }@else{
+                    <img class="hover-image" src="./assets/toggle/blueline_Default.svg" alt="Blueline">
+                    }
+                </div>
+
+                <h3>Description</h3>
+                <br>
+                <span>An action-packed jump, run, slash, and throw game with an object-oriented approach. You are the
+                    last survivor of humanity, searching for the poison that can defeat the insane zombies. Wield your
+                    sword to cut through hordes of enemies or use the poison bottle to eliminate them for good. But stay
+                    alert—countless obstacles and dangers await. Stay sharp, fight bravely, and survive!</span>
+                <br>
+                <br>
+                <h3>Implementation Details</h3>
+                <br>
+                <span>Developed a dynamic 2D action-platformer using JavaScript, applying object-oriented programming
+                    principles for modular and scalable code. Designed and implemented core gameplay mechanics,
+                    including character movement, combat (sword attacks and throwable poison), and enemy AI. Integrated
+                    collision detection, physics, and interactive obstacles to enhance gameplay depth. Worked
+                    independently on game logic while structuring the project for maintainability and future expansion.
+                    Focused on performance optimization and cross-browser compatibility to ensure a smooth player
+                    experience.</span>
+                <br><br>
+                <p>Duration: 3 weeks</p>
+                <div class="icon_content">
+                    <span><img class="icon" src="./assets/icons/Js.svg" alt="JavaScript">JavaScript</span>
+                    <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
+                    <span><img class="icon" src="./assets/icons/CSS.svg" alt="CSS">CSS</span>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <img src="./assets/img/project_zombie.png" alt="zombie-Project">
+                <div class="btn-content">
+                    <button>GitHub</button>
+                    <button>Live Test</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-btn"><a href="#">Next Project</a><img src="./assets/icons/next.svg" alt="next"></div>
+
+    </div>
+    <div id="background"></div>
+</section>
