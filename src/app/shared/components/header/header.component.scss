@@ -1,8 +1,9 @@
-header{
+header {
     width: 100%;
     max-width: 1440px;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,14 +11,17 @@ nav{
     position: relative;
     top: 10px;
     padding: 19px 72px;
-    img{
+
+    img {
         width: 38px;
         height: 42px;
-         transition: filter 225ms ease-in-out;
+        transition: filter 225ms ease-in-out;
+
         &:hover {
             filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(3242%) hue-rotate(220deg) brightness(93%) contrast(108%);
         }
     }
+
     a {
         position: relative;
         color: #fff;
@@ -37,7 +41,7 @@ nav{
             background-repeat: no-repeat;
             opacity: 0;
             transition: opacity 225ms ease-in-out;
-            clip-path: inset(100% 0 0 0); // Startet komplett ausgeblendet
+            clip-path: inset(100% 0 0 0);
         }
 
         &:hover::after {
@@ -47,7 +51,18 @@ nav{
         }
     }
 
-    // Individuelle Bilder für jeden Link
+    .active-nav {
+        color: #ffffff !important; // Hebt den aktiven Link hervor
+        font-weight: bold;
+
+        &::after {
+            opacity: 1;
+            animation: drawTopToBottom 0.5s ease-in-out forwards;
+            transform: translateX(-50%) translateY(-40px);
+        }
+    }
+
+
     a:nth-child(2)::after {
         background-image: url('./../../../../../public/assets/toggle/B.1 1.png');
         width: 105px;
@@ -63,7 +78,7 @@ nav{
         width: 68px;
         height: 42px;
     }
-    
+
     a:nth-child(3):hover::after {
         animation: drawLeftToRight 225ms ease-in-out forwards;
     }
@@ -92,6 +107,7 @@ nav{
         display: flex;
         gap: 10px;
 
+
         a {
             color: #fff;
             text-decoration: none;
@@ -99,6 +115,7 @@ nav{
             font-size: 16px;
             font-family: 'Bricolage Grotesque';
             position: relative;
+            display: inline-block;
 
             &::after {
                 content: "";
@@ -110,7 +127,9 @@ nav{
                 background-repeat: no-repeat;
                 opacity: 0;
                 transition: opacity 0.3s ease-in-out;
-                clip-path: inset(100% 0 0 0); // Startet komplett ausgeblendet
+                clip-path: inset(100% 0 0 0);
+                width: 32px;
+                height: 32px;
             }
 
             &:hover::after {
@@ -120,28 +139,43 @@ nav{
             }
         }
 
-        // Individuelle Bilder für div > a Links (Sprachumschaltung)
-        a:nth-child(1)::after {
-            background-image: url('./../../../../../public/assets/toggle/Toggle 1.png');
-            width: 32px;
-            height: 32px;
+        .active-language {
+            color: #f39c12;
+            font-weight: bold;
+
+            &::after {
+                opacity: 1;
+                background-image: url('./../../../../../public/assets/toggle/Toggle 1.png');
+                width: 32px;
+                height: 32px;
+            }
         }
 
+
+        a:nth-child(1)::after,
         a:nth-child(2)::after {
             background-image: url('./../../../../../public/assets/toggle/Toggle 1.png');
-            width: 32px;
-            height: 32px;
         }
+
     }
 }
 
-// Keyframe-Animationen für den Zeicheneffekt
 @keyframes drawTopToBottom {
-    0% { clip-path: inset(100% 0 0 0); }
-    100% { clip-path: inset(0 0 0 0); }
+    0% {
+        clip-path: inset(100% 0 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 @keyframes drawLeftToRight {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0 0 0); }
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
 }

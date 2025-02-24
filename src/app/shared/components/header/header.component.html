@@ -1,14 +1,15 @@
 
 <header>
-<nav>
-    <div><img src="./assets/icons/logo.svg" alt=""></div>
-    <a href="#aboutMe">{{ 'header.about-me' | translate }}</a>
-    <a href="#skills">{{ 'header.skills' | translate }}</a>
-    <a href="#projects">{{ 'header.projects' | translate }}</a>
-    <a href="#contact">{{ 'header.contact' | translate }}</a>
-    <div>
-        <a href="#">EN</a>
-        <a href="#">DE</a>
-    </div>
-</nav>
+    <nav>
+        <div><img src="./assets/icons/logo.svg" alt=""></div>
+        <a href="#aboutMe" [ngClass]="{'active-nav': activeSection === 'aboutMe'}">{{ 'header.about-me' | translate }}</a>
+        <a href="#skills" [ngClass]="{'active-nav': activeSection === 'skills'}">{{ 'header.skills' | translate }}</a>
+        <a href="#projects" [ngClass]="{'active-nav': activeSection === 'projects'}">{{ 'header.projects' | translate }}</a>
+        <a href="#contact" [ngClass]="{'active-nav': activeSection === 'contact'}">{{ 'header.contact' | translate }}</a>
+        <div>
+            <a (click)="changeLanguage('en')" href="#" [ngClass]="{'active-language': currentLanguage === 'en'}">EN</a>
+            <a (click)="changeLanguage('de')" href="#" [ngClass]="{'active-language': currentLanguage === 'de'}">DE</a>
+        </div>
+    </nav>
+    
 </header>
