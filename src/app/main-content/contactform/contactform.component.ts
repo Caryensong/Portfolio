@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone:true,
-  imports: [CommonModule, FooterComponent, FormsModule],
+  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })

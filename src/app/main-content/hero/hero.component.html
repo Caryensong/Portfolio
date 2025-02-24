@@ -1,7 +1,6 @@
 <section>
     <div class="main-container">
     <!-- <app-header></app-header> -->
-    
   <div>
     <div class="content">
     <div class="headline">
@@ -10,9 +9,10 @@
         [ngClass]="{'hovered': isHovered}" 
         (mouseover)="changeButtonState(true)" 
         (mouseout)="changeButtonState(false)">
-        {{ isHovered ? "I'M CARYEN SONG" : "Hello World" }}
+        {{ isHovered ? ('hero.me' | translate ) : ('hero.hello' | translate)}}
         <div class="hand-image"></div>
     </button>
+  
     
         <div>
             <span>F</span>
@@ -46,7 +46,7 @@
         <span>R</span>
     </div>  
     <a href="#contact">
-    <button class="contact_btn" >Get in Touch</button></a>
+    <button class="contact_btn" >{{ 'hero.contact' | translate }}</button></a>
     </div>
 </div>
 </div>

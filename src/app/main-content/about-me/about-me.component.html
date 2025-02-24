@@ -1,9 +1,9 @@
 <section id="aboutMe" class="fontBricolageG">
-    <div><img src="./assets/img/Location.svg" alt="Location"></div>
+    <div><img src="{{ 'about-me.img' | translate }}" alt="Location"></div>
     <div (mouseover)="showImage()">
-        <p>WHO'S CARYEN?</p>
+        <p>{{ 'about-me.who' | translate }}</p>
 
-        <h1>About me</h1>
+        <h1>{{ 'about-me.about' | translate }}</h1>
         <div class="blueline_content">
             @if(showAnimation && isHovered){
             <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
@@ -11,17 +11,13 @@
             <img class="hover-image" src="./assets/toggle/blueline_Default.svg" alt="Blueline">
             }
         </div>
-        <span>Hi there! I'm Caryen, a frontend developer passionate about
-            creating intuitive and efficient digital experiences. With a
-            natural problem-solving mindset and a keen eye for detail, I
-            specialize in transforming complex concepts into visually
-            appealing and functional web solutions.
+        <span> {{ 'about-me.text' | translate }}
             <br><br>
-            Let’s collaborate and build something remarkable together!
+            {{ 'about-me.subtitle' | translate }}
         </span>
         <div class="button-container">
             <a href="#contact">
-                <button>Let'talk</button>
+                <button> {{ 'about-me.btn' | translate }}</button>
             </a>
         </div>
     </div>

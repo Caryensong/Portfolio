@@ -1,0 +1,57 @@
+{
+    "header": {
+        "about-me": "About Me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "hello": "Hello World",
+        "contact": "Get in Touch",
+        "me": "I'm Caryen Song"
+    },
+    "about-me": {
+        "about": "About me",
+        "who": "WHO'S CARYEN?",
+        "subtitle": "Let's collaborate and build something remarkable together!",
+        "text": "Hi there! I'm Caryen, a frontend developer passionate about creating intuitive and efficient digital experiences. With a natural problem-solving mindset and a keen eye for detail, I specialize in transforming complex concepts into visually appealing and functional web solutions.",
+        "btn": "Let's talk",
+        "img":"./assets/img/Location.svg"
+    },
+    "my-stack": {
+        "skill_img": "./assets/img/skill.svg",
+        "headline": "MY STACK",
+        "title": "Skill set"
+    },
+    "projects": {
+        "headline": "MY CRAFT",
+        "title": " Projects",
+        "text": "In my projects, I focus on creating user-friendly and responsive solutions that are both functional and visually appealing. Each project is built on efficient and clean code to optimize performance and ensure a seamless user experience. Take a look at some of my work and see for yourself the quality and creativity I bring to every project.",
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "game" :"An action-packed jump, run, slash, and throw game with an object-oriented approach",
+        "pokedex":"An interactive Pokédex web app that fetches Pokémon data via an API, allowing users to search and explore Pokémon details easily."
+    },
+    "colleagues": {
+        "headline": "IN THEIR WORDS:",
+        "title": "Colleagues' Thoughts",
+        "card1": "super super",
+        "card2": "It was a pleasure to work with Caryen...",
+        "card3": "Caryen was a great team colleague..."
+    },
+    "contactFrom": {
+        "headline": "CONTACT ME",
+        "title": "Ready to work together?",
+        "text": "I look forward to hearing from you! If you're looking for a dedicated and passionate frontend developer who can bring real value to your team with expertise and enthusiasm, let's definitely get in touch." ,
+        "text2": "I'm committed to improving my skills and delivering innovative solutions that enhance the user experience. Whether for new projects or existing ones, I'm ready to contribute to your team's success." ,
+        "subline": "Let's work together and create something great! I'm excited to share more about my experience and skills to show how I can contribute to your team.",
+        "name":"What's your name?",
+        "email":"Whats's your email?",
+        "help":"How can I help you?",
+        "name-input":"Your name goes here",
+        "email-input":"youremail@email.com",
+        "help-input":"Hello Caryen, I am interested in...",
+        "policy": "I've read the privacy policy and agree to the processing of my data as outlined.",
+        "send": "Send"
+    }
+
+}

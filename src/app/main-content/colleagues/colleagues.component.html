@@ -1,13 +1,13 @@
 <section class="fontBricolageG">
     <div>
-        <p>IN THEIR WORDS:</p>
-        <h1>Colleagues' Thoughts</h1>
+        <p>{{ 'colleagues.headline' | translate }}</p>
+        <h1>{{ 'colleagues.title' | translate }}</h1>
     </div>
 
     <div class="card-container">
         @for(card of cards; track $index){
         <div class="card" [ngStyle]="{'background-image': 'url(' + card.image + ')'}">
-            <p>{{card.text}}</p>
+            <p>{{ card.text | translate }}</p>
             <div class="person-content">
                 <div>
                     <strong>{{card.name}}</strong><br>

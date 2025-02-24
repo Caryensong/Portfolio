@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-stack',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './my-stack.component.html',
   styleUrl: './my-stack.component.scss'
 })

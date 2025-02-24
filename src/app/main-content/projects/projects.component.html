@@ -1,9 +1,9 @@
 <section id="projects" class="fontBricolageG">
     <div>
-        <p>MY CRAFT</p>
-        <H1>Projects</H1>
-        <span>Encourage people to take a look and interact with your projects.
-            Highlight your approach to creating responsive, user-friendly projects with efficient code.</span>
+        <p>{{ 'projects.headline' | translate }}</p>
+        <H1>{{ 'projects.title' | translate }}</H1>
+        <br>
+        <span>{{ 'projects.text' | translate }}</span>
     </div>
     <div>
         <div class="project_content" (mouseover)="onMouseOver('game')">
@@ -14,8 +14,7 @@
             </a>
         </div>
         <h3>Join</h3>
-        <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
-            assign users and categories. </span>
+        <span>{{ 'projects.join' | translate }}</span>
     </div>
 </section>
 
@@ -30,7 +29,7 @@
         </a>
         </div>
         <h3>Game</h3>
-        <p>An action-packed jump, run, slash, and throw game with an object-oriented approach.</p>
+        <p>{{ 'projects.game' | translate }}</p>
     </div>
 
     <div>
@@ -42,6 +41,6 @@
             <button class="details_button" [class.show]="activeProject === 'pokedex'">Project Details</button> </a>
         </div>
         <h3>Pokédex</h3>
-        <p>An interactive Pokédex web app that fetches Pokémon data via an API, allowing users to search and explore Pokémon details easily.</p>
+        <p>{{ 'projects.pokedex' | translate }}</p>
     </div>
 </section>

@@ -1,0 +1,56 @@
+{
+    "header": {
+        "about-me": "Über Mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "hello": "Hallo Welt",
+        "contact": "Jetzt kontaktieren",
+         "me": "Ich bin Caryen Song"
+    },
+    "about-me": {
+        "about": "Über Mich",
+        "who": "WER IST CARYEN?",
+        "subtitle": "Lass uns gemeinsam etwas Großartiges erschaffen!",
+        "text": "Hey! Ich bin Caryen, eine Frontend-Entwicklerin mit Leidenschaft für intuitive und effiziente digitale Erlebnisse. Mit einem lösungsorientierten Ansatz und einem Blick fürs Detail verwandle ich komplexe Konzepte in ansprechende und funktionale Web-Lösungen.",
+        "btn": "Lass quatschen!",
+        "img": "./assets/img/location_de.svg"
+    },
+    "my-stack": {
+        "skill_img": "./assets/img/skill_de.svg",
+        "headline": "Mein Tech-Stack",
+        "title": " Fähigkeiten"
+    },
+    "projects": {
+        "headline": "Meine Leidenschaft",
+        "title": "Projekte",
+        "text": "In meinen Projekten lege ich großen Wert darauf, benutzerfreundliche und responsive Lösungen zu schaffen, die sowohl funktional als auch ästhetisch ansprechend sind. Jedes Projekt basiert auf effizientem und sauberem Code, um die Performance zu optimieren und eine reibungslose Nutzererfahrung zu gewährleisten. Werfen Sie einen Blick auf einige meiner Arbeiten und lassen Sie sich von der Qualität und Kreativität überzeugen.",
+        "join": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzern und Kategorien zu.",
+        "game": "Ein actionreiches Jump-'n'-Run-Spiel mit Schlagen und Werfen, basierend auf einem objektorientierten Ansatz.",
+        "pokedex": "Eine interaktive Pokédex-Web-App, die Pokémon-Daten über eine API abruft, damit Nutzer Pokémon-Details einfach durchsuchen und erkunden können."
+    },
+    "colleagues": {
+        "headline": "IHRE WORTE:",
+        "title": "Feedback von Kollegen",
+        "card1": "gut gut",
+        "card2": "Glücklich mit Caryen zu arbeiten.....",
+        "card3": "super Team kollegin...."
+    },
+    "contactFrom": {
+        "headline": "KONTAKTIERE MICH",
+        "title": "„Lass uns gemeinsam etwas schaffen!",
+        "text": "Ich freue mich darauf, von dir zu hören! Wenn du auf der Suche nach einer engagierten und leidenschaftlichen Frontend-Entwicklerin bist, die mit Expertise und Begeisterung einen echten Mehrwert für dein Team schaffen kann, dann lass uns unbedingt ins Gespräch kommen. Ich bin stets darauf bedacht, meine Fähigkeiten weiterzuentwickeln und innovative Lösungen zu liefern, die nicht nur die Anforderungen erfüllen, sondern die Nutzererfahrung auf das nächste Level heben. Ob für neue Projekte oder die Weiterentwicklung bestehender Ideen ich bin bereit, mich mit vollem Einsatz einzubringen und meine Kenntnisse für den Erfolg deines Teams einzusetzen.",
+        "text2": "Ich bin stets bestrebt, meine Fähigkeiten weiterzuentwickeln und innovative Lösungen zu liefern, die das Nutzererlebnis verbessern. Ob bei neuen Projekten oder der Weiterentwicklung bestehender Ideen – ich bin bereit, zum Erfolg deines Teams beizutragen.",
+        "subline": "Lass uns zusammenarbeiten und etwas Großartiges schaffen! Ich freue mich darauf, dir mehr über meine Erfahrungen und Fähigkeiten zu zeigen, um zu sehen, wie ich dein Team unterstützen kann.",
+        "name": "Wie heißt du?",
+        "email": "Wie lautet deine E-Mail?",
+        "help": "Wie kann ich dir helfen?",
+        "name-input": "Dein Name ...",
+        "email-input": "deineemail@email.com",
+        "help-input": "Hallo Caryen, ich interessiere mich für...",
+        "policy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
+         "send": "Senden"
+    }
+}

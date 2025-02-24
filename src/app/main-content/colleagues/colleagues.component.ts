@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-colleagues',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateDirective, TranslatePipe],
   templateUrl: './colleagues.component.html',
   styleUrl: './colleagues.component.scss'
 })
@@ -21,21 +22,21 @@ export class ColleaguesComponent {
   image:'./assets/img/cardB.png',
   linkedIn:'http/w',
   job: 'Frontend Developer',
-  text:'supi supi',
+  text:'colleagues.card1',
  },
  {   
   name:'Karl',
   image:'./assets/img/cardA.png',
   linkedIn:'http/w',
   job: 'Designer',
-  text:'It was a pleasure to work with Caryen...',
+  text:'colleagues.card2',
  },
  {   
   name:'Sarah',
   image:'./assets/img/cardB.png',
   linkedIn:'http/w',
   job: 'Project Manager',
-  text:'Caryen was a great team colleague...',
+  text:'colleagues.card3',
  },
 
   ];
