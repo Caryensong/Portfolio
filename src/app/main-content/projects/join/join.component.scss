@@ -4,7 +4,7 @@ section {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #1d1d1d;
 
     #background {
         display: flex;
@@ -78,6 +78,7 @@ section {
             display: flex;
             flex-direction: row;
             padding: 0px 72px;
+            gap: 50px;
 
 
             .content-left {
@@ -99,7 +100,7 @@ section {
                 .btn-content {
                     display: flex;
                     justify-content: end;
-                    padding: 30px 0px;
+                    padding: 30px 0px 100px 0px;
                     gap: 30px;
 
                     button {

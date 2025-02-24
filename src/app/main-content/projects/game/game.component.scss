@@ -4,13 +4,14 @@ section {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color:#1d1d1d;
+    padding-bottom: 40px;
 
     #background {
         display: flex;
         justify-content: center;
         width: 100dvw;
-        height: 1000px;
+        height: 100vh;
         background-image: url('./../../../../../public/assets/img/project_bg.png');
         background-size: cover;
         background-repeat: no-repeat;
