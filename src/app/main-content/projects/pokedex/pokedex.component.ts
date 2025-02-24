@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-pokedex',
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './pokedex.component.html',
   styleUrl: './pokedex.component.scss'
