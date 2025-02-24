@@ -2,47 +2,54 @@
 
     <div>
         <app-header></app-header>
-        <div><a href="#">Go Back</a></div>
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">Go Back</a></div>
 
-        <div class="container">
+        <div class="container" (mouseover)="showImage()">
 
             <div class="content-left">
                 <h1>Join</h1>
                 <div class="blueline_content">
                     @if(showAnimation && isHovered){
-                    <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
+                    <img class="hover-image" src="./assets/toggle/join_line.svg" alt="Blueline">
                     }@else{
-                    <img class="hover-image" src="./assets/toggle/blueline_Default.svg" alt="Blueline">
+                    <img class="hover-image" src="./assets/toggle/default_join_line.png" alt="Blueline">
                     }
                 </div>
+
                 <h3>Description</h3>
+                <br>
                 <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
                     functions,
                     assign users and categories. </span>
+                    <br>
+                    <br>
                 <h3>Implementation Details</h3>
+                <br>
                 <span>Short text that describes your role or the workflow for this specific project. Let a recruiter
                     know
                     more about your knowledge and ability to work independently or collaboratively in a structured
                     way.</span>
-                <span>Duration: 5 weeks</span>
-                <div>
-                    <span>CSS</span>
-                    <span>CSS</span>
-                    <span>CSS</span>
-                    <span>CSS</span>
-                    <span>CSS</span>
+                    <br><br>
+                <p>Duration: 5 weeks</p>
+                <div class="icon_content">
+                    <span><img class="icon" src="./assets/icons/CSS.svg" alt="CSS">CSS</span>
+                    <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
+                    <span><img class="icon" src="./assets/icons/Firebase.svg" alt="Firebase">Firebase</span>
+                    <span><img class="icon" src="./assets/icons/Angular.svg" alt="Angular">Angular</span>
+                    <span><img class="icon" src="./assets/icons/Ts.svg" alt="TypeScript">TypeScript</span>
                 </div>
             </div>
 
             <div class="content-right">
                 <img src="./assets/img/join.png" alt="join-Project">
-                <div>
+                <div class="btn-content">
                     <button>GitHub</button>
                     <button>Live Test</button>
                 </div>
             </div>
         </div>
-        <div><a href="#">Next Project</a></div>
+
+        <div class="next-btn"><a href="#">Next Project</a><img src="./assets/icons/next.svg" alt="next"></div>
 
     </div>
     <div id="background"></div>
