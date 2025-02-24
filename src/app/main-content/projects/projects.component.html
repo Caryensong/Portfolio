@@ -6,9 +6,11 @@
             Highlight your approach to creating responsive, user-friendly projects with efficient code.</span>
     </div>
     <div>
-        <div>
-            <a [routerLink]="['/join']">
+        <div class="project_content" (mouseover)="onMouseOver('game')">
+            <a [routerLink]="['/join']" class="project_link">
                 <img src="./assets/img/Laptop.png" alt="Join">
+                <span class="overlay" [class.show]="activeProject === 'game'"></span>
+                <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button> 
             </a>
         </div>
         <h3>Join</h3>
@@ -17,24 +19,29 @@
     </div>
 </section>
 
-<section id="projectContent" class="fontBricolageG">
+<section id="projectsContainer" class="fontBricolageG">
     <div>
-        <div>
-            <a [routerLink]="['/game']">
+        <div class="project_content" (mouseover)="onMouseOver('game')">
+            <a [routerLink]="['/game']" class="project_link">
                 <img src="./assets/img/project_zombie.png" alt="Zombie Game">
-            </a>
+          
+            <span class="overlay" [class.show]="activeProject === 'game'"></span>
+            <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button> 
+        </a>
         </div>
         <h3>Game</h3>
-        <p>An action-packed jump, run, slash, and throw game with an object-oriented approach. </p>
-    </div>
-    <div>
-        <div>
-            <a [routerLink]="['/pokedex']">
-                <img src="./assets/img/Pokedex.png" alt="Zombie Game">
-            </a>
-        </div>
-        <h3>Pokedex</h3>
-        <p>An interactive Pokédex web app that fetches Pokémon data via an API, allowing users to search and explore Pokémon details easily.</p>
+        <p>An action-packed jump, run, slash, and throw game with an object-oriented approach.</p>
     </div>
 
+    <div>
+        <div class="project_content" (mouseover)="onMouseOver('pokedex')">
+            <a [routerLink]="['/pokedex']" class="project_link">
+                <img src="./assets/img/Pokedex.png" alt="Pokedex">
+           
+            <span class="overlay" [class.show]="activeProject === 'pokedex'"></span>
+            <button class="details_button" [class.show]="activeProject === 'pokedex'">Project Details</button> </a>
+        </div>
+        <h3>Pokédex</h3>
+        <p>An interactive Pokédex web app that fetches Pokémon data via an API, allowing users to search and explore Pokémon details easily.</p>
+    </div>
 </section>

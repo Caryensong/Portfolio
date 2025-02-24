@@ -10,5 +10,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  activeProject: string | null = null;
 
+  onMouseOver(projectName: string) {
+    this.activeProject = projectName;
+  }
 }
