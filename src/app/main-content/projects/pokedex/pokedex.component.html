@@ -1,1 +1,50 @@
-<p>pokedex works!</p>
+<section class="fontBricolageG">
+
+    <div>
+        <app-header></app-header>
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">Go Back</a></div>
+
+        <div class="container" (mouseover)="showImage()">
+
+            <div class="content-left">
+                <h1>Pokedex</h1>
+                <div class="blueline_content">
+                    @if(showAnimation && isHovered){
+                    <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
+                    }@else{
+                    <img class="hover-image" src="./assets/toggle/blueline_Default.svg" alt="Blueline">
+                    }
+                </div>
+
+                <h3>Description</h3>
+                <br>
+                <span>An interactive Pokédex web application that allows users to find Pokémon from the official registry and access detailed information. Using an API, Pokémon attributes are dynamically retrieved and displayed. An intuitive search function enables users to filter Pokémon by their starting letters. The design is user-friendly and optimized for various devices to ensure a seamless experience.</span>
+                <br>
+                <br>
+                <h3>Implementation Details</h3>
+                <br>
+                <span>The project was developed using JavaScript and the Fetch API to retrieve Pokémon data in real-time from an external interface. Asynchronous functions were implemented to ensure smooth data processing. The search functionality utilizes string methods to efficiently filter Pokémon names. Special focus was placed on a structured code architecture, responsive design for different screen sizes, and optimizing API requests for fast loading times.</span>
+                <br><br>
+                <p>Duration: 1 week</p>
+                <div class="icon_content">
+                    <span><img class="icon" src="./assets/icons/Js.svg" alt="JavaScript">JavaScript</span>
+                    <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
+                    <span><img class="icon" src="./assets/icons/CSS.svg" alt="CSS">CSS</span>
+                    <span><img class="icon" src="./assets/icons/Api.svg" alt="CSS">Rest-Api</span>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <img src="./assets/img/Pokedex.png" alt="Pokedex">
+                <div class="btn-content">
+                    <button>GitHub</button>
+                    <button>Live Test</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-btn"><a href="#">Next Project</a><img src="./assets/icons/next.svg" alt="next"></div>
+
+    </div>
+    <div id="background"></div>
+</section>
