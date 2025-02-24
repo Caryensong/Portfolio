@@ -1,3 +1,7 @@
+header{
+    width: 100%;
+    max-width: 1440px;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -5,7 +9,7 @@ nav{
     gap: 32px;
     position: relative;
     top: 10px;
-    // padding: 19px 72px;
+    padding: 19px 72px;
     img{
         width: 38px;
         height: 42px;

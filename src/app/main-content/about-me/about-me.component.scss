@@ -1,9 +1,10 @@
 section {
     height: 720px;
     max-width: 1440px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 10px 72px;
     gap: 50px;

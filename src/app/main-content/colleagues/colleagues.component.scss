@@ -44,7 +44,6 @@ section{
         transform: rotate(-5deg);
         transition: transform 0.3s ease, z-index 0.3s ease;
         z-index: 1;
-        margin-left: -120px;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -54,10 +53,12 @@ section{
     .card:nth-child(2) {
         transform: rotate(0deg);
         z-index: 2;
+        margin-left: -180px;
     }
     .card:nth-child(3) {
         transform: rotate(5deg);
         z-index: 1;
+        margin-left: -90px;
     }
     
     

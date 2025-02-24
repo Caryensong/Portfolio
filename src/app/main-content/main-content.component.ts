@@ -6,10 +6,11 @@ import { ColleaguesComponent } from './colleagues/colleagues.component';
 import { MyStackComponent } from './my-stack/my-stack.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactformComponent } from './contactform/contactform.component';
+import { HeaderComponent } from '../shared/components/header/header.component';
 
 @Component({
   selector: 'app-main-content',
-  imports: [CommonModule, HeroComponent, AboutMeComponent, ColleaguesComponent, ContactformComponent, MyStackComponent, ProjectsComponent],
+  imports: [CommonModule, HeaderComponent, HeroComponent, AboutMeComponent, ColleaguesComponent, ContactformComponent, MyStackComponent, ProjectsComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
