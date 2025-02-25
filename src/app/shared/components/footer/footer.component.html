@@ -1,13 +1,39 @@
-<section class="fontBricolageG">
-    <div>
-    <img src="./assets/icons/logo.svg" alt="logo">
-    <h4>© Caryen Song 2025</h4>
-</div>
-<div class="links_content">
-    <a href="">Legal Notice</a>
-    <a href="https://github.com/Caryensong" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/caryen-song-b6b913317/" target="_blank">LinkedIn</a>
-    <a href="mailto:caryensong@googlemail.com" target="_blank">Email</a>
+<section class="footer-container">
+    <div class="footer-logo">
+        <img src="./assets/icons/logo.svg" alt="Caryen Song Logo">
+        <h4>© Caryen Song 2025</h4>
+    </div>
+    <div class="footer-links">
+        <a href="" class="legal-notice">Legal Notice</a>
 
-</div>
+        <a href="https://github.com/Caryensong" 
+           target="_blank" 
+           class="footer-link github-link"
+           [ngClass]="{'hovered': hoverStates['github']}" 
+           (mouseover)="changeButtonState('github', true)" 
+           (mouseout)="changeButtonState('github', false)">
+            GitHub
+            <div class="github-icon"></div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/caryen-song-b6b913317/" 
+           target="_blank" 
+           class="footer-link linkedIn-link"
+           [ngClass]="{'hovered': hoverStates['linkedin']}" 
+           (mouseover)="changeButtonState('linkedin', true)" 
+           (mouseout)="changeButtonState('linkedin', false)">
+           LinkedIn
+           <div class="linkedin-icon"></div>
+        </a>
+
+        <a href="mailto:caryensong@googlemail.com" 
+           target="_blank" 
+           class="footer-link email-link"
+           [ngClass]="{'hovered': hoverStates['email']}" 
+           (mouseover)="changeButtonState('email', true)" 
+           (mouseout)="changeButtonState('email', false)">
+           Email
+           <div class="email-icon"></div>
+        </a>
+    </div>
 </section>

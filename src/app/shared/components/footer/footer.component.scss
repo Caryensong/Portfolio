@@ -1,26 +1,120 @@
-section {
+.footer-container {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
     position: relative;
-    top:60px;
->div{
-    width: 100%;
-    
-    img{
-        width: 40px;
+    top: 60px;
+
+    .footer-logo {
+        img {
+            width: 40px;
+            height: auto;
+        }
+
+        h4 {
+            color: #fff;
+        }
     }
-    h4{
-        color: #fff;
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        gap: 15px;
+
+        .footer-link {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid transparent;
+
+            &:hover {
+                background-color: #3355ff;
+                border-color: #3355ff;
+                color: #fff;
+            }
+        }
+
+        .github-link, .linkedIn-link, .email-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        .github-icon, .linkedin-icon, .email-icon {
+            width: 30px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -30px;
+            left: 58%;
+            transform: translateX(-50%) scale(0);
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .github-icon { background-image: url('./../../../../../public/assets/icons/Github.svg'); }
+        .linkedin-icon { background-image: url('./../../../../../public/assets/icons/linkedIn.svg'); }
+        .email-icon { background-image: url('./../../../../../public/assets/icons/mail.svg'); }
+
+        // Hover-Animationen für einzelne Links
+        .github-link.hovered .github-icon,
+        .linkedIn-link.hovered .linkedin-icon,
+        .email-link.hovered .email-icon {
+            transform: translateX(50%) scale(1) rotate(360deg);
+        }
     }
-}
-.links_content{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    a{
+
+    .legal-notice {
+        background: none !important;
+        border: none !important;
+        position: relative;
         color: #fff;
         text-decoration: none;
+        transition: color 225ms ease-in-out;
+
+        &:hover {
+            color: #ffffff;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 225ms ease-in-out;
+            clip-path: inset(100% 0 0 0);
+            background-image: url('./../../../../../public/assets/toggle/B.1 3.png');
+        }
+
+        &:hover::after {
+            width: 90px; 
+            height: 42px;
+            opacity: 1;
+            animation: drawEffect 0.5s ease-in-out forwards;
+            transform: translateX(-50%) translateY(-40px);
+            animation: drawLeftToRight 225ms ease-in-out forwards;
+        }
+    }
+    @keyframes drawLeftToRight {
+        0% {
+            clip-path: inset(0 100% 0 0);
+        }
+    
+        100% {
+            clip-path: inset(0 0 0 0);
+        }
     }
 }
-}
+
+
+
