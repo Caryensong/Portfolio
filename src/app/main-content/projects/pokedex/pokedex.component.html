@@ -2,7 +2,7 @@
 
     <div>
         <app-header></app-header>
-        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">Go Back</a></div>
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">{{ 'join.back' | translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">
 
@@ -16,16 +16,16 @@
                     }
                 </div>
 
-                <h3>Description</h3>
+                <h3>{{ 'pokedex.headline' | translate }}</h3>
                 <br>
-                <span>An interactive Pokédex web application that allows users to find Pokémon from the official registry and access detailed information. Using an API, Pokémon attributes are dynamically retrieved and displayed. An intuitive search function enables users to filter Pokémon by their starting letters. The design is user-friendly and optimized for various devices to ensure a seamless experience.</span>
+                <span>{{ 'pokedex.description' | translate }}</span>
                 <br>
                 <br>
-                <h3>Implementation Details</h3>
+                <h3>{{ 'pokedex.subline' | translate }}</h3>
                 <br>
-                <span>The project was developed using JavaScript and the Fetch API to retrieve Pokémon data in real-time from an external interface. Asynchronous functions were implemented to ensure smooth data processing. The search functionality utilizes string methods to efficiently filter Pokémon names. Special focus was placed on a structured code architecture, responsive design for different screen sizes, and optimizing API requests for fast loading times.</span>
+                <span>{{ 'pokedex.details' | translate }}</span>
                 <br><br>
-                <p>Duration: 1 week</p>
+                <p>{{ 'pokedex.weeks' | translate }}</p>
                 <div class="icon_content">
                     <span><img class="icon" src="./assets/icons/Js.svg" alt="JavaScript">JavaScript</span>
                     <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="next-btn"><a [routerLink]="['/join']">Next Project</a><img src="./assets/icons/next.svg" alt="next"></div>
+        <div class="next-btn"><a [routerLink]="['/join']">{{ 'join.next' | translate }}</a><img src="./assets/icons/next.svg" alt="next"></div>
 
     </div>
     <div id="background"></div>

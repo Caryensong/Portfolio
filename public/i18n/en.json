@@ -52,6 +52,29 @@
         "help-input":"Hello Caryen, I am interested in...",
         "policy": "I've read the privacy policy and agree to the processing of my data as outlined.",
         "send": "Send"
+    },
+    "join":{
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "details": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
+        "weeks": "Duration: 5 weeks",
+        "headline": "Description",
+        "subline": "Implementation Details",
+        "back": "Go Back",
+        "next" : "Next Project"
+    },
+    "game":{
+        "description": "An action-packed jump, run, slash, and throw game with an object-oriented approach. You are the last survivor of humanity, searching for the poison that can defeat the insane zombies. Wield your sword to cut through hordes of enemies or use the poison bottle to eliminate them for good. But stay alert—countless obstacles and dangers await. Stay sharp, fight bravely, and survive!",
+        "details": "Developed a dynamic 2D action-platformer using JavaScript, applying object-oriented programming principles for modular and scalable code. Designed and implemented core gameplay mechanics, including character movement, combat (sword attacks and throwable poison), and enemy AI. Integrated collision detection, physics, and interactive obstacles to enhance gameplay depth. Worked independently on game logic while structuring the project for maintainability and future expansion. Focused on performance optimization and cross-browser compatibility to ensure a smooth player experience.",
+        "weeks": "Duration: 3 weeks",
+        "headline": "Description",
+        "subline": "Implementation Details"
+    },
+    "pokedex":{
+        "description": "An interactive Pokédex web application that allows users to find Pokémon from the official registry and access detailed information. Using an API, Pokémon attributes are dynamically retrieved and displayed. An intuitive search function enables users to filter Pokémon by their starting letters. The design is user-friendly and optimized for various devices to ensure a seamless experience.",
+        "details": "The project was developed using JavaScript and the Fetch API to retrieve Pokémon data in real-time from an external interface. Asynchronous functions were implemented to ensure smooth data processing. The search functionality utilizes string methods to efficiently filter Pokémon names. Special focus was placed on a structured code architecture, responsive design for different screen sizes, and optimizing API requests for fast loading times.",
+        "weeks": "Duration: 1 weeks",
+        "headline": "Description",
+        "subline": "Implementation Details"
     }
 
 }

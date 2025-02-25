@@ -2,7 +2,7 @@
 
     <div>
         <app-header></app-header>
-        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">Go Back</a></div>
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">{{ 'join.back' | translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">
 
@@ -16,24 +16,15 @@
                     }
                 </div>
 
-                <h3>Description</h3>
+                <h3>{{ 'game.headline' | translate }}</h3>
                 <br>
-                <span>An action-packed jump, run, slash, and throw game with an object-oriented approach. You are the
-                    last survivor of humanity, searching for the poison that can defeat the insane zombies. Wield your
-                    sword to cut through hordes of enemies or use the poison bottle to eliminate them for good. But stay
-                    alert—countless obstacles and dangers await. Stay sharp, fight bravely, and survive!</span>
+                <span>{{ 'game.description' | translate }}</span>
                 <br>
-                <h3>Implementation Details</h3>
+                <h3>{{ 'game.subline' | translate }}</h3>
                 <br>
-                <span>Developed a dynamic 2D action-platformer using JavaScript, applying object-oriented programming
-                    principles for modular and scalable code. Designed and implemented core gameplay mechanics,
-                    including character movement, combat (sword attacks and throwable poison), and enemy AI. Integrated
-                    collision detection, physics, and interactive obstacles to enhance gameplay depth. Worked
-                    independently on game logic while structuring the project for maintainability and future expansion.
-                    Focused on performance optimization and cross-browser compatibility to ensure a smooth player
-                    experience.</span>
+                <span>{{ 'game.details' | translate }}</span>
                 <br>
-                <p>Duration: 3 weeks</p>
+                <p>{{ 'game.weeks' | translate }}</p>
                 <div class="icon_content">
                     <span><img class="icon" src="./assets/icons/Js.svg" alt="JavaScript">JavaScript</span>
                     <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
@@ -50,7 +41,7 @@
             </div>
         </div>
 
-        <div class="next-btn"><a [routerLink]="['/pokedex']">Next Project</a><img src="./assets/icons/next.svg" alt="next"></div>
+        <div class="next-btn"><a [routerLink]="['/pokedex']">{{ 'join.next' | translate }}</a><img src="./assets/icons/next.svg" alt="next"></div>
 
     </div>
     <div id="background"></div>

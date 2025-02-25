@@ -2,7 +2,7 @@
 
     <div>
         <app-header></app-header>
-        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">Go Back</a></div>
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">{{ 'join.back' | translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">
 
@@ -16,21 +16,16 @@
                     }
                 </div>
 
-                <h3>Description</h3>
+                <h3>{{ 'join.headline' | translate }}</h3>
                 <br>
-                <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-                    functions,
-                    assign users and categories. </span>
+                <span>{{ 'join.description' | translate }}</span>
                     <br>
                     <br>
-                <h3>Implementation Details</h3>
+                <h3>{{ 'join.subline' | translate }}</h3>
                 <br>
-                <span>Short text that describes your role or the workflow for this specific project. Let a recruiter
-                    know
-                    more about your knowledge and ability to work independently or collaboratively in a structured
-                    way.</span>
+                <span>{{ 'join.details' | translate }}</span>
                     <br><br>
-                <p>Duration: 5 weeks</p>
+                <p>{{ 'join.weeks' | translate }}</p>
                 <div class="icon_content">
                     <span><img class="icon" src="./assets/icons/CSS.svg" alt="CSS">CSS</span>
                     <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
@@ -49,7 +44,7 @@
             </div>
         </div>
 
-        <div class="next-btn"><a [routerLink]="['/game']">Next Project</a><img src="./assets/icons/next.svg" alt="next"></div>
+        <div class="next-btn"><a [routerLink]="['/game']">{{ 'join.next' | translate }}</a><img src="./assets/icons/next.svg" alt="next"></div>
 
     </div>
     <div id="background"></div>

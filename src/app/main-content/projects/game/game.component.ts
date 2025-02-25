@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-game',
-  imports: [RouterModule, HeaderComponent],
+  imports: [RouterModule, HeaderComponent, TranslateDirective, TranslatePipe],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })

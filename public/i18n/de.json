@@ -8,7 +8,7 @@
     "hero": {
         "hello": "Hallo Welt",
         "contact": "Jetzt kontaktieren",
-         "me": "Ich bin Caryen Song"
+        "me": "Ich bin Caryen Song"
     },
     "about-me": {
         "about": "Über Mich",
@@ -40,7 +40,7 @@
     },
     "contactFrom": {
         "headline": "KONTAKTIERE MICH",
-        "title": "„Lass uns gemeinsam etwas schaffen!",
+        "title": "Lass uns gemeinsam etwas schaffen!",
         "text": "Ich freue mich darauf, von dir zu hören! Wenn du auf der Suche nach einer engagierten und leidenschaftlichen Frontend-Entwicklerin bist, die mit Expertise und Begeisterung einen echten Mehrwert für dein Team schaffen kann, dann lass uns unbedingt ins Gespräch kommen. Ich bin stets darauf bedacht, meine Fähigkeiten weiterzuentwickeln und innovative Lösungen zu liefern, die nicht nur die Anforderungen erfüllen, sondern die Nutzererfahrung auf das nächste Level heben. Ob für neue Projekte oder die Weiterentwicklung bestehender Ideen ich bin bereit, mich mit vollem Einsatz einzubringen und meine Kenntnisse für den Erfolg deines Teams einzusetzen.",
         "text2": "Ich bin stets bestrebt, meine Fähigkeiten weiterzuentwickeln und innovative Lösungen zu liefern, die das Nutzererlebnis verbessern. Ob bei neuen Projekten oder der Weiterentwicklung bestehender Ideen – ich bin bereit, zum Erfolg deines Teams beizutragen.",
         "subline": "Lass uns zusammenarbeiten und etwas Großartiges schaffen! Ich freue mich darauf, dir mehr über meine Erfahrungen und Fähigkeiten zu zeigen, um zu sehen, wie ich dein Team unterstützen kann.",
@@ -51,6 +51,29 @@
         "email-input": "deineemail@email.com",
         "help-input": "Hallo Caryen, ich interessiere mich für...",
         "policy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
-         "send": "Senden"
+        "send": "Senden"
+    },
+    "join": {
+        "description": "Ein Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",
+        "details": "Kurze Beschreibung deiner Rolle oder des Workflows für dieses spezifische Projekt. Zeige einem Recruiter deine Kenntnisse und deine Fähigkeit, eigenständig oder im Team strukturiert zu arbeiten.",
+        "weeks": "Dauer: 5 Wochen",
+        "headline": "Beschreibung",
+        "subline": "Implementierungsdetails",
+        "back": "Zurück",
+        "next": "Nächstes Projekt"
+    },
+    "game": {
+        "description": "Ein actiongeladenes Jump-'n'-Run-Spiel mit Schwertkämpfen und Wurfgeschossen, entwickelt mit einem objektorientierten Ansatz. Du bist der letzte Überlebende der Menschheit und suchst das Gift, das die wahnsinnigen Zombies besiegen kann. Setze dein Schwert ein, um dich durch Horden von Feinden zu kämpfen, oder nutze die Giftflasche, um sie endgültig auszuschalten. Doch sei wachsam – unzählige Hindernisse und Gefahren lauern auf dich. Bleib fokussiert, kämpfe mutig und überlebe!",
+        "details": "Entwicklung eines dynamischen 2D-Action-Plattformers mit JavaScript unter Anwendung objektorientierter Programmierprinzipien für modularen und skalierbaren Code. Umsetzung der zentralen Spielmechaniken wie Charakterbewegung, Kampf (Schwertangriffe und Wurfgeschosse) sowie feindliche KI. Integration von Kollisionsabfragen, Physik und interaktiven Hindernissen zur Vertiefung des Spielerlebnisses. Eigenständige Entwicklung der Spiellogik mit Fokus auf eine strukturierte Projektarchitektur für Wartbarkeit und zukünftige Erweiterungen. Optimierung der Performance und Gewährleistung der Kompatibilität mit verschiedenen Browsern für ein reibungsloses Spielerlebnis.",
+        "weeks": "Dauer: 3 Wochen",
+        "headline": "Beschreibung",
+        "subline": "Implementierungsdetails"
+    },
+    "pokedex": {
+        "description": "Eine interaktive Pokédex-Webanwendung, die es Nutzern ermöglicht, Pokémon aus dem offiziellen Register zu finden und detaillierte Informationen abzurufen. Mithilfe einer API werden die Attribute der Pokémon dynamisch geladen und angezeigt. Eine intuitive Suchfunktion erlaubt es, Pokémon anhand der Anfangsbuchstaben zu filtern. Das Design ist benutzerfreundlich und für verschiedene Geräte optimiert, um ein nahtloses Nutzungserlebnis zu gewährleisten.",
+        "details": "Das Projekt wurde mit JavaScript und der Fetch API entwickelt, um Pokémon-Daten in Echtzeit aus einer externen Schnittstelle abzurufen. Asynchrone Funktionen sorgen für eine flüssige Datenverarbeitung. Die Suchfunktion nutzt String-Methoden, um Pokémon-Namen effizient zu filtern. Besondere Aufmerksamkeit wurde auf eine strukturierte Code-Architektur, ein responsives Design für verschiedene Bildschirmgrößen und eine optimierte API-Nutzung für schnelle Ladezeiten gelegt.",
+        "weeks": "Dauer: 1 Woche",
+        "headline": "Beschreibung",
+        "subline": "Implementierungsdetails"
     }
 }

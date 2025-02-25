@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-pokedex',
   standalone: true,
-  imports: [RouterModule, HeaderComponent],
+  imports: [RouterModule, HeaderComponent, TranslatePipe, TranslateDirective],
   templateUrl: './pokedex.component.html',
   styleUrl: './pokedex.component.scss'
 })
