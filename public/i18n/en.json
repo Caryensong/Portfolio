@@ -21,7 +21,9 @@
     "my-stack": {
         "skill_img": "./assets/img/skill.svg",
         "headline": "MY STACK",
-        "title": "Skill set"
+        "title": "Skill set",
+        "sticker-default": "./assets/toggle/sticker-default.svg",
+        "sticker-hover":"./assets/toggle/sticker-hover.svg"
     },
     "projects": {
         "headline": "MY CRAFT",

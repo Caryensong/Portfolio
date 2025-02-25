@@ -24,6 +24,21 @@
                 </div>
                 }
             </div>
+            <div class="sticker" (click)="toggleImage()">
+                <ng-container *ngIf="isClicked; else defaultTemplate">
+                  <img src="{{ 'my-stack.sticker-hover' | translate }}" alt="Sticker" class="hover-image">
+                </ng-container>
+                <ng-template #defaultTemplate>
+                  <img src="{{ 'my-stack.sticker-default' | translate }}" alt="Sticker" class="default-image">
+                </ng-template>
+                
+                <img src="{{ 'my-stack.sticker-hover' | translate }}" alt="Sticker" class="hover-image">
+
+                <img src="./assets/toggle/sticker2.svg" alt="Sticker" class="sticker2-image"
+                     [ngClass]="{'animate-diagonal': isClicked}"
+                     [style.opacity]="isClicked ? '1' : '0'">
+              </div>
+              
         </div>
     </div>
 </section>

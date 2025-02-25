@@ -21,7 +21,9 @@
     "my-stack": {
         "skill_img": "./assets/img/skill_de.svg",
         "headline": "Mein Tech-Stack",
-        "title": " Fähigkeiten"
+        "title": " Fähigkeiten",
+        "sticker-default": "./assets/toggle/sticker-default-DE.svg",
+        "sticker-hover":"./assets/toggle/sticker-hover-DE.svg"
     },
     "projects": {
         "headline": "Meine Leidenschaft",

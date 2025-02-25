@@ -11,6 +11,11 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 export class MyStackComponent {
   isHovered:boolean = false;
   showAnimation: boolean = false;
+  isClicked = false; 
+
+  toggleImage() {
+    this.isClicked = !this.isClicked; 
+  }
 
   showImage() {
     if (!this.showAnimation) { 
