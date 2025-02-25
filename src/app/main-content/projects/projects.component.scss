@@ -213,3 +213,40 @@ section#projectsContainer {
         }
     }
 }
+
+.blueline_content {
+    width: 280px;
+    height: 40px;
+    z-index: 3;
+
+    @keyframes drawLeftToRight {
+        0% {
+            clip-path: inset(0 100% 0 0);
+            opacity: 0;
+        }
+
+        10% {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+        }
+
+        90% {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+        }
+
+        100% {
+            clip-path: inset(0 100% 0 0);
+            opacity: 1;
+        }
+    }
+
+    .hover-image {
+        width: 280px;
+        height: 20px;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+        animation: drawLeftToRight 4s ease-in-out forwards;
+    }
+}

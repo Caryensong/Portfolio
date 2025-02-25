@@ -1,6 +1,15 @@
-<section class="fontBricolageG">
+<section class="fontBricolageG" (mouseover)="showImage()">
     <div>
+        <div class="headline_content">
+        <div class="blueline_content">
+            @if(showAnimation && isHovered){
+            <img class="hover-image" src="./assets/toggle/colleagues_file.svg" alt="Blueline">
+            }@else{
+            <img class="hover-image" src="./assets/toggle/colleagues_fileD.svg" alt="Blueline">
+            }
+        </div>
         <p>{{ 'colleagues.headline' | translate }}</p>
+    </div>
         <h1>{{ 'colleagues.title' | translate }}</h1>
     </div>
 

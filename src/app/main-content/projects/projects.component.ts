@@ -11,9 +11,23 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  isHovered:boolean = false;
+  showAnimation: boolean = false;
   activeProject: string | null = null;
 
   onMouseOver(projectName: string) {
     this.activeProject = projectName;
+  }
+
+  showImage() {
+    if (!this.showAnimation) { 
+      this.isHovered = true;
+      this.showAnimation = true;
+      
+      setTimeout(() => {
+        this.isHovered = false;
+        this.showAnimation = false;
+      }, 4000);
+    }
   }
 }

@@ -9,6 +9,20 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './my-stack.component.scss'
 })
 export class MyStackComponent {
+  isHovered:boolean = false;
+  showAnimation: boolean = false;
+
+  showImage() {
+    if (!this.showAnimation) { 
+      this.isHovered = true;
+      this.showAnimation = true;
+      
+      setTimeout(() => {
+        this.isHovered = false;
+        this.showAnimation = false;
+      }, 4000);
+    }
+  }
 
   skills:{
     name:string;

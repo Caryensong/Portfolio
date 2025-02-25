@@ -10,6 +10,9 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './colleagues.component.scss'
 })
 export class ColleaguesComponent {
+  isHovered:boolean = false;
+  showAnimation: boolean = false;
+
   cards:{
     name:string;
     image:string;
@@ -40,5 +43,18 @@ export class ColleaguesComponent {
  },
 
   ];
+
+  
+  showImage() {
+    if (!this.showAnimation) { 
+      this.isHovered = true;
+      this.showAnimation = true;
+      
+      setTimeout(() => {
+        this.isHovered = false;
+        this.showAnimation = false;
+      }, 4000);
+    }
+  }
 
 }

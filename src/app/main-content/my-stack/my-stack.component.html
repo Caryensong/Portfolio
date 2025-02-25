@@ -1,18 +1,29 @@
-<section id="skills" class="fontBricolageG">
-    <div>
-    <div>
-        <p>{{ 'my-stack.headline' | translate }}</p>
-        <h1>{{ 'my-stack.title' | translate }}</h1>
-    </div>
-    <div><img class="text" src="{{ 'my-stack.skill_img' | translate }}" alt="skill"></div>
-</div>
-
-<div class="skills_content">
-    @for(skill of skills; track $index){
-        <div>
-            <img src="{{skill.icon}}" alt="{{skill.name}}">
-            <p>{{skill.name}}</p>
+<section id="skills" class="fontBricolageG" (mouseover)="showImage()">
+    <div class="content">
+        <div class="headline-container">
+            <div>
+                <p>{{ 'my-stack.headline' | translate }}</p>
+                <h1>{{ 'my-stack.title' | translate }}</h1>
+            </div>
+            <div><img class="text" src="{{ 'my-stack.skill_img' | translate }}" alt="skill"></div>
         </div>
-    }
-</div>
+
+        <div class="sub-content">
+            <div class="blueline_content">
+                @if(showAnimation && isHovered){
+                <img class="hover-image" src="./assets/toggle/skillsline.svg" alt="Blueline">
+                }@else{
+                <img class="hover-image" src="./assets/toggle/skillslineD.svg" alt="Blueline">
+                }
+            </div>
+            <div class="skills_content">
+                @for(skill of skills; track $index){
+                <div>
+                    <img src="{{skill.icon}}" alt="{{skill.name}}">
+                    <p>{{skill.name}}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
 </section>

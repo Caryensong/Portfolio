@@ -1,7 +1,14 @@
 <section id="projects" class="fontBricolageG">
-    <div>
+    <div (mouseover)="showImage()">
         <p>{{ 'projects.headline' | translate }}</p>
         <H1>{{ 'projects.title' | translate }}</H1>
+        <div class="blueline_content">
+            @if(showAnimation && isHovered){
+            <img class="hover-image" src="./assets/toggle/projectline.svg" alt="Blueline">
+            }@else{
+            <img class="hover-image" src="./assets/toggle/projectlineD.svg" alt="Blueline">
+            }
+        </div>
         <br>
         <span>{{ 'projects.text' | translate }}</span>
     </div>
@@ -19,7 +26,7 @@
 </section>
 
 <section id="projectsContainer" class="fontBricolageG">
-    <div>
+    <div (mouseover)="showImage()">
         <div class="project_content" (mouseover)="onMouseOver('game')">
             <a [routerLink]="['/game']" class="project_link">
                 <img src="./assets/img/project_zombie.png" alt="Zombie Game">

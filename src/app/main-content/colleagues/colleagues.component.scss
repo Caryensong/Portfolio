@@ -90,3 +90,46 @@ section{
         }
     }
 }}
+
+.blueline_content {
+    width: 100px;
+    height: 36px;
+    z-index: 3;
+
+    @keyframes drawRighttoLeft {
+        0% {
+            clip-path: inset(0  0 0 100%);
+            opacity: 0;
+        }
+
+        10% {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+        }
+
+        90% {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+        }
+
+        100% {
+            clip-path: inset(0 0 0 100% );
+            opacity: 1;
+        }
+    }
+
+    .hover-image {
+        width: 100px;
+        height: 36px;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+        animation: drawRighttoLeft 4s ease-in-out forwards;
+    }
+}
+
+.headline_content{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

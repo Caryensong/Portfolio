@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PokedexComponent } from './pokedex.component';
 
 describe('PokedexComponent', () => {
