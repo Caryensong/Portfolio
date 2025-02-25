@@ -51,7 +51,10 @@
         "email-input": "deineemail@email.com",
         "help-input": "Hallo Caryen, ich interessiere mich für...",
         "policy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
-        "send": "Senden"
+        "send": "Senden",
+        "name-f": "Oops! Es scheint, als fehlt dein Name.",
+        "email-f":"Hoppla! Dein E-mail Adresse wird benötigt",
+        "help-f": "Was möchtest du entwickeln?"
     },
     "join": {
         "description": "Ein Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",

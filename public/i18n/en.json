@@ -51,7 +51,10 @@
         "email-input":"youremail@email.com",
         "help-input":"Hello Caryen, I am interested in...",
         "policy": "I've read the privacy policy and agree to the processing of my data as outlined.",
-        "send": "Send"
+        "send": "Send",
+        "name-f": "Oops! it seems your name is missing",
+        "email-f":"Hoppla! your email is required",
+        "help-f": "What do you neet to develop?"
     },
     "join":{
         "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",

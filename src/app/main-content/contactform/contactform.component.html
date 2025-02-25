@@ -1,56 +1,69 @@
 <div id="background">
-<section id="contact" class="fontBricolageG">
-    <div (mouseover)="showImage()">
-        <div>
-            <p >{{ 'contactFrom.headline' | translate }}</p>
-            <h1>{{ 'contactFrom.title' | translate }}</h1>
-            <span>{{ 'contactFrom.text' | translate }}
-                <br><br>
-                {{ 'contactFrom.text2' | translate }}
-                <br><br>
-                {{ 'contactFrom.subline' | translate }}
-            </span>
+    <section id="contact" class="fontBricolageG">
+        <div (mouseover)="showImage()">
+            <div>
+                <p>{{ 'contactFrom.headline' | translate }}</p>
+                <h1>{{ 'contactFrom.title' | translate }}</h1>
+                <span>{{ 'contactFrom.text' | translate }}
+                    <br><br>
+                    {{ 'contactFrom.text2' | translate }}
+                    <br><br>
+                    {{ 'contactFrom.subline' | translate }}
+                </span>
 
-            <div class="line">
-                @if(showAnimation && isHovered){
-                <img class="hover-image" src="./assets/toggle/Line.svg" alt="Blueline">
-            }@else{
-                <img class="hover-image" src="./assets/toggle/linie-e.svg" alt="line">
-            }
+                <div class="line">
+                    @if(showAnimation && isHovered){
+                    <img class="hover-image" src="./assets/toggle/Line.svg" alt="Blueline">
+                    }@else{
+                    <img class="hover-image" src="./assets/toggle/linie-e.svg" alt="line">
+                    }
+                </div>
+
             </div>
 
+
+            <div class="contact_container">
+                <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
+            
+                    <!-- NAME -->
+                    <label for="name" [ngClass]="{'error': nameError}">{{ 'contactFrom.name' | translate }}</label>
+                    <input class="input_contact" [(ngModel)]="contactData.name" name="name" type="text" id="name"
+                        #nameModel="ngModel" required
+                        (blur)="checkPlaceholder('name')"  
+                        [placeholder]="nameError ? ('contactFrom.name-f' | translate) : ('contactFrom.name-input' | translate)"
+                        [ngClass]="{'error': nameError}">
+            
+                    <!-- EMAIL -->
+                    <label for="email" [ngClass]="{'error': emailError}">{{ 'contactFrom.email' | translate }}</label>
+                    <input class="input_contact" [(ngModel)]="contactData.email" name="email" type="text" id="email"
+                        #emailModel="ngModel" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        (blur)="checkPlaceholder('email')"
+                        [placeholder]="emailError ? ('contactFrom.email-f' | translate) : ('contactFrom.email-input' | translate)"
+                        [ngClass]="{'error': emailError}">
+            
+                    <!-- MESSAGE -->
+                    <label for="message" [ngClass]="{'error': messageError}">{{ 'contactFrom.help' | translate }}</label>
+                    <textarea class="input_contact" [(ngModel)]="contactData.message" name="message" id="message"
+                        #messageModel="ngModel" minlength="6"
+                        (blur)="checkPlaceholder('message')"
+                        [placeholder]="messageError ? ('contactFrom.help-f' | translate) : ('contactFrom.help-input' | translate)"
+                        [ngClass]="{'error': messageError}">
+                    </textarea>
+            
+                    <div class="check_box">
+                        <label>
+                            <input type="checkbox" [(ngModel)]="isChecked" name="check" id="check">
+                            {{ 'contactFrom.policy' | translate }}
+                        </label>
+            
+                        <input type="submit" value="{{ 'contactFrom.send' | translate }}" [disabled]="!isChecked"
+                            [ngClass]="{'enabled-button': isChecked, 'disabled-button': !isChecked}">
+                    </div>
+                </form>
+            </div>
+            
         </div>
-    
 
-        <div class="contact_container">
-            <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
-
-                <label for="name">{{ 'contactFrom.name' | translate }}</label>
-                <input class="input_contact" [(ngModel)]="contactData.name" type="text" id="name" placeholder="{{ 'contactFrom.name-input' | translate }}" required>
-
-                <label for="name">{{ 'contactFrom.email' | translate }}</label>
-                <input class="input_contact" [(ngModel)]="contactData.email" type="text" id="email" placeholder="{{ 'contactFrom.email-input' | translate }}" required
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-
-                <label for="message">{{ 'contactFrom.help' | translate }}</label>
-                <textarea class="input_contact" #message="ngModel" [(ngModel)]="contactData.message" minlength="6" name="message" id="message"
-                    placeholder="{{ 'contactFrom.help-input' | translate }}"></textarea>
-                @if(!message.valid && message.touched){
-                <span>Please enter a message</span>
-                }
-                <div class="check_box">
-                    <label>
-                        <input type="checkbox" name="check" id="check">
-                        {{ 'contactFrom.policy' | translate }}
-                    </label>
-
-                    <input type="submit" value="{{ 'contactFrom.send' | translate }}">
-                </div>
-            </form>
-        </div>
-
-    </div>
-
-    <app-footer></app-footer>
-</section>
+        <app-footer></app-footer>
+    </section>
 </div>

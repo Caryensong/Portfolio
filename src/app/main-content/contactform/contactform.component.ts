@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contactform',
@@ -14,6 +15,8 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 export class ContactformComponent {
   isHovered:boolean = false;
   showAnimation: boolean = false;
+  isChecked: boolean = false;
+
 
   showImage() {
     if (!this.showAnimation) { 
@@ -27,16 +30,37 @@ export class ContactformComponent {
     }
   }
 
+  http = inject(HttpClient)
+
 contactData={
   name:"",
   email:"",
   message:"",
 }
 
+nameError: boolean = false;
+emailError: boolean = false;
+messageError: boolean = false;
+
+checkPlaceholder(field: string): void {
+  switch (field) {
+      case 'name':
+          this.nameError = !this.contactData.name || this.contactData.name.trim() === '';
+          break;
+      case 'email':
+          this.emailError = !this.contactData.email || this.contactData.email.trim() === '';
+          break;
+      case 'message':
+          this.messageError = !this.contactData.message || this.contactData.message.trim() === '';
+          break;
+  }
+}
+
+
 mailTest = true;
 
 post = {
-  endPoint: 'https://deineDomain.de/sendMail.php',
+  endPoint: 'https://caryen-song.com/sendMail.php',
   body: (payload: any) => JSON.stringify(payload),
   options: {
     headers: {
@@ -47,22 +71,24 @@ post = {
 };
 
 onSubmit(ngForm: NgForm) {
-//   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-//     this.http.post(this.post.endPoint, this.post.body(this.contactData))
-//       .subscribe({
-//         next: (response) => {
+  if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
 
-//           ngForm.resetForm();
-//         },
-//         error: (error) => {
-//           console.error(error);
-//         },
-//         complete: () => console.info('send post complete'),
-//       });
-//   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+          ngForm.resetForm();
+          this.isChecked = false; 
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
+  } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-//     ngForm.resetForm();
-//   }
+    ngForm.resetForm();
+    this.isChecked = false;  
+  }
 }
 
 }
