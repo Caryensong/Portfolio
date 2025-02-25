@@ -2,8 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-contactform',
@@ -12,12 +14,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
-export class ContactformComponent {
+export class ContactformComponent { 
+  policyText!: SafeHtml;
   isHovered:boolean = false;
   showAnimation: boolean = false;
   isChecked: boolean = false;
 
+  constructor(private sanitizer: DomSanitizer, private translate: TranslateService) {
+    this.translate.get('contactFrom.policy').subscribe((text: string) => {
+      this.policyText = this.sanitizer.bypassSecurityTrustHtml(text);
+    });
+  }
 
+  
   showImage() {
     if (!this.showAnimation) { 
       this.isHovered = true;
