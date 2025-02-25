@@ -28,6 +28,12 @@ section {
         width: 100%;
         padding: 0px 72px;
         z-index: 1;
+        background-image: url('./../../../../../public/assets/img/project_bg.png');
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh; 
+        padding-left: 10px;
 
         app-header {
             z-index: 10;
