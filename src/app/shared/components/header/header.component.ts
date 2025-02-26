@@ -13,10 +13,42 @@ export class HeaderComponent {
   @Input() projectPage: boolean = false;
   currentLanguage: string = 'en';
   activeSection = '';
+  menuOpen = false; 
 
 constructor(private translate: TranslateService){
   this.currentLanguage = this.translate.currentLang || 'en';
 }
+
+toggleMenu() {
+  this.menuOpen = !this.menuOpen;
+}
+
+closeMenu() {
+  this.menuOpen = false;
+}
+
+links:{
+  name:string;
+  image:string;
+  http:string;
+}[]=[
+  {
+  name:"LinkedIn",
+  image:"./assets/icons/linkedIn.svg",
+  http:"https://www.linkedin.com/in/caryen-song-b6b913317/",
+},
+{
+  name:"Github",
+  image:"./assets/icons/Github.svg",
+  http:"https://github.com/Caryensong",
+},
+{
+  name:"Mail",
+  image:"./assets/icons/mail.svg",
+  http:"mailto:caryensong@googlemail.com",
+},
+];
+
 
 changeLanguage(language: string){
   this.translate.use(language);

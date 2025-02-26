@@ -1,13 +1,37 @@
 <header>
     <nav [ngClass]="{'project-nav': projectPage}">
-        <div><img src="./assets/icons/logo.svg" alt=""></div>
-        <a href="#aboutMe" [ngClass]="{'active-nav': activeSection === 'aboutMe', 'black-link': projectPage}">{{ 'header.about-me' | translate }}</a>
-        <a href="#skills" [ngClass]="{'active-nav': activeSection === 'skills', 'black-link': projectPage}">{{ 'header.skills' | translate }}</a>
-        <a href="#projects" [ngClass]="{'active-nav': activeSection === 'projects'}">{{ 'header.projects' | translate }}</a>
-        <a href="#contact" [ngClass]="{'active-nav': activeSection === 'contact'}">{{ 'header.contact' | translate }}</a>
-        <div class="translate-conent">
-            <a (click)="changeLanguage('en')" href="#" [ngClass]="{'active-language': currentLanguage === 'en'}">EN</a>
-            <a (click)="changeLanguage('de')" href="#" [ngClass]="{'active-language': currentLanguage === 'de'}">DE</a>
+      <div class="logo">
+        <img src="./assets/icons/logo.svg" alt="Logo">
+      </div>
+  
+      <!-- Burger Menü Button -->
+      <button class="burger-menu" (click)="toggleMenu()">
+        <span *ngIf="!menuOpen"><img src="./assets/icons/menu.svg" alt="menu"></span>  <!-- Burger Icon -->
+        <span *ngIf="menuOpen"><img src="./assets/icons/close.svg" alt="menu"></span>   <!-- X Icon -->
+      </button>
+  
+      <!-- Menü -->
+      <div class="menu" [ngClass]="{'open': menuOpen}">
+        <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'aboutMe'}">{{ 'header.about-me' | translate }}</a>
+        <a href="#skills" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'skills'}">{{ 'header.skills' | translate }}</a>
+        <a href="#projects" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'projects'}">{{ 'header.projects' | translate }}</a>
+        <a href="#contact" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'contact'}">{{ 'header.contact' | translate }}</a>
+  
+        <!-- Sprache wechseln -->
+        <div class="translate-content">
+          <a (click)="changeLanguage('en'); closeMenu()" [ngClass]="{'active-language': currentLanguage === 'en'}">EN</a>
+          <a (click)="changeLanguage('de'); closeMenu()" [ngClass]="{'active-language': currentLanguage === 'de'}">DE</a>
         </div>
+
+        <div class="link_content">
+            @for(link of links; track $index){
+                <div class="image-wrapper">
+                    <a href="{{link.http}}" target="_blank"><img src="{{link.image}}" alt="{{link.name}}"></a>
+                    <div class="overlay"></div>
+                </div>
+            }
+        </div>
+      </div>
     </nav>
-</header>
+  </header>
+  

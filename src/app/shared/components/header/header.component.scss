@@ -7,12 +7,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
-    position: relative;
-    top: 10px;
     padding: 19px 72px;
-    
-   
 
     img {
         width: 38px;
@@ -24,38 +19,74 @@ nav {
         }
     }
 
-    a {
-        position: relative;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 18px;
-        font-family: 'Bricolage Grotesque';
-        transition: color 225ms ease-in-out;
+    .menu{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
 
-        
-        &::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -50px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            opacity: 0;
-            transition: opacity 225ms ease-in-out;
-            clip-path: inset(100% 0 0 0);
+        a {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Bricolage Grotesque';
+            transition: color 225ms ease-in-out;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -50px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0;
+                transition: opacity 225ms ease-in-out;
+                clip-path: inset(100% 0 0 0);
+            }
+
+            &:hover::after {
+                opacity: 1;
+                animation: drawTopToBottom 0.5s ease-in-out forwards;
+                transform: translateX(-50%) translateY(-40px);
+            }
         }
 
-        &:hover::after {
-            opacity: 1;
-            animation: drawEffect 0.5s ease-in-out forwards;
-            transform: translateX(-50%) translateY(-40px);
+        a:nth-child(1)::after {
+            background-image: url('/assets/toggle/B.1 1.png');
+            width: 105px;
+            height: 42px;
+        }
+
+        a:nth-child(2)::after {
+            background-image: url('/assets/toggle/B.1 2.png');
+            width: 68px;
+            height: 42px;
+        }
+
+        a:nth-child(3)::after {
+            background-image: url('/assets/toggle/B.1 4.png');
+            width: 105px;
+            height: 42px;
+        }
+
+        a:nth-child(4)::after {
+            background-image: url('/assets/toggle/B.1 3.png');
+            width: 90px;
+            height: 42px;
+        }
+
+        a:hover::after {
+            animation: drawLeftToRight 225ms ease-in-out forwards;
         }
     }
 
     .active-nav {
-        color: #ffffff !important; // Hebt den aktiven Link hervor
+        color: #ffffff !important;
         font-weight: bold;
 
         &::after {
@@ -65,51 +96,9 @@ nav {
         }
     }
 
-
-    a:nth-child(2)::after {
-        background-image: url('./../../../../../public/assets/toggle/B.1 1.png');
-        width: 105px;
-        height: 42px;
-    }
-
-    a:nth-child(2):hover::after {
-        animation: drawTopToBottom 225ms ease-in-out forwards;
-    }
-
-    a:nth-child(3)::after {
-        background-image: url('./../../../../../public/assets/toggle/B.1 2.png');
-        width: 68px;
-        height: 42px;
-    }
-
-    a:nth-child(3):hover::after {
-        animation: drawLeftToRight 225ms ease-in-out forwards;
-    }
-
-    a:nth-child(4)::after {
-        background-image: url('./../../../../../public/assets/toggle/B.1 4.png');
-        width: 105px;
-        height: 42px;
-    }
-
-    a:nth-child(4):hover::after {
-        animation: drawLeftToRight 225ms ease-in-out forwards;
-    }
-
-    a:nth-child(5)::after {
-        background-image: url('./../../../../../public/assets/toggle/B.1 3.png');
-        width: 90px;
-        height: 42px;
-    }
-
-    a:nth-child(5):hover::after {
-        animation: drawLeftToRight 225ms ease-in-out forwards;
-    }
-
-   div.translate-conent{
+    .translate-content {
         display: flex;
         gap: 10px;
-
 
         a {
             color: #fff;
@@ -139,40 +128,28 @@ nav {
                 opacity: 1;
                 animation: drawTopToBottom 0.5s ease-in-out forwards;
                 transform: translateX(-50%) translateY(-45px);
+                  background-image: url('/assets/toggle/Toggle 1.png');
+                  width: 32px;
+                height: 32px;
             }
         }
 
         .active-language {
             color: #f7c518;
             font-weight: bold;
-
-            &::after {
-                opacity: 1;
-                background-image: url('./../../../../../public/assets/toggle/Toggle 1.png');
-                width: 32px;
-                height: 32px;
+        
+              
+                
             }
         }
-
-
-        a:nth-child(1)::after,
-        a:nth-child(2)::after {
-            background-image: url('./../../../../../public/assets/toggle/Toggle 1.png');
-        }
-
-        .project-nav a:nth-child(1),   /* 1. Link: About Me */
-.project-nav a:nth-child(2) {   /* 2. Link: Skills */
-  color: rgb(255, 255, 255) !important;  /* Setze die Farbe auf schwarz */
-}
-
     }
-}
 
+
+/* Animationen */
 @keyframes drawTopToBottom {
     0% {
         clip-path: inset(100% 0 0 0);
     }
-
     100% {
         clip-path: inset(0 0 0 0);
     }
@@ -182,26 +159,114 @@ nav {
     0% {
         clip-path: inset(0 100% 0 0);
     }
-
     100% {
         clip-path: inset(0 0 0 0);
     }
 }
-.black-link {
-    color: black !important;  /* Setzt die Farbe auf Schwarz */
-}
 
+/* Projekt-Navigation */
 .project-nav img {
     filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(3242%) hue-rotate(220deg) brightness(93%) contrast(108%);
-    transition: filter 0.3s ease-in-out; /* Füge eine Übergangszeit hinzu, um das Hover sanft zu machen */
+    transition: filter 0.3s ease-in-out;
 
     &:hover {
         filter: brightness(0.7) saturate(5.0) sepia(0.5) hue-rotate(7deg);
     }
 }
 
+/* Burger-Menü */
+.burger-menu { 
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+   
+}
 
-@media (max-width: 780px) {
+.link_content{
+    display: none;
+}
 
+/* Mobile Styles */
+@media (max-width: 770px) {
+    nav {
+      padding: 10px 50px;
+    }
 
+    .burger-menu {
+        display: block; /* Burger-Icon einblenden */
+        z-index: 1001;
+    }
+    
+    .menu {
+        display: none; 
+        flex-direction: column;
+        background-image: url(./../../../../../public/assets/img/background_hero.png);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 600px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-150%);
+    }
+
+    /* Wenn `menuOpen` aktiv ist */
+    .menu.open {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .link_content{
+        display: flex;
+        gap: 30px;
+        padding: 40px 72px;
+        .image-wrapper {
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid #fff;
+            margin-bottom: 8px;
+            padding: 3px;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+            transition: transform 225ms ease-in-out;
+            filter: brightness(1);
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: #3355ff;
+            transition: height 225ms ease-in-out;
+            border-radius: 100%;
+        }
+
+        &:hover .overlay {
+            height: 100%;
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+        }
+    }}
 }
