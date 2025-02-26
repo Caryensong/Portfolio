@@ -1,3 +1,4 @@
+
 section {
     height: 120dvh;
     width: 100%;
@@ -154,8 +155,10 @@ section {
                         gap: 8px;
                         padding-left: 0px;
 
-
-
+                        .policy-link {
+                            font-size: 14px;
+                        }
+                        
                         input[type="checkbox"] {
                             width: 20px;
                             height: 20px;
@@ -184,21 +187,6 @@ section {
                                 left: 50%;
                                 transform: translate(-50%, -50%);
                                 font-weight: bold;
-                            }
-
-                        }
-
-                        .policy-link {
-                            font-size: 15px;
-
-                            a {
-                                text-decoration: none;
-                                color: #3355ff;
-                                font-weight: bold;
-
-                                &:hover {
-                                    color: #f7c518;
-                                }
                             }
                         }
                     }
@@ -249,7 +237,6 @@ section {
         }
     }
 }
-
 
 #background {
     background-image: url('./../../../../public/assets/img/footer_bg.png');

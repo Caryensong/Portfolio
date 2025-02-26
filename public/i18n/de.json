@@ -52,7 +52,7 @@
         "name-input": "Dein Name ...",
         "email-input": "deineemail@email.com",
         "help-input": "Hallo Caryen, ich interessiere mich für...",
-        "policy": "Ich habe die <a href='/privacy-policy' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
+        "policy": "Ich habe die <a href='/privacy-policy' target='_blank' style='color: #3355ff ;font-weight: bold; text-decoration: none;' onmouseover='this.style.color=\"#f7c518\"' onmouseout='this.style.color=\"#3355ff\"'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
         "send": "Senden",
         "name-f": "Oops! Es scheint, als fehlt dein Name.",
         "email-f":"Hoppla! Dein E-mail Adresse wird benötigt",

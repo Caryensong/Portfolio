@@ -53,7 +53,7 @@
                     <div class="check_box">
                         <label>
                           <input type="checkbox" [(ngModel)]="isChecked" name="check" id="check">
-                          <span class="policy-link" [innerHTML]="'contactFrom.policy' | translate"></span>
+                         <span class="policy-link" [innerHTML]="policyText"></span> 
                         </label>
                     
                         <input type="submit" value="{{ 'contactFrom.send' | translate }}" [disabled]="!isChecked"

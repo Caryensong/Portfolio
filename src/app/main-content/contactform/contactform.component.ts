@@ -15,14 +15,23 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent { 
-  policyText!: SafeHtml;
+  policyText: SafeHtml = ''; 
   isHovered:boolean = false;
   showAnimation: boolean = false;
   isChecked: boolean = false;
 
   constructor(private sanitizer: DomSanitizer, private translate: TranslateService) {
-    this.translate.get('contactFrom.policy').subscribe((text: string) => {
-      this.policyText = this.sanitizer.bypassSecurityTrustHtml(text);
+    this.updatePolicyText(); // Methode aufrufen, um den Text zu setzen
+
+    // Falls sich die Sprache ändert, wird der Text neu geladen
+    this.translate.onLangChange.subscribe(() => {
+      this.updatePolicyText();
+    });
+  }
+
+  updatePolicyText() {
+    this.translate.get('contactFrom.policy').subscribe((translatedText: string) => {
+      this.policyText = this.sanitizer.bypassSecurityTrustHtml(translatedText);
     });
   }
 
