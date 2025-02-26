@@ -1,11 +1,14 @@
 <section id="skills" class="fontBricolageG" (mouseover)="showImage()">
     <div class="content">
         <div class="headline-container">
-            <div>
+            <div class="headline">
                 <p>{{ 'my-stack.headline' | translate }}</p>
                 <h1>{{ 'my-stack.title' | translate }}</h1>
             </div>
-            <div><img class="text" src="{{ 'my-stack.skill_img' | translate }}" alt="skill"></div>
+            <div class="paper-content">
+                <img class="text" src="./assets/img/skill_paper.svg" alt="skill">
+                <span  class="my-text">"{{ 'my-stack.text' | translate }}"</span>
+            </div>
         </div>
 
         <div class="sub-content">
@@ -41,4 +44,5 @@
               
         </div>
     </div>
+
 </section>

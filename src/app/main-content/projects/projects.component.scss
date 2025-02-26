@@ -8,7 +8,7 @@ section {
     width: 100%;
 
     div {
-        width: 560px;
+        width: 100%;
         overflow: hidden;
 
         p {
@@ -20,7 +20,10 @@ section {
             font-size: 64px;
             font-weight: 700;
         }
-
+.project_container{
+    width: 100%;
+    height: auto;
+}
         .project_content {
                 position: relative;
                 border-radius: 18px;
@@ -39,6 +42,7 @@ section {
                     border-radius: 18px;
                     transition: transform 0.3s ease-in-out;
                     cursor: pointer;
+                    object-fit: contain;
                 }
     
                 &:hover img {
@@ -128,6 +132,7 @@ section#projectsContainer {
             position: relative;
             border-radius: 18px;
             overflow: hidden;
+            width: 100%;
 
             .project_link {
                 display: block;
@@ -139,13 +144,15 @@ section#projectsContainer {
             img {
                 width: 100%;
                 height: 360px;
-                border-radius: 18px;
+                border-radius: 20px;
                 transition: transform 0.3s ease-in-out;
                 cursor: pointer;
+                object-fit: cover;
             }
 
             &:hover img {
                 transform: scale(1.1);
+                border-radius: 20px;
             }
 
             .overlay {
@@ -249,4 +256,7 @@ section#projectsContainer {
         transition: opacity 300ms ease-in-out;
         animation: drawLeftToRight 4s ease-in-out forwards;
     }
+}
+@media (max-width:1300px){
+    
 }

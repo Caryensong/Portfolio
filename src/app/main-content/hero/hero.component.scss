@@ -1,10 +1,4 @@
 section {
-    // height: 100dvh;
-    // width: 100%;
-    // background-image: url('./../../../../public/assets/img/background_hero.png');
-    // background-size:cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
     width: 100%;
     max-width: 1440px;
     display: flex;
@@ -14,13 +8,6 @@ section {
     padding: 10px 72px;
 
     .main-container {
-        // width: 100%;    
-        // max-width: 1440px;
-        // display: flex;
-        // justify-content: center;
-        // flex-direction: column;
-
-
         >div {
             display: flex;
             flex-direction: column;
@@ -189,6 +176,33 @@ section {
                 }
             }
 
+        }
+    }
+}
+
+#background {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url('./../../../../public/assets/img/background_hero.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 915px) {
+
+    section {
+        .main-container {
+            >div {
+                span {
+                    font-size: 100px;
+                    font-weight: 700;
+                    font-family: 'Bricolage Grotesque';
+                    color: #fff;
+                }
+            }
         }
     }
 }

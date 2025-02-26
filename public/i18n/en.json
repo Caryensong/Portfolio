@@ -23,7 +23,8 @@
         "headline": "MY STACK",
         "title": "Skill set",
         "sticker-default": "./assets/toggle/sticker-default.svg",
-        "sticker-hover":"./assets/toggle/sticker-hover.svg"
+        "sticker-hover":"./assets/toggle/sticker-hover.svg",
+        "text": "I have gained experience in building projects with a variety of frontend technologies and concepts. With a strong growth mindset, I'm always exploring new areas to enhance my skill set."
     },
     "projects": {
         "headline": "MY CRAFT",

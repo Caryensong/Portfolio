@@ -6,7 +6,7 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    justify-content: center;
+    padding-top: 100px;
     align-items: center;
     flex-direction: column;
 
@@ -70,56 +70,64 @@ section {
                     height: 15px;
                 }
             }
+
             .sticker {
                 transform: rotate(9deg);
                 position: relative;
                 display: inline-block;
                 cursor: pointer;
-                overflow: hidden; /* Alles außerhalb des Containers wird ausgeblendet */
-                width: 200px;  
+                overflow: hidden;
+                /* Alles außerhalb des Containers wird ausgeblendet */
+                width: 200px;
                 height: 200px;
                 border-radius: 15px;
-              }
-              
-              .hover-image {
+            }
+
+            .hover-image {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 1;
                 width: 100%;
                 height: 100%;
-                transition: none; 
-              }
-              .default-image,
-              .sticker2-image {
+                transition: none;
+            }
+
+            .default-image,
+            .sticker2-image {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 2;
                 width: 100%;
                 height: 100%;
-              }
-           
-              .sticker2-image {
-                z-index: 2; /* liegt über dem Hover-Bild */
-                transition: transform 225ms ease; /* Nur Animation für die Verschiebung */
-              }
-              
-              .animate-diagonal {
+            }
+
+            .sticker2-image {
+                z-index: 2;
+                /* liegt über dem Hover-Bild */
+                transition: transform 225ms ease;
+                /* Nur Animation für die Verschiebung */
+            }
+
+            .animate-diagonal {
                 animation: slideOut 1s forwards;
-              }
-              
-              /* Keyframes für diagonale Verschiebung nach links unten */
-              @keyframes slideOut {
+            }
+
+            /* Keyframes für diagonale Verschiebung nach links unten */
+            @keyframes slideOut {
                 0% {
-                  transform: translate(0, 0);
+                    transform: translate(0, 0);
                 }
+
                 100% {
-                  transform: translate(-200px, 200px); /* Passe die Werte an deinen Bedarf an */
+                    transform: translate(-200px, 200px);
+                    /* Passe die Werte an deinen Bedarf an */
                 }
-              }
-              
-    }}
+            }
+
+        }
+    }
 
     .blueline_content {
         width: 261px;
@@ -157,6 +165,201 @@ section {
             opacity: 0;
             transition: opacity 300ms ease-in-out;
             animation: drawLeftToRight 4s ease-in-out forwards;
+        }
+    }
+}
+
+
+.my-text {
+    position: absolute;
+    top: 1798px;
+    width: 550px;
+    height: 60px;
+    padding: 20px;
+
+}
+
+
+@media (max-width: 1200px) {
+
+    section {
+        height: 100vh;
+        width: 100%;
+        background-image: url('./../../../../public/assets/img/bg_myStack.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        padding-top: 50px;
+        flex-direction: column;
+
+
+        .content {
+            max-width: 1440px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 19px 72px;
+
+            .headline-container {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .headline {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    margin-right: 50px;
+
+                    p {
+                        color: #fff;
+                        padding-bottom: 10px;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+
+                    h1 {
+                        color: #fff;
+                        font-size: 64px;
+                        font-weight: 700;
+                        z-index: 2;
+                    }
+
+                }
+
+                .paper-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .sub-content {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                align-items: center;
+                justify-content: center;
+
+
+                .skills_content {
+                    height: 344px;
+                    width: 50%;
+                    display: flex;
+                    align-content: center;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 30px;
+                    justify-content: space-between;
+
+                    p {
+                        color: #fff;
+                        padding-bottom: 10px;
+                        font-size: 18px;
+                        text-align: center;
+                        width: 72px;
+                        height: 15px;
+                    }
+                }
+
+                .sticker {
+                    transform: rotate(9deg);
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    overflow: hidden;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 15px;
+                }
+
+                .hover-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    transition: none;
+                }
+
+                .default-image,
+                .sticker2-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .sticker2-image {
+                    z-index: 2;
+                    /* liegt über dem Hover-Bild */
+                    transition: transform 225ms ease;
+                    /* Nur Animation für die Verschiebung */
+                }
+
+                .animate-diagonal {
+                    animation: slideOut 1s forwards;
+                }
+
+                @keyframes slideOut {
+                    0% {
+                        transform: translate(0, 0);
+                    }
+
+                    100% {
+                        transform: translate(-200px, 200px);
+                    }
+                }
+
+            }
+        }
+
+        .blueline_content {
+            width: 290px;
+            height: 80px;
+            z-index: 1;
+            position: absolute;
+            top: 1757px;
+            right: 80px;
+
+            .hover-image {
+                width: 290px;
+                height: 80px;
+                object-fit: cover;
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+                animation: drawLeftToRight 4s ease-in-out forwards;
+            }
+        }
+    }
+
+
+    .my-text {
+        position: absolute;
+        top: 1910px;
+        width: 550px;
+        height: 60px;
+        padding: 20px;
+
+    }
+}
+
+
+@media (max-width: 917px) {
+
+    section {
+        .content {
+            .sub-content {
+                gap: 30px;
+                .skills_content {
+           
+                    gap: 10px;
+                }
+            }
         }
     }
 }

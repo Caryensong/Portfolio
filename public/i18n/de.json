@@ -20,10 +20,11 @@
     },
     "my-stack": {
         "skill_img": "./assets/img/skill_de.svg",
-        "headline": "Mein Tech-Stack",
-        "title": " Fähigkeiten",
+        "headline": "Fähigkeiten",
+        "title": " Skill set",
         "sticker-default": "./assets/toggle/sticker-default-DE.svg",
-        "sticker-hover":"./assets/toggle/sticker-hover-DE.svg"
+        "sticker-hover":"./assets/toggle/sticker-hover-DE.svg",
+        "text":"Ich habe umfassende Erfahrung in der Entwicklung von Projekten mit unterschiedlichen Frontend-Technologien und Konzepten. Mit meiner Neugier und Offenheit für Neues erweitere ich kontinuierlich mein Wissen, um meine Fähigkeiten gezielt auszubauen."
     },
     "projects": {
         "headline": "Meine Leidenschaft",

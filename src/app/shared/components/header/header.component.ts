@@ -10,7 +10,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  @Input() projectPage: boolean = false; 
+  @Input() projectPage: boolean = false;
   currentLanguage: string = 'en';
   activeSection = '';
 
