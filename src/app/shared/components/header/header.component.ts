@@ -1,5 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,6 +10,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Input() projectPage: boolean = false; 
   currentLanguage: string = 'en';
   activeSection = '';
 

@@ -14,7 +14,6 @@ import { CommonModule, NgClass } from '@angular/common';
 export class GameComponent {
   isHovered:boolean = false;
   showAnimation: boolean = false;
-  isProjectPage = true; 
 
   showImage() {
     if (!this.showAnimation) { 

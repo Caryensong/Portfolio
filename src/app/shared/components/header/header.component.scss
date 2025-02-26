@@ -2,7 +2,7 @@ header {
     width: 100%;
     max-width: 1440px;
 }
-  
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -11,6 +11,8 @@ nav {
     position: relative;
     top: 10px;
     padding: 19px 72px;
+    
+   
 
     img {
         width: 38px;
@@ -31,6 +33,7 @@ nav {
         font-family: 'Bricolage Grotesque';
         transition: color 225ms ease-in-out;
 
+        
         &::after {
             content: "";
             position: absolute;
@@ -103,7 +106,7 @@ nav {
         animation: drawLeftToRight 225ms ease-in-out forwards;
     }
 
-    div {
+   div.translate-conent{
         display: flex;
         gap: 10px;
 
@@ -140,7 +143,7 @@ nav {
         }
 
         .active-language {
-            color: #f39c12;
+            color: #f7c518;
             font-weight: bold;
 
             &::after {
@@ -156,6 +159,11 @@ nav {
         a:nth-child(2)::after {
             background-image: url('./../../../../../public/assets/toggle/Toggle 1.png');
         }
+
+        .project-nav a:nth-child(1),   /* 1. Link: About Me */
+.project-nav a:nth-child(2) {   /* 2. Link: Skills */
+  color: rgb(255, 255, 255) !important;  /* Setze die Farbe auf schwarz */
+}
 
     }
 }
@@ -179,8 +187,15 @@ nav {
         clip-path: inset(0 0 0 0);
     }
 }
+.black-link {
+    color: black !important;  /* Setzt die Farbe auf Schwarz */
+}
 
-.project-page nav a:nth-child(2),
-.project-page nav a:nth-child(3) {
-  color: black !important;
+.project-nav img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(3242%) hue-rotate(220deg) brightness(93%) contrast(108%);
+    transition: filter 0.3s ease-in-out; /* Füge eine Übergangszeit hinzu, um das Hover sanft zu machen */
+
+    &:hover {
+        filter: brightness(0.7) saturate(5.0) sepia(0.5) hue-rotate(7deg);
+    }
 }

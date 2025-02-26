@@ -7,6 +7,7 @@ import { MyStackComponent } from './my-stack/my-stack.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactformComponent } from './contactform/contactform.component';
 import { HeaderComponent } from '../shared/components/header/header.component';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',
@@ -15,5 +16,14 @@ import { HeaderComponent } from '../shared/components/header/header.component';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
+  projectPage: boolean = false;
+    constructor(private router: Router) {
+   
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          this.projectPage = event.url.includes('/game'); // Prüft, ob die Route "game" enthält
+        }
+      });
+  }
 
 }
