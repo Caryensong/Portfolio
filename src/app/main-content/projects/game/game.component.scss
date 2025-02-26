@@ -6,7 +6,7 @@ section {
     height: 100vh;
     background-color:#1d1d1d;
     padding-bottom: 40px;
-
+    
     #background {
         display: flex;
         justify-content: center;
@@ -85,8 +85,8 @@ section {
             display: flex;
             flex-direction: row;
             padding: 0px 72px;
-            gap:50px;
-
+            gap: 130px;
+            height: 680px;
 
             .content-left {
                 color: #000000;
@@ -102,7 +102,7 @@ section {
             .content-right {
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: center;
                 width: 100%;
 
                 img{
@@ -113,7 +113,7 @@ section {
                 .btn-content {
                     display: flex;
                     justify-content: end;
-                    padding: 30px 0px 100px 0px;
+                    padding: 30px 0px 50px 0px;
                     gap: 30px;
 
                     button {
@@ -199,4 +199,9 @@ section {
    
 
 }
+}
+
+.project-page nav a[href="#aboutMe"],
+.project-page nav a[href="#skills"] {
+  color: black !important;
 }

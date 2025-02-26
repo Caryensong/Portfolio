@@ -1,7 +1,7 @@
 <section class="fontBricolageG">
 
     <div>
-        <app-header></app-header>
+        <app-header [ngClass]="{'project-page': isProjectPage}"></app-header>
         <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">{{ 'join.back' | translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">
@@ -35,8 +35,8 @@
             <div class="content-right">
                 <img src="./assets/img/project_zombie.png" alt="zombie-Project">
                 <div class="btn-content">
-                    <button>GitHub</button>
-                    <button>Live Test</button>
+                    <a href="https://github.com/Caryensong/LastHumanStanding" target="_blank"><button>GitHub</button></a>
+                    <a href="https://caryen-song.developerakademie.net/LastHumanStanding/index.html"><button>Live Test</button></a>
                 </div>
             </div>
         </div>

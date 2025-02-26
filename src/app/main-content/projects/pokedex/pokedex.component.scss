@@ -84,7 +84,8 @@ section {
             display: flex;
             flex-direction: row;
             padding: 0px 72px;
-            gap:50px;
+            gap: 130px;
+            height: 681px;
             
             .content-left {
                 color: #000000;
@@ -101,13 +102,12 @@ section {
             .content-right {
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content:center;
                 width: 100%;
 
                 img{
                     border-radius: 20px;
                     width: 100%;
-                    height: 390px;
                 }
 
                 .btn-content {

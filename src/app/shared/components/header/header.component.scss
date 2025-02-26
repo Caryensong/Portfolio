@@ -2,7 +2,7 @@ header {
     width: 100%;
     max-width: 1440px;
 }
-
+  
 nav {
     display: flex;
     justify-content: space-between;
@@ -178,4 +178,9 @@ nav {
     100% {
         clip-path: inset(0 0 0 0);
     }
+}
+
+.project-page nav a:nth-child(2),
+.project-page nav a:nth-child(3) {
+  color: black !important;
 }
