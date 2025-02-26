@@ -101,3 +101,32 @@ section {
         }
     }
 }
+
+@media (max-width: 800px){
+    section {
+        height: 960px;
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 72px;
+        gap: 50px;
+    }    
+
+}
+@media (max-width: 600px){
+    section {
+        height: 960px;
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 40px;
+        gap: 50px;
+    }    
+
+}

@@ -7,7 +7,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 19px 72px;
+    padding: 13px 72px;
 
     img {
         width: 38px;
@@ -189,9 +189,9 @@ nav {
 }
 
 /* Mobile Styles */
-@media (max-width: 770px) {
+@media (max-width: 800px) {
     nav {
-      padding: 10px 50px;
+      padding: 10px 10px 10px 35px;
     }
 
     .burger-menu {
@@ -216,9 +216,9 @@ nav {
         gap: 20px;
         transition: transform 0.3s ease-in-out;
         transform: translateY(-150%);
+        padding-top: 50px;
     }
 
-    /* Wenn `menuOpen` aktiv ist */
     .menu.open {
         display: flex;
         transform: translateY(0);

@@ -12,8 +12,6 @@
         {{ isHovered ? ('hero.me' | translate ) : ('hero.hello' | translate)}}
         <div class="hand-image"></div>
     </button>
-  
-    
         <div>
             <span>F</span>
             <span>r</span>
@@ -60,6 +58,11 @@
     }
 </div>
 
+<img class="my_pic_respo" 
+[src]="imageSrc" 
+(mouseover)="changeImage(true)" 
+(mouseout)="changeImage(false)" 
+alt="ME">
 </div>
 </section>
 </div>
