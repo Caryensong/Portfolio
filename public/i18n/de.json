@@ -16,7 +16,8 @@
         "subtitle": "Lass uns gemeinsam etwas Großartiges erschaffen!",
         "text": "Hey! Ich bin Caryen, eine Frontend-Entwicklerin mit Leidenschaft für intuitive und effiziente digitale Erlebnisse. Mit einem lösungsorientierten Ansatz und einem Blick fürs Detail verwandle ich komplexe Konzepte in ansprechende und funktionale Web-Lösungen.",
         "btn": "Lass quatschen!",
-        "img": "./assets/img/location_de.svg"
+        "img": "./assets/img/location_de.svg",
+        "img-small": "./assets/img/location-respo-de.svg"
     },
     "my-stack": {
         "skill_img": "./assets/img/skill_de.svg",
