@@ -203,11 +203,8 @@ section {
 @media (max-width: 915px) {
   #background {
             background-size: cover;
-      
         }
     section {
-      
-        
         .main-container {
             >div {
                 span {
@@ -236,9 +233,7 @@ section {
         .main-container {
             >div {
                 .content {
-
                     justify-content: flex-start;
-
                 }
 
                 .headline {
@@ -337,11 +332,97 @@ section {
         display: flex;
         position: absolute;
         top: 530px;
-        left: 140px;
         width: 203px;
         height: 244px;
         transform: rotate(7deg);
         transition: opacity 225ms ease-in-out;
     }
     
+}
+
+@media (max-width: 460px) {
+
+    section {
+        .main-container {
+            >div {
+
+                .content {
+                    padding-left: 20px;
+                }
+                .subline {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 400px;
+                    gap: 25px;
+                    margin-left: -70px;
+                }
+            }
+        }
+    }
+    .respoimage-content{
+        display: flex;
+        justify-content: center;
+    .my_pic_respo{
+        top: 490px;
+    }
+      }
+}
+
+@media (max-width: 413px) {
+
+    section {
+        .main-container {
+            >div {
+                span {
+                    font-size: 60px;
+                }
+                .content {
+                    padding-left: 60px;
+                }
+                .subline {
+                    margin-left: -130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 373px) {
+
+    section {
+        .main-container {
+            >div {
+                span {
+                    font-size: 55px;
+                }
+                .content {
+                    padding-left: 95px;
+                }
+                .subline {
+                    margin-left: -190px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 338px) {
+
+    section {
+        .main-container {
+            >div {
+                span {
+                    font-size: 50px;
+                }
+                .content {
+                    padding-left: 115px;
+                }
+                .subline {
+                    margin-left: -240px;
+                }
+            }
+        }
+    }
 }

@@ -16,12 +16,13 @@ section {
         display: flex;
         flex-direction: column;
         padding: 19px 72px;
-        gap: 20px;
+        gap: 30px;
 
         .headline-container {
             display: flex;
             flex-direction: row;
             gap: 50px;
+            height: 130px;
 
             div {
                 display: flex;
@@ -52,6 +53,7 @@ section {
             align-items: center;
 
             .skills_content {
+                width: 650px;
                 height: 344px;
                 width: 60%;
                 display: flex;
@@ -77,7 +79,6 @@ section {
                 display: inline-block;
                 cursor: pointer;
                 overflow: hidden;
-                /* Alles außerhalb des Containers wird ausgeblendet */
                 width: 200px;
                 height: 200px;
                 border-radius: 15px;
@@ -125,11 +126,12 @@ section {
     }
 
     .blueline_content {
-        width: 390px;
-        height: 100px;
+        width: 365px;
+        height: 90px;
         z-index: 1;
         position: relative;
-        top: -270px;
+        top: -260px;
+        left: -20px;
 
         @keyframes drawLeftToRight {
             0% {
@@ -154,8 +156,8 @@ section {
         }
 
         .hover-image {
-            width: 261px;
-            height: 100px;
+            width: 365px;
+            height: 90px;
             object-fit: cover;
             opacity: 0;
             transition: opacity 300ms ease-in-out;
@@ -166,36 +168,25 @@ section {
 
 
 .my-text {
-    position: absolute;
-    top: 1798px;
+    position: relative;
+    top: -130px;
     width: 550px;
     height: 60px;
     padding: 20px;
-
+    left: -50px;
 }
 
 
 @media (max-width: 1200px) {
 
     section {
-        height: 100vh;
-        width: 100%;
-        background-image: url('./../../../../public/assets/img/bg_myStack.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
         padding-top: 50px;
         flex-direction: column;
-        background-size: cover;  
-
+        background-size: cover;
+        height: 120vh;
 
         .content {
-            max-width: 1440px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 19px 72px;
+            gap: 120px;
 
             .headline-container {
                 display: flex;
@@ -203,144 +194,105 @@ section {
                 gap: 50px;
 
                 .headline {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: end;
-                    margin-right: 50px;
-
-                    p {
-                        color: #fff;
-                        padding-bottom: 10px;
-                        font-weight: 500;
-                        font-size: 20px;
-                    }
-
-                    h1 {
-                        color: #fff;
-                        font-size: 64px;
-                        font-weight: 700;
-                        z-index: 2;
-                    }
-
+                    margin-right: 0;
                 }
 
                 .paper-content {
-                    display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin-right: 0;
                 }
             }
 
             .sub-content {
-                display: flex;
-                flex-direction: row;
-                gap: 30px;
+                gap: 10px;
                 align-items: center;
                 justify-content: center;
-
+                flex-direction: column;
+                position: relative;
+                top: -80px;
 
                 .skills_content {
                     height: 344px;
                     width: 50%;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
                     gap: 30px;
-                    justify-content: space-between;
-
-                    p {
-                        color: #fff;
-                        padding-bottom: 10px;
-                        font-size: 18px;
-                        text-align: center;
-                        width: 72px;
-                        height: 15px;
-                    }
                 }
-
-                .sticker {
-                    transform: rotate(9deg);
-                    position: relative;
-                    display: inline-block;
-                    cursor: pointer;
-                    overflow: hidden;
-                    width: 200px;
-                    height: 200px;
-                    border-radius: 15px;
-                }
-
-                .hover-image {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 1;
-                    width: 100%;
-                    height: 100%;
-                    transition: none;
-                }
-
-                .default-image,
-                .sticker2-image {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 2;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .sticker2-image {
-                    z-index: 2;
-                    /* liegt über dem Hover-Bild */
-                    transition: transform 225ms ease;
-                    /* Nur Animation für die Verschiebung */
-                }
-
-                .animate-diagonal {
-                    animation: slideOut 1s forwards;
-                }
-
-                @keyframes slideOut {
-                    0% {
-                        transform: translate(0, 0);
-                    }
-
-                    100% {
-                        transform: translate(-200px, 200px);
-                    }
-                }
-
             }
         }
 
         .blueline_content {
-            width: 290px;
+            width: 265px;
             height: 80px;
             z-index: 1;
-            position: absolute;
-            top: 1757px;
-            right: 80px;
-
-            .hover-image {
-                width: 290px;
-                height: 80px;
-                object-fit: cover;
-                opacity: 0;
-                transition: opacity 300ms ease-in-out;
-                animation: drawLeftToRight 4s ease-in-out forwards;
-            }
+            left: 380px;
+            top: -140px;
         }
     }
 
-
     .my-text {
-        position: absolute;
-        top: 1910px;
-        width: 550px;
-        height: 60px;
-        padding: 20px;
+        top: -130px;
+        left: 10px;
+    }
+}
 
+@media (max-width: 1120px) {
+
+    section {
+        padding-top: 50px;
+        flex-direction: column;
+        background-size: cover;
+        height: 120vh;
+
+        .content {
+            gap: 180px;
+
+            .sub-content {
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                top: -80px;
+
+                .skills_content {
+                    height: 344px;
+                    width: 50%;
+                    gap: 30px;
+                }
+
+                .sticker {
+                    top: -100px;
+                    left: 120px
+                }
+            }
+        }
+
+        .blueline_content {
+            width: 265px;
+            height: 80px;
+            z-index: 1;
+            left: 340px;
+            top: -200px;
+        }
+    }
+}
+
+
+@media (max-width: 1027px) {
+
+    section {
+        .blueline_content {
+            left: 300px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+
+    section {
+        .blueline_content {
+            left: 270px;
+        }
     }
 }
 
@@ -348,16 +300,20 @@ section {
 @media (max-width: 917px) {
 
     section {
-        background-size: cover;  
+        background-size: cover;
+
         .content {
             .sub-content {
-                gap: 30px;
-
                 .skills_content {
-
-                    gap: 10px;
+                    width: 60%;
+                    gap: 30px;
                 }
             }
+        }
+
+        .blueline_content {
+            left: 260px;
+            top: -200px;
         }
     }
 }
@@ -365,32 +321,30 @@ section {
 @media (max-width: 895px) {
 
     section {
-        height: 120vh;
-
         .content {
             align-items: center;
 
             .sub-content {
-                height: 344px;
-                width: 90%;
+                width: 80%;
                 display: flex;
                 flex-direction: column;
                 height: auto;
+                top: -130px;
 
                 .skills_content {
                     width: 100%;
-                    gap: 50px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: flex-start;
+                    gap: 35px;
                 }
 
                 .sticker {
-                    top: -50px;
+                    top: -10px;
                 }
             }
+        }
+
+        .blueline_content {
+            left: 220px;
+            top: -150px;
         }
     }
 }
@@ -400,17 +354,7 @@ section {
     section {
         .content {
             padding: 19px 30px;
-
-
-            .headline-container {
-                .headline {
-                    margin-right: 0px;
-                }
-
-                .paper-content {
-                    margin-right: 0px;
-                }
-            }
+            gap: 200px;
 
             .sub-content {
                 height: 344px;
@@ -420,81 +364,22 @@ section {
                 height: auto;
 
                 .skills_content {
-                    width: 100%;
                     gap: 50px;
-                    display: flex;
                     align-content: center;
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-between;
-                    position: relative;
-                    top: -30px;
                 }
 
                 .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -50px;
+                    top: -10px;
                 }
             }
-        }
-
-        .my-text {
-            top: 2150px;
         }
 
         .blueline_content {
-            top: 1997px;
-            right: 30px;
-        }
-    }
-}
-
-
-@media (max-width: 730px) {
-
-    section {
-        .content {
-            padding: 19px 30px;
-
-            .headline-container {
-                .headline {
-                    margin-right: 0px;
-                }
-
-                .paper-content {
-                    margin-right: 0px;
-                    width: 600px;
-                    overflow-x: hidden;
-
-                    img {
-                        height: 150px;
-
-
-                    }
-                }
-            }
-
-            .sub-content {
-
-                .skills_content {
-
-                    top: -130px;
-                }
-
-                .sticker {
-                    top: -150px;
-                }
-            }
-
-            .blueline_content {
-                width: 290px;
-                height: 80px;
-                z-index: 1;
-                position: relative;
-                top: -310px;
-                right: -190px;
-            }
+            left: 220px;
+            top: -170px;
         }
     }
 }
@@ -503,75 +388,18 @@ section {
 
     section {
         .content {
-            padding: 19px 50px;
-
             .headline-container {
-                .headline {
-                    margin-right: 0px;
-                }
-
                 .paper-content {
-
-                    width: 550px;
-                    overflow-x: hidden;
-                }
-            }
-
-            .sub-content {
-                height: 344px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                height: auto;
-
-                .skills_content {
-                    width: 100%;
-                    gap: 50px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: flex-start;
-                    position: relative;
-                    top: -90px;
-                }
-
-                .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -190px;
-                    left: 150px;
-                }
-            }
-
-            .blueline_content {
-                right: -160px;
-            }
-        }
-    }
-}
-
-@media (max-width: 603px) {
-
-    section {
-        .content {
-            padding: 19px 50px;
-
-            .headline-container {
-                .headline {
-                    margin-right: 0px;
-                }
-
-                .paper-content {
-                    width: 520px;
-                    overflow-x: hidden;
+                    width: 580px;
 
                     img {
                         height: 160px;
+                        width: 580px;
+                        object-fit: cover;
                     }
 
                     .my-text {
-                        top: 2150px;
+                        top: -140px;
                         width: 500px;
                         height: 120px;
 
@@ -580,109 +408,153 @@ section {
             }
 
             .sub-content {
-                height: 344px;
                 width: 90%;
                 display: flex;
                 flex-direction: column;
                 height: auto;
+                top: 20px;
 
                 .skills_content {
-                    width: 100%;
-                    gap: 40px;
+                    gap: 35px;
                     display: flex;
                     align-content: center;
                     flex-wrap: wrap;
                     align-items: center;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     position: relative;
-                    top: -90px;
+                    top: -150px;
                 }
 
                 .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -190px;
-                    left: 100px;
+                    top: -150px;
                 }
             }
 
             .blueline_content {
+                left: 160px;
                 top: -320px;
-                right: -130px;
             }
         }
     }
 }
 
-@media (max-width: 570px) {
-
+@media (max-width: 632px) {
     section {
         .content {
-            padding: 19px 50px;
-
             .headline-container {
-                .headline {
-                    margin-right: 0px;
-                }
-
                 .paper-content {
-                    width: 500px;
-                    overflow-x: hidden;
+                    width: 560px;
 
                     img {
-                        height: 190px;
+                        height: 165px;
+                        width: 560px;
                     }
 
                     .my-text {
-                        top: 2160px;
-                        width: 480px;
+                        top: -149px;
+                        width: 500px;
                         height: 120px;
-
                     }
                 }
             }
 
             .sub-content {
-                height: 344px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                height: auto;
+                top: 100px;
 
                 .skills_content {
-                    width: 100%;
-                    gap: 30px;
+                    gap: 55px;
                     display: flex;
                     align-content: center;
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: flex-start;
                     position: relative;
-                    top: -100px;
+                    top: -150px;
                 }
 
                 .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -190px;
-                    left: 100px;
+                    top: -200px;
                 }
             }
 
             .blueline_content {
-                top: -350px;
+                left: 160px;
+                top: -400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        .content {
+            .headline-container {
+                .paper-content {
+                    width: 520px;
+
+                    img {
+                        height: 165px;
+                        width: 520px;
+                    }
+
+                    .my-text {
+                        top: -149px;
+                        width: 510px;
+                        height: 120px;
+                    }
+                }
+            }
+
+            .blueline_content {
+                left: 140px;
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    section {
+        .content {
+
+            .sub-content {
+                top: 20px;
+
+                .skills_content {
+                    gap: 30px;
+                    justify-content: start;
+                    top: -120px;
+                    margin-left: auto;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        img {
+                            width: 55px;
+                        }
+                    }
+                }
+
+                .sticker {
+                    top: -150px;
+                }
+            }
+
+            .blueline_content {
+                left: 140px;
+                top: -320px;
             }
         }
     }
 }
 
 
-@media (max-width: 536px) {
+@media (max-width: 560px) {
 
     section {
         .content {
-            padding: 19px 50px;
-
             .headline-container {
                 .headline {
                     margin-right: 0px;
@@ -690,433 +562,357 @@ section {
 
                 .paper-content {
                     width: 480px;
-                    overflow-x: hidden;
 
                     img {
                         height: 190px;
+                        width: 480px;
                     }
 
                     .my-text {
-                        top: 2160px;
+                        top: -160px;
                         width: 480px;
-                        height: 120px;
-
                     }
                 }
             }
 
             .sub-content {
-                height: 344px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                height: auto;
+                top: 90px;
 
                 .skills_content {
                     width: 100%;
-                    gap: 25px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
+                    gap: 40px;
                     justify-content: flex-start;
-                    position: relative;
-                    top: -110px;
+                    top: -140px;
                 }
 
                 .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -190px;
+                    top: -150px;
                     left: 100px;
                 }
             }
 
             .blueline_content {
-                top: -350px;
-                right: -110px;
+                top: -390px;
+                left: 120px;
             }
         }
     }
 }
 
 
-@media (max-width: 520px) {
-
+@media (max-width: 530px) {
     section {
         .content {
-
-            padding: 19px 10px;
-            gap: 10px;
-
             .headline-container {
-                gap: 10px;
-
                 .paper-content {
-                    width: 410px;
-                    overflow-x: hidden;
+                    width: 420px;
 
                     img {
-                        height: 220px;
+                        height: 195px;
+                        width: 420px;
                     }
 
                     .my-text {
-                        top: 2130px;
-                        width: 400px;
-                        height: 120px;
-
+                        top: -165px;
+                        width: 410px;
                     }
-                }
+               }
             }
-
             .sub-content {
-                height: 344px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                height: auto;
-
                 .skills_content {
-                    width: 100%;
                     gap: 25px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
                     justify-content: flex-start;
-                    position: relative;
                     top: -150px;
-
-                    div {
-                        text-align: center;
-
-                        img {
-                            width: 53px;
-                        }
-                    }
                 }
 
                 .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -250px;
-                    left: 110px;
+                    top: -150px;
+                    left: 100px;
                 }
             }
 
             .blueline_content {
-                top: -320px;
-                right: -90px;
-
+                top: -390px;
+                left: 90px;
             }
         }
     }
+
 }
 
-
-@media (max-width: 465px) {
-
+@media (max-width: 480px) {
     section {
         .content {
-
-            padding: 19px 10px;
-            gap: 10px;
-
-            .headline-container {
-                gap: 10px;
-
-                .paper-content {
-                    width: 360px;
-                    overflow-x: hidden;
-
-                    img {
-                        height: 245px;
-                    }
-
-                    .my-text {
-                        top: 2130px;
-                        width: 350px;
-                        height: 10px;
-
-                    }
-                }
-            }
-
             .sub-content {
-                height: 344px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                height: auto;
+                top: 90px;
 
                 .skills_content {
-                    width: 100%;
                     gap: 25px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: flex-start;
-                    position: relative;
-                    top: -150px;
-
-                    div {
-                        text-align: center;
-
-                        img {
-                            width: 53px;
-                        }
-                    }
-                }
-
-                .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -250px;
-                    left: 80px;
-                }
-            }
-
-            .blueline_content {
-                top: -350px;
-                right: -60px;
-
-            }
-        }
-    }
-}
-
-
-@media (max-width: 440px) {
-
-    section {
-        .content {
-            .sub-content {
-                .skills_content {
-                    gap: 20px;
-                }
-            }
-        }
-    }
-}
-
-
-@media (max-width: 423px) {
-
-    section {
-        .content {
-            padding: 19px 10px;
-            gap: 35px;
-
-            .headline-container {
-                gap: 10px;
-
-                .paper-content {
-                    img {
-                        height: 245px;
-                    }
-
-                    .my-text {
-                        top: 2130px;
-                        width: 350px;
-                        height: 10px;
-                    }
-                }
-            }
-
-            .sub-content {
-                .skills_content {
                     justify-content: space-between;
 
-                    div {
-                        img {
-                            width: 60px;
-                        }
-                    }
+                    top: -110px;
                 }
 
                 .sticker {
-                    top: -50px;
-                    position: relative;
-                    top: -240px;
-                    left: 80px;
+                    top: -150px;
+                    left: 100px;
                 }
             }
 
             .blueline_content {
-                top: -380px;
-                right: -60px;
+                top: -390px;
+                left: 90px;
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width: 456px) {
+    section {
+        .content {
+            .headline-container {
+                .paper-content {
+                    width: 380px;
+                    position: relative;
+                    top: -50px;
+
+                    img {
+                        height: 230px;
+                        width: 380px;
+                    }
+
+                    .my-text {
+                        top: -195px;
+                        width: 370px;
+                    }
+                }
+            }
+
+            .sub-content {
+                top: 100px;
+
+                .skills_content {
+                    width: 100%;
+                    gap: 25px;
+                    justify-content: space-between;
+                    top: -160px;
+                }
+
+                .sticker {
+                    top: -180px;
+                    left: 60px;
+                }
+            }
+            .blueline_content {
+                top: -400px;
+                left: 70px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 442px) {
+    section {
+        .content {
+            .sub-content {
+                .sticker {
+                    top: -150px;
+                }
             }
         }
     }
 }
 
-@media (max-width: 399px) {
-
+@media (max-width: 420px) {
     section {
         .content {
-            gap: 50px;
-
             .headline-container {
-                .headline {
-                    h1 {
-                        font-size: 50px;
-                    }
-                }
-
                 .paper-content {
-                    width: 320px;
+                    width: 340px;
 
                     img {
-                        height: 252px;
+                        height: 250px;
+                        width: 340px;
                     }
 
                     .my-text {
-                        top: 2118px;
+                        top: -210px;
                         width: 320px;
                     }
                 }
             }
 
             .sub-content {
+                .sticker {
+                    top: -190px;
+                }
+            }
+            .blueline_content {
+                top: -400px;
+                left: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 401px) {
+    section {
+
+        .content {
+            .headline-container {
+                .headline {
+                    h1 {
+                        font-size: 50px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }}
+            .sub-content {
                 .skills_content {
                     gap: 20px;
+                    justify-content:space-between;
+                    top: -140px;
                 }
 
                 .sticker {
-                    top: -200px;
-                    left: 50px;
+                    top: -190px;
+                    width: 162px;
                 }
             }
-
             .blueline_content {
+                top: -400px;
+                left: 80px;
                 width: 200px;
-                top: -390px;
-                right: -70px;
-
+                height: 60px;
+                object-fit: cover;
                 .hover-image {
                     width: 200px;
+      
                 }
+
             }
         }
     }
 }
 
 
-@media (max-width: 399px) {
-
+@media (max-width: 381px) {
     section {
-        .content {
-            gap: 70px;
+        .content {  
+            padding: 19px 0px;
+        
+        }
+    }
+}
 
+@media (max-width: 370px) {
+    section {
+        padding: 50px 10px;
+        .content {  
             .headline-container {
-                .headline {
-                    h1 {
-                        font-size: 50px;
+                .paper-content {
+                    width: 310px;
+
+                    img {
+                        height: 250px;
+                        width: 310px;
                     }
-                    p{
-                        font-size: 18px;
+
+                    .my-text {
+                        top: -210px;
+                        width: 300px;
+                    }    span{
+                        font-size: 15px;  
                     }
                 }
+            }
+        
+            .blueline_content {
+                top: -400px;
+                left: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 345px) {
+    section {
+        padding: 50px 10px;
+        .content {  
+            .headline-container {
                 .paper-content {
                     width: 290px;
 
                     img {
-                        height: 252px;
+                        height: 250px;
+                        width: 290px;
                     }
 
                     .my-text {
-                        top: 2118px;
+                        top: -210px;
                         width: 300px;
-                        font-size: 15px;
                     }
                 }
             }
-
-            .sub-content {
-                .skills_content {
-                    gap: 20px;
-                    div{
-                        p{font-size: 15px;}
-                    }
-                }
-
-                .sticker {
-                    top: -200px;
-                    left: 50px;
-                    width: 158px;
-                }
-            }
-
-            .blueline_content {
-                width: 180px;
-                height: 60px;
-                top: -396px;
-                right: -50px;
-                .hover-image {
-                    width: 200px;
-                    height: 60px;
-                }
-            }
+        
         }
     }
 }
 
+
 @media (max-width: 321px) {
-
     section {
-   
-        .content {
-            gap: 50px;
-
+        padding: 50px 10px;
+        .content {  
             .headline-container {
-                .headline {
-                    h1 {
-                        font-size: 50px;
-                    }
-                    p{
-                        font-size: 18px;
-                    }
-                }
                 .paper-content {
-                    width: 270px;
+                    width: 280px;
 
                     img {
-                        height: 262px;
+                        height: 255px;
+                        width: 280px;
                     }
 
                     .my-text {
-                        top: 2118px;
+                        top: -217px;
                         width: 280px;
-                        font-size: 15px;
                     }
                 }
             }
-
             .sub-content {
+                top: 100px;
+
                 .skills_content {
-                    gap: 12px;
+                    width: 100%;
+                    gap: 30px;
+                    justify-content:space-between;
+                    top: -90px;
                     div{
-                        p{font-size: 15px;}
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{width: 60px;
+                            font-size:15px ;
+                        }
                     }
                 }
 
                 .sticker {
-                    top: -200px;
-                    left: 50px;
-                    width: 158px;
+                    top: -160px;
+                    left: 40px;
                 }
             }
-
             .blueline_content {
-                width: 200px;
-                top: -380px;
-                right: -38px;
-
-                .hover-image {
-                    width: 200px;
-                }
+                top: -400px;
+                left: 50px;
             }
+        
         }
     }
 }

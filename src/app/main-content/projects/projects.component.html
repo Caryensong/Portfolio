@@ -17,11 +17,16 @@
             <a [routerLink]="['/join']" class="project_link">
                 <img src="./assets/img/Laptop.png" alt="Join">
                 <span class="overlay" [class.show]="activeProject === 'game'"></span>
-                <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button> 
+                <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button>
             </a>
         </div>
         <h3>Join</h3>
         <p>{{ 'projects.join' | translate }}</p>
+        <div class="respo_btn">
+            <a [routerLink]="['/join']" class="project_link-respo">
+                <button class="button_respo" [class.show]="activeProject === 'game'">Project Details</button>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -30,24 +35,34 @@
         <div class="project_content" (mouseover)="onMouseOver('game')">
             <a [routerLink]="['/game']" class="project_link">
                 <img src="./assets/img/project_zombie.png" alt="Zombie Game">
-          
-            <span class="overlay" [class.show]="activeProject === 'game'"></span>
-            <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button> 
-        </a>
+
+                <span class="overlay" [class.show]="activeProject === 'game'"></span>
+                <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button>
+            </a>
         </div>
         <h3>Game</h3>
         <p>{{ 'projects.game' | translate }}</p>
+        <div class="respo_btn">
+            <a [routerLink]="['/game']" class="project_link-respo">
+                <button class="button_respo" [class.show]="activeProject === 'game'">Project Details</button>
+            </a>
+        </div>
     </div>
 
     <div>
         <div class="project_content" (mouseover)="onMouseOver('pokedex')">
             <a [routerLink]="['/pokedex']" class="project_link">
                 <img src="./assets/img/Pokedex.png" alt="Pokedex">
-           
-            <span class="overlay" [class.show]="activeProject === 'pokedex'"></span>
-            <button class="details_button" [class.show]="activeProject === 'pokedex'">Project Details</button> </a>
+
+                <span class="overlay" [class.show]="activeProject === 'pokedex'"></span>
+                <button class="details_button" [class.show]="activeProject === 'pokedex'">Project Details</button> </a>
         </div>
         <h3>Pokédex</h3>
         <p>{{ 'projects.pokedex' | translate }}</p>
+        <div class="respo_btn">
+            <a [routerLink]="['/pokedex']" class="project_link-respo">
+                <button class="button_respo" [class.show]="activeProject === 'pokedex'">Project Details</button>
+            </a>
+        </div>
     </div>
 </section>
