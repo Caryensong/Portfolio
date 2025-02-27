@@ -16,8 +16,11 @@
   </div>
       <!-- Menü -->
       <div class="menu" [ngClass]="{'open': menuOpen}">
-        <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'aboutMe'}">{{ 'header.about-me' | translate }}</a>
-        <a href="#skills" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'skills'}">{{ 'header.skills' | translate }}</a>
+        <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'aboutMe', 'black-link': projectPage || screenWidth <= 800}">
+          {{ 'header.about-me' | translate }}
+      </a>
+      
+        <a href="#skills" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'skills', 'black-link': projectPage || screenWidth <= 800}">{{ 'header.skills' | translate }}</a>
         <a href="#projects" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'projects'}">{{ 'header.projects' | translate }}</a>
         <a href="#contact" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'contact'}">{{ 'header.contact' | translate }}</a>
   

@@ -19,7 +19,7 @@ nav {
         }
     }
 
-    .menu{
+    .menu {
         display: flex;
         gap: 20px;
         align-items: center;
@@ -128,8 +128,8 @@ nav {
                 opacity: 1;
                 animation: drawTopToBottom 0.5s ease-in-out forwards;
                 transform: translateX(-50%) translateY(-45px);
-                  background-image: url('/assets/toggle/Toggle 1.png');
-                  width: 32px;
+                background-image: url('/assets/toggle/Toggle 1.png');
+                width: 32px;
                 height: 32px;
             }
         }
@@ -137,12 +137,12 @@ nav {
         .active-language {
             color: #f7c518;
             font-weight: bold;
-        
-              
-                
-            }
+
+
+
         }
     }
+}
 
 
 /* Animationen */
@@ -150,6 +150,7 @@ nav {
     0% {
         clip-path: inset(100% 0 0 0);
     }
+
     100% {
         clip-path: inset(0 0 0 0);
     }
@@ -159,6 +160,7 @@ nav {
     0% {
         clip-path: inset(0 100% 0 0);
     }
+
     100% {
         clip-path: inset(0 0 0 0);
     }
@@ -174,48 +176,55 @@ nav {
     }
 }
 
+.black-link {
+    color: rgb(0, 0, 0) !important;
+}
+
 /* Burger-Menü */
-.burger-menu-container{
+.burger-menu-container {
     display: none;
 
-.burger-menu { 
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-}
+    .burger-menu {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
 }
 
-.link_content{
+.link_content {
     display: none;
 }
 
 /* Mobile Styles */
 @media (max-width: 800px) {
-    .logo{
+    .logo {
         display: none;
     }
+
     nav {
-      padding: 10px 10px 10px 35px;
+        padding: 10px 10px 10px 35px;
     }
 
-    .burger-menu-container{
+    .burger-menu-container {
         display: flex;
         justify-content: space-between;
         width: 100%;
 
-        .logo{
+        .logo {
             display: block;
             z-index: 40;
         }
-    .burger-menu {
-        display: block;
-        z-index: 1001;
+
+        .burger-menu {
+            display: block;
+            z-index: 1001;
+        }
     }
-}
+
     .menu {
-        display: none; 
+        display: none;
         flex-direction: column;
         background-image: url(./../../../../../public/assets/img/background_hero.png);
         background-position: center;
@@ -233,17 +242,23 @@ nav {
         transform: translateY(-150%);
         padding-top: 50px;
         z-index: 6;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .menu.open {
         display: flex;
         transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0.4s ease-in-out, visibility 0s linear;
     }
 
-    .link_content{
+    .link_content {
         display: flex;
         gap: 30px;
         padding: 40px 72px;
+
         .image-wrapper {
             position: relative;
             border-radius: 50%;
@@ -257,32 +272,38 @@ nav {
             width: 50px;
             height: 50px;
 
-        img {
-            display: block;
-            width: 100%;
-            border-radius: 50%;
-            position: relative;
-            z-index: 1;
-            transition: transform 225ms ease-in-out;
-            filter: brightness(1);
-        }
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0%;
-            background-color: #3355ff;
-            transition: height 225ms ease-in-out;
-            border-radius: 100%;
-        }
+            img {
+                display: block;
+                width: 100%;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+                transition: transform 225ms ease-in-out;
+                filter: brightness(1);
+            }
 
-        &:hover .overlay {
-            height: 100%;
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background-color: #3355ff;
+                transition: height 225ms ease-in-out;
+                border-radius: 100%;
+            }
 
-            &:hover img {
-                transform: scale(1.05);
+            &:hover .overlay {
+                height: 100%;
+
+                &:hover img {
+                    transform: scale(1.05);
+                }
             }
         }
-    }}
+    }
+    nav.project-nav .black-link {
+        color: rgb(250, 250, 250) !important;
+    }
+    
 }

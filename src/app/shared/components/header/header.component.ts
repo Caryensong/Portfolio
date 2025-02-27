@@ -14,6 +14,12 @@ export class HeaderComponent {
   currentLanguage: string = 'en';
   activeSection = '';
   menuOpen = false; 
+  screenWidth: number = window.innerWidth;
+
+@HostListener('window:resize', ['$event'])
+onResize(event: Event) {
+  this.screenWidth = (event.target as Window).innerWidth;
+}
 
 constructor(private translate: TranslateService){
   this.currentLanguage = this.translate.currentLang || 'en';
