@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
@@ -12,8 +12,23 @@ import { CommonModule, NgClass } from '@angular/common';
   styleUrls: ['./game.component.scss'] 
 })
 export class GameComponent {
+  isScrolledDown = false;
+  lastScrollTop = 0;
   isHovered:boolean = false;
   showAnimation: boolean = false;
+
+    @HostListener('window:scroll', [])
+    onScroll() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  
+      if (scrollTop > this.lastScrollTop) {
+        this.isScrolledDown = true;
+      } else {
+        this.isScrolledDown = false;
+      }
+  
+      this.lastScrollTop = scrollTop;
+    }
 
   showImage() {
     if (!this.showAnimation) { 

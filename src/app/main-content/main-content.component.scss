@@ -8,14 +8,25 @@ section {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 20;
-        background-image: url('./../../../public/assets/img/background_hero.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        z-index: 2000;
         display: flex;
         justify-content: center;
     }
+
+    app-header.scrolled {
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.2));
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.596); 
+      }
+      app-header:hover {
+                background-image: url('./../../../public/assets/img/background_hero.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+      }
+      .hidden-header {
+        transform: translateY(-100%);
+      }
 
     div {
         display: flex;

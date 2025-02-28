@@ -1,5 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostBinding, HostListener, Input } from '@angular/core';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,7 +15,6 @@ export class HeaderComponent {
   activeSection = '';
   menuOpen = false; 
   screenWidth: number = window.innerWidth;
-
 @HostListener('window:resize', ['$event'])
 onResize(event: Event) {
   this.screenWidth = (event.target as Window).innerWidth;
@@ -64,11 +63,13 @@ changeLanguage(language: string){
   this.translate.use(language);
   this.currentLanguage = language;
   }
-
+  @HostBinding('class.scrolled') scrolled = false;
   @HostListener('window:scroll', [])
   onScroll() {
     const sections = document.querySelectorAll('section'); 
     let scrollPosition = window.scrollY + 200;
+    this.scrolled = window.scrollY > 80;
+    
 
     sections.forEach((section) => {
       const sectionId = section.getAttribute('id');
@@ -82,4 +83,8 @@ changeLanguage(language: string){
       }
     });
   }
+
+
+
+
 }

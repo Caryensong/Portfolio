@@ -1,5 +1,5 @@
 <section>
-    <app-header></app-header>
+    <app-header [ngClass]="{ 'hidden-header': isScrolledDown }"></app-header>
     <app-hero></app-hero>
     <app-about-me></app-about-me>
     <app-my-stack></app-my-stack>
