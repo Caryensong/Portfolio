@@ -2,6 +2,7 @@
 
     <div>
         <app-header [projectPage]="true"></app-header>
+
         <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">{{ 'join.back' | translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">
@@ -10,12 +11,11 @@
                 <h1>Join</h1>
                 <div class="blueline_content">
                     @if(showAnimation && isHovered){
-                    <img class="hover-image" src="./assets/toggle/join_line.svg" alt="Blueline">
+                    <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
                     }@else{
-                    <img class="hover-image" src="./assets/toggle/default_join_line.png" alt="Blueline">
+                    <img class="hover-image" src="./assets/toggle/blueline_Default.svg" alt="Blueline">
                     }
                 </div>
-
                 <h3>{{ 'join.headline' | translate }}</h3>
                 <br>
                 <span>{{ 'join.description' | translate }}</span>
@@ -38,8 +38,8 @@
             <div class="content-right">
                 <img src="./assets/img/join.png" alt="join-Project">
                 <div class="btn-content">
-                    <button>GitHub</button>
-                    <button>Live Test</button>
+                    <a href="https://github.com/Caryensong/LastHumanStanding" target="_blank"><button>GitHub</button></a>
+                    <a href="https://caryen-song.developerakademie.net/LastHumanStanding/index.html"><button>Live Test</button></a>
                 </div>
             </div>
         </div>

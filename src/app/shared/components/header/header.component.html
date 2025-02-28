@@ -1,13 +1,13 @@
 <header>
     <nav [ngClass]="{'project-nav': projectPage}">
       <div class="logo">
-        <img src="./assets/icons/logo.svg" alt="Logo">
+        <a href="#home"><img src="./assets/icons/logo.svg" alt="Logo"></a>
       </div>
   
       <!-- Burger Menü Button -->
        <div class="burger-menu-container">
         <div class="logo">
-        <img src="./assets/icons/logo.svg" alt="Logo">
+          <a href="#home"><img src="./assets/icons/logo.svg" alt="Logo"></a>
       </div>
       <button class="burger-menu" (click)="toggleMenu()">
         <span *ngIf="!menuOpen"><img src="./assets/icons/menu.svg" alt="menu"></span>  <!-- Burger Icon -->
@@ -16,11 +16,11 @@
   </div>
       <!-- Menü -->
       <div class="menu" [ngClass]="{'open': menuOpen}">
-        <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'aboutMe', 'black-link': projectPage || screenWidth <= 800}">
+        <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'aboutMe', 'black-link': projectPage ||(menuOpen && screenWidth <= 800)}">
           {{ 'header.about-me' | translate }}
       </a>
       
-        <a href="#skills" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'skills', 'black-link': projectPage || screenWidth <= 800}">{{ 'header.skills' | translate }}</a>
+        <a href="#skills" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'skills', 'black-link': projectPage || (menuOpen && screenWidth <= 800)}">{{ 'header.skills' | translate }}</a>
         <a href="#projects" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'projects'}">{{ 'header.projects' | translate }}</a>
         <a href="#contact" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'contact'}">{{ 'header.contact' | translate }}</a>
   

@@ -25,6 +25,10 @@ constructor(private translate: TranslateService){
   this.currentLanguage = this.translate.currentLang || 'en';
 }
 
+ngOnInit() {
+  this.screenWidth = window.innerWidth;
+}
+
 toggleMenu() {
   this.menuOpen = !this.menuOpen;
 }

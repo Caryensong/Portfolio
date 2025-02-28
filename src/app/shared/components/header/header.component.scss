@@ -302,6 +302,11 @@ nav {
             }
         }
     }
+
+    nav:not(.project-nav) .menu a {
+        color: white !important; /* Text bleibt weiß */
+      }
+      
     nav.project-nav .black-link {
         color: rgb(250, 250, 250) !important;
     }
