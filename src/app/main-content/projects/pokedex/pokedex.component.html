@@ -1,7 +1,7 @@
 <section class="fontBricolageG project-page">
 
     <div>
-        <app-header [projectPage]="true"></app-header>
+        <app-header [ngClass]="{ 'hidden-header': isScrolledDown }" [projectPage]="true"></app-header>
         <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#">{{ 'join.back' | translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">
@@ -43,7 +43,12 @@
             </div>
         </div>
 
-        <div class="next-btn"><a [routerLink]="['/join']">{{ 'join.next' | translate }}</a><img src="./assets/icons/next.svg" alt="next"></div>
+        <div class="respo-btn">
+            <div class="next-btn"><a [routerLink]="['/join']">{{ 'join.next' | translate }}</a><img
+                    src="./assets/icons/next.svg" alt="next"></div>
+            <div class="back-btn-respo"><img src="./assets/icons/Back.svg" alt="Back"><a href="#projects">{{ 'join.back' |
+                    translate }}</a></div>
+        </div>
 
     </div>
     <div id="background"></div>
