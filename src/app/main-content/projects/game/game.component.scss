@@ -3,15 +3,15 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
     background-color: #1d1d1d;
-    padding-bottom: 40px;
+    min-height: 100vh;
 
     #background {
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 100vh;
+        min-height: calc(100%);
+        min-height: 100vh;
         background-image: url('./../../../../../public/assets/img/project_bg.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -21,18 +21,16 @@ section {
         left: 0;
         right: 0;
         z-index: 0;
-        overflow: hidden; 
+        background-attachment: fixed;
+    }
+    #background-2{
+        display: none;
     }
 
     >div {
         max-width: 1440px;
         width: 100%;
         z-index: 1;
-        // background-image: url('./../../../../../public/assets/img/project_bg.png');
-        background-size: 100% 130%;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
         padding-left: 10px;
 
         app-header {
@@ -43,8 +41,8 @@ section {
             display: flex;
             align-items: center;
             gap: 5px;
-            padding-top: 60px;
-            padding-bottom: 50px;
+            padding-top: 40px;
+            padding-bottom: 40px;
             cursor: pointer;
 
             a {
@@ -64,7 +62,6 @@ section {
             align-items: center;
             justify-content: end;
             gap: 5px;
-            padding-top: 60px 0px;
             width: 100%;
             cursor: pointer;
             padding-right: 20px;
@@ -87,23 +84,22 @@ section {
             flex-direction: row;
             padding: 0px 72px;
             gap: 130px;
-            height: 680px;
+            height: 580px;
 
             .content-left {
                 color: #000000;
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                width: 92%;
 
                 h1 {
-                    font-size: 72px;
+                    font-size: 60px;
                 }
             }
 
             .content-right {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 width: 100%;
 
                 img {

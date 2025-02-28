@@ -71,13 +71,13 @@
     },
     "game": {
         "description": "Ein actiongeladenes Jump-'n'-Run-Spiel mit Schwertkämpfen und Wurfgeschossen, entwickelt mit einem objektorientierten Ansatz. Du bist der letzte Überlebende der Menschheit und suchst das Gift, das die wahnsinnigen Zombies besiegen kann. Setze dein Schwert ein, um dich durch Horden von Feinden zu kämpfen, oder nutze die Giftflasche, um sie endgültig auszuschalten. Doch sei wachsam – unzählige Hindernisse und Gefahren lauern auf dich. Bleib fokussiert, kämpfe mutig und überlebe!",
-        "details": "Entwicklung eines dynamischen 2D-Action-Plattformers mit JavaScript unter Anwendung objektorientierter Programmierprinzipien für modularen und skalierbaren Code. Umsetzung der zentralen Spielmechaniken wie Charakterbewegung, Kampf (Schwertangriffe und Wurfgeschosse) sowie feindliche KI. Integration von Kollisionsabfragen, Physik und interaktiven Hindernissen zur Vertiefung des Spielerlebnisses. Eigenständige Entwicklung der Spiellogik mit Fokus auf eine strukturierte Projektarchitektur für Wartbarkeit und zukünftige Erweiterungen. Optimierung der Performance und Gewährleistung der Kompatibilität mit verschiedenen Browsern für ein reibungsloses Spielerlebnis.",
+        "details": "Entwickelte ein 2D-Action-Platformer in JavaScript. Implementierte Charakterbewegung, Kampf, Gegner-KI, Kollisionsabfrage und Physik. Sicherte Wartbarkeit, Performance-Optimierung und Browser-Kompatibilität.",
         "weeks": "Dauer: 3 Wochen",
         "headline": "Beschreibung",
         "subline": "Implementierungsdetails"
     },
     "pokedex": {
-        "description": "Eine interaktive Pokédex-Webanwendung, die es Nutzern ermöglicht, Pokémon aus dem offiziellen Register zu finden und detaillierte Informationen abzurufen. Mithilfe einer API werden die Attribute der Pokémon dynamisch geladen und angezeigt. Eine intuitive Suchfunktion erlaubt es, Pokémon anhand der Anfangsbuchstaben zu filtern. Das Design ist benutzerfreundlich und für verschiedene Geräte optimiert, um ein nahtloses Nutzungserlebnis zu gewährleisten.",
+        "description": "Ein interaktiver Pokédex mit API-Anbindung, der Pokémon-Suche und detaillierte Infos bietet. Nutzer können Pokémon nach Anfangsbuchstaben filtern. Optimiert für alle Geräte.",
         "details": "Das Projekt wurde mit JavaScript und der Fetch API entwickelt, um Pokémon-Daten in Echtzeit aus einer externen Schnittstelle abzurufen. Asynchrone Funktionen sorgen für eine flüssige Datenverarbeitung. Die Suchfunktion nutzt String-Methoden, um Pokémon-Namen effizient zu filtern. Besondere Aufmerksamkeit wurde auf eine strukturierte Code-Architektur, ein responsives Design für verschiedene Bildschirmgrößen und eine optimierte API-Nutzung für schnelle Ladezeiten gelegt.",
         "weeks": "Dauer: 1 Woche",
         "headline": "Beschreibung",
