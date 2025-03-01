@@ -20,6 +20,18 @@ onResize(event: Event) {
   this.screenWidth = (event.target as Window).innerWidth;
 }
 
+
+@HostListener('document:click', ['$event'])
+onClickOutside(event: Event) {
+  const menuElement = document.querySelector('.menu'); 
+  const burgerButton = document.querySelector('.burger-menu'); 
+  
+  if (this.menuOpen && menuElement && !menuElement.contains(event.target as Node) && 
+      burgerButton && !burgerButton.contains(event.target as Node)) {
+    this.closeMenu();
+  }
+}
+
 constructor(private translate: TranslateService){
   this.currentLanguage = this.translate.currentLang || 'en';
 }

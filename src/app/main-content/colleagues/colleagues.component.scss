@@ -63,10 +63,39 @@ section {
             margin-left: -90px;
         }
 
+        .card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('./../../../../public/assets/img/card_hover.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .card:hover::after {
+            opacity: 1;
+            z-index: -1;
+        }
+
+        p {
+            z-index: 10;
+        }
 
         .card:hover {
             transform: scale(1.1) rotate(0deg);
             z-index: 10;
+        }
+
+        .card:hover .person-content strong,
+        .card:hover .person-content span {
+            color: #fff;
         }
 
         .person-content {
@@ -84,12 +113,21 @@ section {
             align-items: center;
             font-size: 18px;
             font-weight: 400;
+            z-index: 10;
 
             >img {
                 width: 24px;
                 height: 24px;
                 filter: brightness(0);
 
+            }
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:hover>img {
+                filter: brightness(1);
             }
         }
     }
@@ -240,11 +278,12 @@ section {
                 z-index: 1;
                 margin-left: -15px;
             }
+
             .card:hover {
                 transform: scale(1.03) rotate(0deg);
                 z-index: 10;
             }
-    
+
         }
     }
 }
@@ -258,7 +297,7 @@ section {
                 font-size: 18px;
                 font-weight: 500;
             }
-    
+
             h1 {
                 font-size: 50px;
                 font-weight: 700;
@@ -294,7 +333,7 @@ section {
                 font-size: 18px;
                 font-weight: 500;
             }
-    
+
             h1 {
                 font-size: 50px;
                 font-weight: 700;
@@ -325,7 +364,7 @@ section {
                 font-size: 16px;
                 font-weight: 500;
             }
-    
+
             h1 {
                 font-size: 48px;
                 font-weight: 700;
