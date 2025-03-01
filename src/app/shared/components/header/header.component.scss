@@ -78,24 +78,59 @@ nav {
             background-image: url('/assets/toggle/B.1 3.png');
             width: 90px;
             height: 42px;
+            
         }
 
         a:hover::after {
             animation: drawLeftToRight 225ms ease-in-out forwards;
         }
-    }
+   
 
     .active-nav {
-        color: #ffffff !important;
+        color:#ffffff !important;
         font-weight: bold;
 
         &::after {
-            opacity: 1;
-            animation: drawTopToBottom 0.5s ease-in-out forwards;
-            transform: translateX(-50%) translateY(-40px);
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-40px);
+        bottom: -50px;
+        width: 105px;
+        height: 42px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 1;
+        animation: drawTopToBottom 0.5s ease-in-out forwards;
         }
-    }
 
+      
+        &:nth-child(1)::after {
+            background-image: url('/assets/toggle/B.1 1.png');
+            width: 105px;
+            height: 42px;
+        }
+
+        &:nth-child(2)::after {
+            background-image: url('/assets/toggle/B.1 2.png');
+            width: 68px;
+            height: 42px;
+        }
+
+        &:nth-child(3)::after {
+            background-image: url('/assets/toggle/B.1 4.png');
+            width: 105px;
+            height: 42px;
+        }
+
+        &:nth-child(4)::after {
+            background-image: url('/assets/toggle/B.1 3.png');
+            width: 90px;
+            height: 42px;
+        }
+    
+    }
+ }
     .translate-content {
         display: flex;
         gap: 10px;
@@ -135,11 +170,34 @@ nav {
         }
 
         .active-language {
-            color: #f7c518;
+            color: #ffffff;
             font-weight: bold;
-
-
-
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) translateY(-45px);
+                bottom: -50px;
+                width: 32px;
+                height: 32px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 1;
+                animation: drawTopToBottom 0.5s ease-in-out forwards;
+                }
+        
+              
+                &:nth-child(1)::after {
+                    background-image: url('/assets/toggle/Toggle 1.png');
+                    width: 32px;
+                    height: 32px;
+                }
+        
+                &:nth-child(2)::after {
+                    background-image: url('/assets/toggle/Toggle 1.png');
+                    width: 32px;
+                    height: 32px;
+                }
         }
     }
 }

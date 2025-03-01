@@ -4,84 +4,84 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-header',
-  standalone:true,
+  standalone: true,
   imports: [CommonModule, TranslatePipe, TranslateDirective, NgClass],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
+
 export class HeaderComponent {
-  @Input() projectPage: boolean = false;
   currentLanguage: string = 'en';
   activeSection = '';
-  menuOpen = false; 
+  menuOpen = false;
   screenWidth: number = window.innerWidth;
-@HostListener('window:resize', ['$event'])
-onResize(event: Event) {
-  this.screenWidth = (event.target as Window).innerWidth;
-}
-
-
-@HostListener('document:click', ['$event'])
-onClickOutside(event: Event) {
-  const menuElement = document.querySelector('.menu'); 
-  const burgerButton = document.querySelector('.burger-menu'); 
-  
-  if (this.menuOpen && menuElement && !menuElement.contains(event.target as Node) && 
-      burgerButton && !burgerButton.contains(event.target as Node)) {
-    this.closeMenu();
+  @Input() projectPage: boolean = false;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.screenWidth = (event.target as Window).innerWidth;
   }
-}
 
-constructor(private translate: TranslateService){
-  this.currentLanguage = this.translate.currentLang || 'en';
-}
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: Event) {
+    const menuElement = document.querySelector('.menu');
+    const burgerButton = document.querySelector('.burger-menu');
 
-ngOnInit() {
-  this.screenWidth = window.innerWidth;
-}
+    if (this.menuOpen && menuElement && !menuElement.contains(event.target as Node) &&
+      burgerButton && !burgerButton.contains(event.target as Node)) {
+      this.closeMenu();
+    }
+  }
 
-toggleMenu() {
-  this.menuOpen = !this.menuOpen;
-}
+  constructor(private translate: TranslateService) {
+    this.currentLanguage = this.translate.currentLang || 'en';
+  }
 
-closeMenu() {
-  this.menuOpen = false;
-}
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
+  }
 
-links:{
-  name:string;
-  image:string;
-  http:string;
-}[]=[
-  {
-  name:"LinkedIn",
-  image:"./assets/icons/linkedIn.svg",
-  http:"https://www.linkedin.com/in/caryen-song-b6b913317/",
-},
-{
-  name:"Github",
-  image:"./assets/icons/Github.svg",
-  http:"https://github.com/Caryensong",
-},
-{
-  name:"Mail",
-  image:"./assets/icons/mail.svg",
-  http:"mailto:caryensong@googlemail.com",
-},
-];
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  links: {
+    name: string;
+    image: string;
+    http: string;
+  }[] = [
+      {
+        name: "LinkedIn",
+        image: "./assets/icons/linkedIn.svg",
+        http: "https://www.linkedin.com/in/caryen-song-b6b913317/",
+      },
+      {
+        name: "Github",
+        image: "./assets/icons/Github.svg",
+        http: "https://github.com/Caryensong",
+      },
+      {
+        name: "Mail",
+        image: "./assets/icons/mail.svg",
+        http: "mailto:caryensong@googlemail.com",
+      },
+    ];
 
 
-changeLanguage(language: string){
-  this.translate.use(language);
-  this.currentLanguage = language;
+  changeLanguage(language: string) {
+    this.translate.use(language);
+    this.currentLanguage = language;
   }
   @HostBinding('class.scrolled') scrolled = false;
   @HostListener('window:scroll', [])
   onScroll() {
-    const sections = document.querySelectorAll('section'); 
+    const menuLinks = document.querySelectorAll('nav .menu a'); 
+    const sections = document.querySelectorAll('section');
     let scrollPosition = window.scrollY + 200;
     this.scrolled = window.scrollY > 80;
-    
 
     sections.forEach((section) => {
       const sectionId = section.getAttribute('id');
@@ -92,6 +92,14 @@ changeLanguage(language: string){
 
       if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
         this.activeSection = sectionId;
+
+        menuLinks.forEach((link) => link.classList.remove('active-nav'));
+
+      // Füge die 'active-nav' Klasse zum entsprechenden Link hinzu
+      const activeLink = Array.from(menuLinks).find((link) => link.getAttribute('href') === `#${this.activeSection}`);
+      if (activeLink) {
+        activeLink.classList.add('active-nav');
+      }
       }
     });
   }

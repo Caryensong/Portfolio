@@ -1,44 +1,47 @@
 <header>
-    <nav [ngClass]="{'project-nav': projectPage}">
+  <nav [ngClass]="{'project-nav': projectPage}">
+    <div class="logo">
+      <a href="#home"><img src="./assets/icons/logo.svg" alt="Logo"></a>
+    </div>
+
+    <div class="burger-menu-container">
       <div class="logo">
         <a href="#home"><img src="./assets/icons/logo.svg" alt="Logo"></a>
       </div>
-  
-      <!-- Burger Menü Button -->
-       <div class="burger-menu-container">
-        <div class="logo">
-          <a href="#home"><img src="./assets/icons/logo.svg" alt="Logo"></a>
-      </div>
       <button class="burger-menu" (click)="toggleMenu()">
-        <span *ngIf="!menuOpen"><img src="./assets/icons/menu.svg" alt="menu"></span>  <!-- Burger Icon -->
-        <span *ngIf="menuOpen"><img src="./assets/icons/close.svg" alt="menu"></span>   <!-- X Icon -->
+        <span *ngIf="!menuOpen"><img src="./assets/icons/menu.svg" alt="menu"></span>
+        <span *ngIf="menuOpen"><img src="./assets/icons/close.svg" alt="menu"></span>
       </button>
-  </div>
-      <!-- Menü -->
-      <div class="menu" [ngClass]="{'open': menuOpen}">
-        <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'aboutMe', 'black-link': projectPage ||(menuOpen && screenWidth <= 800)}">
-          {{ 'header.about-me' | translate }}
-      </a>
-      
-        <a href="#skills" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'skills', 'black-link': projectPage || (menuOpen && screenWidth <= 800)}">{{ 'header.skills' | translate }}</a>
-        <a href="#projects" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'projects'}">{{ 'header.projects' | translate }}</a>
-        <a href="#contact" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'contact'}">{{ 'header.contact' | translate }}</a>
-  
-        <!-- Sprache wechseln -->
-        <div class="translate-content">
-          <a (click)="changeLanguage('en'); closeMenu()" [ngClass]="{'active-language': currentLanguage === 'en'}">EN</a>
-          <a (click)="changeLanguage('de'); closeMenu()" [ngClass]="{'active-language': currentLanguage === 'de'}">DE</a>
-        </div>
+    </div>
 
-        <div class="link_content">
-            @for(link of links; track $index){
-                <div class="image-wrapper">
-                    <a href="{{link.http}}" target="_blank"><img src="{{link.image}}" alt="{{link.name}}"></a>
-                    <div class="overlay"></div>
-                </div>
-            }
-        </div>
+    <div class="menu" [ngClass]="{'open': menuOpen}">
+      <a href="#aboutMe" (click)="closeMenu()"
+        [ngClass]="{'active-nav': activeSection === 'aboutMe', 'black-link': projectPage ||(menuOpen && screenWidth <= 800)}">
+        {{ 'header.about-me' | translate }}
+      </a>
+
+      <a href="#skills" (click)="closeMenu()"
+        [ngClass]="{'active-nav': activeSection === 'skills', 'black-link': projectPage || (menuOpen && screenWidth <= 800)}">{{
+        'header.skills' | translate }}</a>
+      <a href="#projects" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'projects'}">{{
+        'header.projects' | translate }}</a>
+      <a href="#contact" (click)="closeMenu()" [ngClass]="{'active-nav': activeSection === 'contact'}">{{
+        'header.contact' | translate }}</a>
+
+
+      <div class="translate-content">
+        <a (click)="changeLanguage('en'); closeMenu()" [ngClass]="{'active-language': currentLanguage === 'en'}">EN</a>
+        <a (click)="changeLanguage('de'); closeMenu()" [ngClass]="{'active-language': currentLanguage === 'de'}">DE</a>
       </div>
-    </nav>
-  </header>
-  
+
+      <div class="link_content">
+        @for(link of links; track $index){
+        <div class="image-wrapper">
+          <a href="{{link.http}}" target="_blank"><img src="{{link.image}}" alt="{{link.name}}"></a>
+          <div class="overlay"></div>
+        </div>
+        }
+      </div>
+    </div>
+  </nav>
+</header>
