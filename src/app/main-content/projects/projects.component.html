@@ -14,7 +14,7 @@
     </div>
     <div class="project_container">
         <div class="project_content" (mouseover)="onMouseOver('game')">
-            <a [routerLink]="['/join']" class="project_link">
+            <a [routerLink]="['/join']" class="project_link project_join">
                 <img src="./assets/img/Laptop.png" alt="Join">
                 <span class="overlay" [class.show]="activeProject === 'game'"></span>
                 <button class="details_button" [class.show]="activeProject === 'game'">Project Details</button>
@@ -27,6 +27,7 @@
                 <button class="button_respo" [class.show]="activeProject === 'game'">Project Details</button>
             </a>
         </div>
+        <div class="sticker"><img src="./assets/img/Sticker.svg" alt="Sticker"></div>
     </div>
 </section>
 

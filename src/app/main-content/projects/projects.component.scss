@@ -8,7 +8,7 @@ section {
 
     div {
         width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
 
         p {
             font-size: 20px;
@@ -30,6 +30,25 @@ section {
             border-radius: 18px;
             overflow: hidden;
 
+            @keyframes floatY {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(20px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .project_join img {
+                animation: floatY 4s ease-in-out infinite;
+            }
+
+
             .project_link {
                 display: block;
                 position: relative;
@@ -44,6 +63,7 @@ section {
                 transition: transform 0.3s ease-in-out;
                 cursor: pointer;
                 object-fit: contain;
+
             }
 
             &:hover img {
@@ -104,6 +124,14 @@ section {
             }
 
         }
+
+        div.sticker{
+            height: 1px;
+          img{
+            position: relative;
+            top: -300px;
+        }  
+        } 
 
         h3 {
             padding-top: 15px;
@@ -506,18 +534,20 @@ section#projectsContainer {
 @media (max-width:400px) {
     section {
         padding: 80px 10px;
+
         div {
             p {
                 font-size: 16px;
                 font-weight: 500;
             }
-    
+
             h1 {
                 font-size: 50px;
                 font-weight: 700;
             }
         }
     }
+
     section#projectsContainer {
         padding: 19px 10px;
     }
@@ -526,9 +556,10 @@ section#projectsContainer {
         width: 180px;
         height: 40px;
         z-index: 3;
-    
+
         .hover-image {
             width: 200px;
             height: 15px;
         }
-}}
+    }
+}
