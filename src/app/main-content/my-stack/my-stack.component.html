@@ -19,6 +19,7 @@
                 <img class="hover-image" src="./assets/toggle/skillslineD.svg" alt="Blueline">
                 }
             </div>
+            
             <div class="skills_content">
                 @for(skill of skills; track $index){
                 <div>
@@ -27,6 +28,7 @@
                 </div>
                 }
             </div>
+
             <div class="sticker" (click)="toggleImage()">
                 <ng-container *ngIf="isClicked; else defaultTemplate">
                   <img src="{{ 'my-stack.sticker-hover' | translate }}" alt="Sticker" class="hover-image">

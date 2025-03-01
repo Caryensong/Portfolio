@@ -63,6 +63,13 @@ section {
                 gap: 50px;
                 justify-content: flex-start;
 
+                div{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   position: relative; 
+                   gap: 8px;
+
                 p {
                     color: #fff;
                     padding-bottom: 10px;
@@ -71,6 +78,18 @@ section {
                     width: 72px;
                     height: 15px;
                 }
+
+                img {
+                    width: 60px;
+                    height: 60px; 
+                    filter: grayscale(100%); 
+                    transition: filter 225ms ease; 
+                }
+
+                img:hover {
+                    transform: scale(0.8);
+                    filter: grayscale(0%);
+                } }
             }
 
             .sticker {
@@ -369,6 +388,34 @@ section {
                     flex-wrap: wrap;
                     align-items: center;
                     justify-content: space-between;
+
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative; 
+                        gap: 8px;
+     
+                     p {
+                         color: #fff;
+                         padding-bottom: 10px;
+                         font-size: 18px;
+                         text-align: center;
+                         width: 72px;
+                         height: 15px;
+                     }
+     
+                     img {
+                         width: 60px;
+                         height: 60px; 
+                         filter: grayscale(0%); 
+                         transition: filter 225ms ease; 
+                     }
+     
+                     img:hover {
+                         transform: scale(1);
+                         filter: grayscale(0%);
+                     } }
                 }
 
                 .sticker {
@@ -729,7 +776,8 @@ section {
 
 @media (max-width: 420px) {
     section {
-        .content {
+        .content { 
+            gap: 218px;
             .headline-container {
                 .paper-content {
                     width: 340px;
@@ -752,7 +800,7 @@ section {
                 }
             }
             .blueline_content {
-                top: -400px;
+                top: -420px;
                 left: 50px;
             }
         }
@@ -761,8 +809,9 @@ section {
 
 @media (max-width: 401px) {
     section {
-
+       
         .content {
+            gap: 200px;
             .headline-container {
                 .headline {
                     h1 {
