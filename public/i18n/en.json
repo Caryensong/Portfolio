@@ -8,8 +8,20 @@
     "hero": {
         "hello": "Hello World",
         "contact": "Get in Touch",
-        "me": "I'm Caryen Song"
+        "me": "I'm Caryen Song",
+        "empty1": "",
+        "empty2": "",
+        "D": "D",
+        "E": "E",
+        "V": "V",
+        "Ee": "E",
+        "L": "L",
+        "O": "O",
+        "P": "P",
+        "Eee": "E",
+        "R": "R"
     },
+
     "about-me": {
         "about": "About me",
         "who": "WHO'S CARYEN?",

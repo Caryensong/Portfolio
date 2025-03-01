@@ -105,12 +105,33 @@ section {
                 transition: opacity 225ms ease-in-out;
             }
 
-            span {
-                font-size: 128px;
-                font-weight: 700;
-                font-family: 'Bricolage Grotesque';
-                color: #fff;
+            .frontend-content {
+                width: 550px;
+
+                span {
+                    font-size: 128px;
+                    font-weight: 700;
+                    font-family: 'Bricolage Grotesque';
+                    color: #fff;
+                    transition: color 225ms ease, transform 225ms ease, opacity 225ms ease;
+                    cursor: default;
+
+                    &:first-child:hover {
+                        text-transform: lowercase;
+                        color: #f7c518;
+                    }
+                    
+
+                    &:hover {
+                        text-transform: uppercase;
+                        color: #f7c518;
+                    }
+                }
+
+
             }
+
+
 
             .contact_btn {
                 box-shadow: 2px 3px 0 0 #ffffff;
@@ -131,6 +152,24 @@ section {
             flex-direction: column;
             align-items: flex-end;
             padding-left: 100px;
+            width: 894px;
+
+            .sub_title {
+
+                span {
+                    transition: color 225ms ease, transform 225ms ease, opacity 225ms ease;
+                    cursor: default;
+                    font-size: 128px;
+                    font-weight: 700;
+                    font-family: 'Bricolage Grotesque';
+                    color: #fff;
+
+                    &:hover {
+                        text-transform: lowercase;
+                        color: #f7c518;
+                    }
+                }
+            }
         }
 
         .link_content {
@@ -201,9 +240,10 @@ section {
 }
 
 @media (max-width: 915px) {
-  #background {
-            background-size: cover;
-        }
+    #background {
+        background-size: cover;
+    }
+
     section {
         .main-container {
             >div {
@@ -246,12 +286,14 @@ section {
                     font-family: 'Bricolage Grotesque';
                     color: #fff;
                 }
-            }.link_content {
-        display: none;
-    }
+            }
+
+            .link_content {
+                display: none;
+            }
         }
     }
-    
+
 
 }
 
@@ -302,7 +344,8 @@ section {
                     justify-content: flex-start;
                     gap: 0px;
                     width: 400px;
-                     .top_title {
+
+                    .top_title {
                         gap: 20px;
                     }
                 }
@@ -328,7 +371,8 @@ section {
             }
         }
     }
-    .my_pic_respo{
+
+    .my_pic_respo {
         display: flex;
         position: absolute;
         top: 530px;
@@ -337,7 +381,7 @@ section {
         transform: rotate(7deg);
         transition: opacity 225ms ease-in-out;
     }
-    
+
 }
 
 @media (max-width: 460px) {
@@ -349,6 +393,7 @@ section {
                 .content {
                     padding-left: 20px;
                 }
+
                 .subline {
                     display: flex;
                     flex-direction: column;
@@ -360,13 +405,15 @@ section {
             }
         }
     }
-    .respoimage-content{
+
+    .respoimage-content {
         display: flex;
         justify-content: center;
-    .my_pic_respo{
-        top: 490px;
+
+        .my_pic_respo {
+            top: 490px;
+        }
     }
-      }
 }
 
 @media (max-width: 413px) {
@@ -377,9 +424,11 @@ section {
                 span {
                     font-size: 60px;
                 }
+
                 .content {
                     padding-left: 60px;
                 }
+
                 .subline {
                     margin-left: -130px;
                 }
@@ -396,9 +445,11 @@ section {
                 span {
                     font-size: 55px;
                 }
+
                 .content {
                     padding-left: 95px;
                 }
+
                 .subline {
                     margin-left: -190px;
                 }
@@ -416,9 +467,11 @@ section {
                 span {
                     font-size: 50px;
                 }
+
                 .content {
                     padding-left: 115px;
                 }
+
                 .subline {
                     margin-left: -240px;
                 }
