@@ -201,10 +201,7 @@ section {
         }
 
         .card-container {
-            display: flex;
-            justify-content: center;
             flex-direction: column;
-            flex-wrap: wrap;
             align-items: center;
         }
     }
@@ -215,12 +212,6 @@ section {
         padding: 19px 50px;
 
         .card-container {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-
-
             .card {
                 width: 450px;
                 height: 295px;
@@ -233,18 +224,10 @@ section {
 
 @media (max-width:630px) {
     section {
-        padding: 19px 50px;
-
         .card-container {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-
             .card {
                 width: 380px;
                 height: 400px;
-                background-size: 100% 100%;
             }
 
         }
@@ -253,18 +236,10 @@ section {
 
 @media (max-width:549px) {
     section {
-        padding: 19px 50px;
-
         .card-container {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-
             .card {
                 width: 370px;
                 height: 410px;
-                background-size: 100% 100%;
             }
 
             .card:nth-child(2) {
@@ -295,25 +270,17 @@ section {
         >div {
             p {
                 font-size: 18px;
-                font-weight: 500;
             }
 
             h1 {
                 font-size: 50px;
-                font-weight: 700;
             }
         }
 
         .card-container {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-
             .card {
                 width: 350px;
                 height: 400px;
-                background-size: 100% 100%;
 
                 p {
                     font-size: 18px;
@@ -326,25 +293,10 @@ section {
 
 @media (max-width:420px) {
     section {
-        padding: 19px 30px;
-
-        >div {
-            p {
-                font-size: 18px;
-                font-weight: 500;
-            }
-
-            h1 {
-                font-size: 50px;
-                font-weight: 700;
-            }
-        }
-
         .card-container {
             .card {
                 width: 330px;
                 height: 390px;
-                background-size: 100% 100%;
 
                 p {
                     font-size: 18px;
@@ -357,17 +309,13 @@ section {
 
 @media (max-width:390px) {
     section {
-        padding: 19px 30px;
-
         >div {
             p {
                 font-size: 16px;
-                font-weight: 500;
             }
 
             h1 {
                 font-size: 48px;
-                font-weight: 700;
             }
         }
 
@@ -375,7 +323,6 @@ section {
             .card {
                 width: 300px;
                 height: 370px;
-                background-size: 100% 100%;
 
                 p {
                     font-size: 18px;
@@ -392,7 +339,6 @@ section {
             .card {
                 width: 260px;
                 height: 350px;
-                background-size: 100% 100%;
 
                 p {
                     font-size: 16px;

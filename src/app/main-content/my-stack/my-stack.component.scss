@@ -63,33 +63,34 @@ section {
                 gap: 50px;
                 justify-content: flex-start;
 
-                div{
-                   display: flex;
-                   flex-direction: column;
-                   align-items: center;
-                   position: relative; 
-                   gap: 8px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    gap: 8px;
 
-                p {
-                    color: #fff;
-                    padding-bottom: 10px;
-                    font-size: 18px;
-                    text-align: center;
-                    width: 72px;
-                    height: 15px;
+                    p {
+                        color: #fff;
+                        padding-bottom: 10px;
+                        font-size: 18px;
+                        text-align: center;
+                        width: 72px;
+                        height: 15px;
+                    }
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        filter: grayscale(100%);
+                        transition: filter 225ms ease;
+                    }
+
+                    img:hover {
+                        transform: scale(0.8);
+                        filter: grayscale(0%);
+                    }
                 }
-
-                img {
-                    width: 60px;
-                    height: 60px; 
-                    filter: grayscale(100%); 
-                    transition: filter 225ms ease; 
-                }
-
-                img:hover {
-                    transform: scale(0.8);
-                    filter: grayscale(0%);
-                } }
             }
 
             .sticker {
@@ -197,20 +198,16 @@ section {
 
 
 @media (max-width: 1200px) {
-
     section {
-        padding-top: 50px;
-        flex-direction: column;
-        background-size: cover;
         height: 120vh;
+        padding-top: 50px;
+        background-size: cover;
 
         .content {
             gap: 120px;
 
             .headline-container {
-                display: flex;
                 flex-direction: column;
-                gap: 50px;
 
                 .headline {
                     margin-right: 0;
@@ -225,14 +222,12 @@ section {
 
             .sub-content {
                 gap: 10px;
-                align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 position: relative;
                 top: -80px;
 
                 .skills_content {
-                    height: 344px;
                     width: 50%;
                     gap: 30px;
                 }
@@ -242,7 +237,6 @@ section {
         .blueline_content {
             width: 265px;
             height: 80px;
-            z-index: 1;
             left: 380px;
             top: -140px;
         }
@@ -257,28 +251,10 @@ section {
 @media (max-width: 1120px) {
 
     section {
-        padding-top: 50px;
-        flex-direction: column;
-        background-size: cover;
-        height: 120vh;
-
         .content {
             gap: 180px;
 
             .sub-content {
-                gap: 10px;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                position: relative;
-                top: -80px;
-
-                .skills_content {
-                    height: 344px;
-                    width: 50%;
-                    gap: 30px;
-                }
-
                 .sticker {
                     top: -100px;
                     left: 120px
@@ -287,9 +263,6 @@ section {
         }
 
         .blueline_content {
-            width: 265px;
-            height: 80px;
-            z-index: 1;
             left: 340px;
             top: -200px;
         }
@@ -319,13 +292,10 @@ section {
 @media (max-width: 917px) {
 
     section {
-        background-size: cover;
-
         .content {
             .sub-content {
                 .skills_content {
                     width: 60%;
-                    gap: 30px;
                 }
             }
         }
@@ -345,8 +315,6 @@ section {
 
             .sub-content {
                 width: 80%;
-                display: flex;
-                flex-direction: column;
                 height: auto;
                 top: -130px;
 
@@ -376,56 +344,34 @@ section {
             gap: 200px;
 
             .sub-content {
-                height: 344px;
                 width: 90%;
-                display: flex;
-                flex-direction: column;
                 height: auto;
 
                 .skills_content {
                     gap: 50px;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
                     justify-content: space-between;
 
-                    div{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        position: relative; 
-                        gap: 8px;
-     
-                     p {
-                         color: #fff;
-                         padding-bottom: 10px;
-                         font-size: 18px;
-                         text-align: center;
-                         width: 72px;
-                         height: 15px;
-                     }
-     
-                     img {
-                         width: 60px;
-                         height: 60px; 
-                         filter: grayscale(0%); 
-                         transition: filter 225ms ease; 
-                     }
-     
-                     img:hover {
-                         transform: scale(1);
-                         filter: grayscale(0%);
-                     } }
+                    div {
+                        img {
+                            filter: grayscale(0%);
+                        }
+
+                        img:hover {
+                            transform: scale(1);
+                            filter: grayscale(0%);
+                        }
+                    }
                 }
 
                 .sticker {
-                    top: -10px;
+                    top: -30px;
+                    width: 170px;
+                    height: 170px;
                 }
             }
         }
 
         .blueline_content {
-            left: 220px;
             top: -170px;
         }
     }
@@ -449,7 +395,6 @@ section {
                         top: -140px;
                         width: 500px;
                         height: 120px;
-
                     }
                 }
             }
@@ -463,17 +408,12 @@ section {
 
                 .skills_content {
                     gap: 35px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: space-between;
                     position: relative;
                     top: -150px;
                 }
 
                 .sticker {
-                    top: -150px;
+                    top: -210px;
                 }
             }
 
@@ -510,22 +450,15 @@ section {
 
                 .skills_content {
                     gap: 55px;
-                    display: flex;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    align-items: center;
                     justify-content: flex-start;
-                    position: relative;
-                    top: -150px;
                 }
 
                 .sticker {
-                    top: -200px;
+                    top: -255px;
                 }
             }
 
             .blueline_content {
-                left: 160px;
                 top: -400px;
             }
         }
@@ -568,14 +501,10 @@ section {
 
                 .skills_content {
                     gap: 30px;
-                    justify-content: start;
                     top: -120px;
                     margin-left: auto;
 
                     div {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
                         justify-content: space-between;
 
                         img {
@@ -585,12 +514,11 @@ section {
                 }
 
                 .sticker {
-                    top: -150px;
+                    top: -230px;
                 }
             }
 
             .blueline_content {
-                left: 140px;
                 top: -320px;
             }
         }
@@ -628,12 +556,10 @@ section {
                 .skills_content {
                     width: 100%;
                     gap: 40px;
-                    justify-content: flex-start;
                     top: -140px;
                 }
 
                 .sticker {
-                    top: -150px;
                     left: 100px;
                 }
             }
@@ -663,18 +589,13 @@ section {
                         top: -165px;
                         width: 410px;
                     }
-               }
+                }
             }
+
             .sub-content {
                 .skills_content {
                     gap: 25px;
-                    justify-content: flex-start;
                     top: -150px;
-                }
-
-                .sticker {
-                    top: -150px;
-                    left: 100px;
                 }
             }
 
@@ -691,23 +612,20 @@ section {
     section {
         .content {
             .sub-content {
-                top: 90px;
-
                 .skills_content {
-                    gap: 25px;
                     justify-content: space-between;
-
                     top: -110px;
                 }
 
                 .sticker {
-                    top: -150px;
+                    top: -190px;
                     left: 100px;
+                    width: 150px;
+                    height: 150px;
                 }
             }
 
             .blueline_content {
-                top: -390px;
                 left: 90px;
             }
         }
@@ -742,17 +660,15 @@ section {
                 top: 100px;
 
                 .skills_content {
-                    width: 100%;
-                    gap: 25px;
-                    justify-content: space-between;
                     top: -160px;
                 }
 
                 .sticker {
-                    top: -180px;
+                    top: -220px;
                     left: 60px;
                 }
             }
+
             .blueline_content {
                 top: -400px;
                 left: 70px;
@@ -762,22 +678,11 @@ section {
 
 }
 
-@media (max-width: 442px) {
-    section {
-        .content {
-            .sub-content {
-                .sticker {
-                    top: -150px;
-                }
-            }
-        }
-    }
-}
-
 @media (max-width: 420px) {
     section {
-        .content { 
+        .content {
             gap: 218px;
+
             .headline-container {
                 .paper-content {
                     width: 340px;
@@ -794,11 +699,6 @@ section {
                 }
             }
 
-            .sub-content {
-                .sticker {
-                    top: -190px;
-                }
-            }
             .blueline_content {
                 top: -420px;
                 left: 50px;
@@ -809,9 +709,10 @@ section {
 
 @media (max-width: 401px) {
     section {
-       
+
         .content {
             gap: 200px;
+
             .headline-container {
                 .headline {
                     h1 {
@@ -821,11 +722,12 @@ section {
                     p {
                         font-size: 16px;
                     }
-                }}
+                }
+            }
+
             .sub-content {
                 .skills_content {
                     gap: 20px;
-                    justify-content:space-between;
                     top: -140px;
                 }
 
@@ -834,15 +736,17 @@ section {
                     width: 162px;
                 }
             }
+
             .blueline_content {
                 top: -400px;
                 left: 80px;
                 width: 200px;
                 height: 60px;
                 object-fit: cover;
+
                 .hover-image {
                     width: 200px;
-      
+
                 }
 
             }
@@ -853,9 +757,9 @@ section {
 
 @media (max-width: 381px) {
     section {
-        .content {  
+        .content {
             padding: 19px 0px;
-        
+
         }
     }
 }
@@ -863,7 +767,8 @@ section {
 @media (max-width: 370px) {
     section {
         padding: 50px 10px;
-        .content {  
+
+        .content {
             .headline-container {
                 .paper-content {
                     width: 310px;
@@ -873,17 +778,13 @@ section {
                         width: 310px;
                     }
 
-                    .my-text {
-                        top: -210px;
-                        width: 300px;
-                    }    span{
-                        font-size: 15px;  
+                    span {
+                        font-size: 15px;
                     }
                 }
             }
-        
+
             .blueline_content {
-                top: -400px;
                 left: 60px;
             }
         }
@@ -893,7 +794,8 @@ section {
 @media (max-width: 345px) {
     section {
         padding: 50px 10px;
-        .content {  
+
+        .content {
             .headline-container {
                 .paper-content {
                     width: 290px;
@@ -902,14 +804,9 @@ section {
                         height: 250px;
                         width: 290px;
                     }
-
-                    .my-text {
-                        top: -210px;
-                        width: 300px;
-                    }
                 }
             }
-        
+
         }
     }
 }
@@ -917,8 +814,9 @@ section {
 
 @media (max-width: 321px) {
     section {
-        padding: 50px 10px;
-        .content {  
+        .content {
+            gap: 172px;
+
             .headline-container {
                 .paper-content {
                     width: 280px;
@@ -934,20 +832,20 @@ section {
                     }
                 }
             }
+
             .sub-content {
                 top: 100px;
 
                 .skills_content {
-                    width: 100%;
                     gap: 30px;
-                    justify-content:space-between;
                     top: -90px;
-                    div{
-                        display: flex;
+
+                    div {
                         justify-content: center;
-                        align-items: center;
-                        p{width: 60px;
-                            font-size:15px ;
+
+                        p {
+                            width: 60px;
+                            font-size: 15px;
                         }
                     }
                 }
@@ -957,11 +855,12 @@ section {
                     left: 40px;
                 }
             }
+
             .blueline_content {
-                top: -400px;
+                top: -380px;
                 left: 50px;
             }
-        
+
         }
     }
 }

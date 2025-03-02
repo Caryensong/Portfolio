@@ -8,7 +8,6 @@ section {
 
     div {
         width: 100%;
-        // overflow: hidden;
 
         p {
             font-size: 20px;
@@ -60,7 +59,7 @@ section {
                 width: 100%;
                 height: 360px;
                 border-radius: 18px;
-                transition: transform 0.3s ease-in-out;
+                transition: transform 125ms ease-in-out;
                 cursor: pointer;
                 object-fit: contain;
 
@@ -125,13 +124,14 @@ section {
 
         }
 
-        div.sticker{
+        div.sticker {
             height: 1px;
-          img{
-            position: relative;
-            top: -300px;
-        }  
-        } 
+
+            img {
+                position: relative;
+                top: -300px;
+            }
+        }
 
         h3 {
             padding-top: 15px;
@@ -346,26 +346,13 @@ section#projectsContainer {
     }
 
     section#projectsContainer {
-        display: flex;
         padding: 19px 72px;
-        gap: 50px;
 
         div {
             width: 100%;
-            overflow: hidden;
-            position: relative;
 
             .project_content {
-                position: relative;
-                border-radius: 18px;
-                overflow: hidden;
-                width: 100%;
-
                 .project_link {
-                    display: block;
-                    position: relative;
-                    text-decoration: none;
-                    color: inherit;
                     display: flex;
                     justify-content: center;
                 }
@@ -373,7 +360,6 @@ section#projectsContainer {
                 img {
                     width: 505px;
                     height: 360px;
-                    object-fit: cover;
                 }
             }
 
@@ -386,17 +372,6 @@ section#projectsContainer {
     section {
         div {
             .project_content {
-                position: relative;
-                border-radius: 18px;
-                overflow: hidden;
-
-                .project_link {
-                    display: block;
-                    position: relative;
-                    text-decoration: none;
-                    color: inherit;
-                }
-
                 img {
                     width: 100%;
                     height: 360px;
@@ -412,71 +387,34 @@ section#projectsContainer {
                 }
 
                 .overlay {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 50%;
                     background: linear-gradient(to top, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0));
-                    opacity: 0;
-                    transition: opacity 0.3s ease-in-out;
-                    z-index: 5;
                 }
 
                 .details_button {
                     display: none;
                 }
-
-
-            }
-
-            h3 {
-                padding-top: 15px;
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 18px;
-                padding-top: 10px;
             }
 
             .respo_btn {
-
                 display: flex;
+            }
+
+            div.sticker {
+                img {
+                    top: -400px;
+                }
             }
         }
 
     }
 
     section#projectsContainer {
-        display: flex;
         padding: 19px 60px;
-        gap: 50px;
 
         div {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-
             .project_content {
-                position: relative;
-                border-radius: 18px;
-                overflow: hidden;
-                width: 100%;
-
-                .project_link {
-                    display: block;
-                    position: relative;
-                    text-decoration: none;
-                    color: inherit;
-                    display: flex;
-                    justify-content: center;
-                }
-
                 img {
                     width: 100%;
-                    height: 360px;
-                    object-fit: cover;
                 }
 
                 &:hover img {
@@ -495,7 +433,7 @@ section#projectsContainer {
 
 @media (max-width:620px) {
     section {
-        padding: 80px 19px;
+        padding: 40px 19px;
 
         div {
             .project_content {
@@ -508,6 +446,13 @@ section#projectsContainer {
                     }
                 }
             }
+
+            div.sticker {
+                img {
+                    top: -350px;
+                    width: 130px;
+                }
+            }
         }
     }
 
@@ -518,12 +463,7 @@ section#projectsContainer {
             .project_content {
 
                 img {
-                    width: 100%;
                     height: auto;
-                    border-radius: 20px;
-                    transition: transform 0.3s ease-in-out;
-                    cursor: pointer;
-                    object-fit: cover;
                 }
             }
         }
@@ -533,18 +473,21 @@ section#projectsContainer {
 
 @media (max-width:400px) {
     section {
-        padding: 80px 10px;
+        padding: 40px 10px;
 
         div {
             p {
                 font-size: 16px;
-                font-weight: 500;
             }
 
             h1 {
                 font-size: 50px;
-                font-weight: 700;
             }
+            div.sticker {
+                img {
+                    top: -300px;
+                    width: 90px;
+                }}
         }
     }
 
@@ -554,7 +497,6 @@ section#projectsContainer {
 
     .blueline_content {
         width: 180px;
-        height: 40px;
         z-index: 3;
 
         .hover-image {

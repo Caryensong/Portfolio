@@ -129,7 +129,6 @@ section {
 
                 textarea {
                     scrollbar-width: thin;
-                    // height: 39px;
                     scrollbar-color: #f7c518 transparent;
 
                     &::-webkit-scrollbar-track {
@@ -276,13 +275,11 @@ label.error {
             flex-direction: column;
 
             >div {
-                flex-direction: column;
                 width: 100%;
 
                 .line {
                     width: 270px;
                     height: 40px;
-                    padding-top: 60px;
                     position: relative;
                     top: 390px;
 
@@ -295,23 +292,9 @@ label.error {
             .contact_container {
                 width: 100%;
                 padding-left: 0px;
-                display: flex;
-                align-items: flex-start;
 
                 form {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
                     padding: 0px;
-                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                    width: 100%;
-
-                    label {
-                        color: #fff;
-                        font-size: 24px;
-                        font-weight: 500;
-                        padding-left: 20px;
-                    }
 
                     .check_box {
 
@@ -340,22 +323,14 @@ label.error {
     }
 }
 
-
 @media (max-width:530px) {
 
     section {
         padding: 180px 20px 50px 20px;
 
         div {
-            align-items: start;
-            flex-direction: column;
-
             >div {
-                flex-direction: column;
-                width: 100%;
-
                 p {
-                    font-weight: 500;
                     font-size: 18px;
                 }
 
@@ -365,47 +340,13 @@ label.error {
                 }
 
                 span {
-                    color: #fff;
                     font-size: 16px;
-                    font-weight: 400;
                 }
-
 
                 .line {
                     width: 230px;
-                    height: 40px;
-                    padding-top: 60px;
                     top: 400px;
-
-                    img {
-                        width: 100%;
-                    }
                 }
-            }
-
-            .contact_container {
-                width: 100%;
-                padding-left: 0px;
-                display: flex;
-                align-items: flex-start;
-
-                form {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    padding: 0px;
-                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                    width: 100%;
-
-                    label {
-                        color: #fff;
-                        font-size: 24px;
-                        font-weight: 500;
-                        padding-left: 20px;
-                    }
-
-                }
-
             }
         }
     }
@@ -415,34 +356,10 @@ label.error {
 
     section {
         div {
-            align-items: start;
-            flex-direction: column;
-
             >div {
-                flex-direction: column;
-                width: 100%;
-
-                p {
-                    font-weight: 500;
-                    font-size: 18px;
-                }
-
-                span {
-                    color: #fff;
-                    font-size: 16px;
-                    font-weight: 100;
-                }
-
-
                 .line {
                     width: 200px;
                     height: 35px;
-                    padding-top: 60px;
-                    top: 400px;
-
-                    img {
-                        width: 100%;
-                    }
                 }
             }
 
@@ -462,26 +379,13 @@ label.error {
         padding: 180px 10px 50px 10px;
 
         div {
-            align-items: start;
-            flex-direction: column;
-
             >div {
-                flex-direction: column;
-                width: 100%;
-
                 p {
                     font-size: 16px;
                 }
 
-                span {
-                    color: #fff;
-                    font-size: 16px;
-                    font-weight: 100;
-                }
-
                 .line {
                     width: 150px;
-                    height: 35px;
                 }
             }
         }
@@ -491,47 +395,17 @@ label.error {
 @media (max-width:377px) {
     section {
         div {
-            align-items: start;
-            flex-direction: column;
-
-            >div {
-                .line {
-                    width: 150px;
-                    height: 35px;
-                }
-            }
-
             .contact_container {
                 form {
 
                     .input_contact {
-                        width: 100%;
-                        padding: 10px;
-                        color: #c37706;
-                        font-size: 16px;
-                        padding-left: 20px;
-
                         &::placeholder {
-                            color: #ffffff92;
-                            font-family: 'Bricolage Grotesque';
                             font-size: 16px;
-
                         }
                     }
 
                     .check_box {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-
-
                         label {
-                            display: flex;
-                            align-items: center;
-                            font-size: 14px;
-                            gap: 8px;
-                            padding-left: 0px;
-
                             .policy-link {
                                 font-size: 14px;
                                 font-weight: 100;
@@ -539,33 +413,6 @@ label.error {
 
                             input[type="checkbox"] {
                                 width: 25px;
-                                height: 20px;
-                                cursor: pointer;
-                                border: 2px solid #3355ff;
-                                background-color: transparent;
-                                appearance: none;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                position: relative;
-                                border-radius: 2px;
-                                padding: 0;
-
-                                &:checked {
-                                    background-color: transparent;
-                                    border-color: #3355ff;
-                                }
-
-                                &:checked::after {
-                                    content: "✔";
-                                    font-size: 14px;
-                                    color: #f7c518;
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    font-weight: bold;
-                                }
                             }
                         }
 
@@ -583,7 +430,6 @@ label.error {
             >div {
                 .line {
                     width: 120px;
-                    height: 35px;
                     top: 420px
                 }
             }
@@ -593,7 +439,7 @@ label.error {
                     label {
                         padding-left: 5px;
                     }
-    
+
                     .input_contact {
                         font-size: 15px;
                         padding-left: 5px;
@@ -608,4 +454,3 @@ label.error {
         }
     }
 }
-

@@ -12,7 +12,6 @@ section {
         display: flex;
         justify-content: center;
         width: 100%;
-        min-height: calc(100%);
         min-height: 100vh;
         background-image: url('./../../../../../public/assets/img/project_bg.png');
         background-size: 100% 100%;
@@ -252,19 +251,10 @@ section {
                 height: 580px;
 
                 .content-left {
-                    color: #000000;
-                    display: flex;
-                    flex-direction: column;
                     width: 100%;
-
-                    h1 {
-                        font-size: 60px;
-                    }
                 }
 
                 .content-right {
-                    display: flex;
-                    flex-direction: column;
                     justify-content: center;
                     width: 108%;
                 }
@@ -299,7 +289,6 @@ section {
 
             }
         }
-
     }
 }
 
@@ -308,34 +297,27 @@ section {
         >div {
             .container {
                 padding: 0px 45px;
-                gap: 50px;
             }
 
         }
     }
 }
 
-
 @media (max-width:800px) {
     section {
         #background {
-            display: flex;
-            justify-content: center;
             align-items: center;
             width: 450%;
             height: 100%;
             background-size: 100% 100%;
             background-position: top;
-            background-repeat: no-repeat;
             transform: rotate(90deg);
             position: fixed;
             top: 235px;
             left: -300px;
-            right: 0;
         }
 
         >div {
-
             .back-btn {
                 display: none;
             }
@@ -362,69 +344,32 @@ section {
 
                 .back-btn-respo {
                     display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    padding-top: 40px;
-                    padding-bottom: 40px;
 
                     a {
                         color: #ffffff;
-                        text-decoration: none;
-                        font-size: 18px;
-                        font-weight: 700;
                         background-color: #1d1d1da8;
                         height: 40px;
                         display: flex;
                         align-items: center;
                         padding: 4px;
                         border-radius: 20px;
-
-
-                        &:hover {
-                            color: #f87a55;
-                        }
                     }
                 }
             }
 
             .container {
                 padding: 100px 45px 0 45px;
-                gap: 50px;
                 height: auto;
                 flex-direction: column;
 
                 .content-right {
-                    display: flex;
-                    flex-direction: column;
                     width: 100%;
 
-                    img {
-                        border-radius: 20px;
-                        width: 100%;
-                    }
-
                     .btn-content {
-                        display: flex;
-                        justify-content: end;
-                        padding: 30px 0px 50px 0px;
-                        gap: 30px;
-
                         button {
                             box-shadow: 2px 3px 0 0 #b4b4b4;
-                            transition: border-color 225ms ease-in-out, box-shadow 125ms ease-in-out;
-                            cursor: pointer;
-                            position: relative;
-                            width: 118px;
-                            height: 40px;
                             border: 1px solid #b4b4b4;
-                            border-radius: 100px;
-                            font-family: 'Bricolage Grotesque';
-                            font-size: 18px;
-                            font-weight: 500;
-                            color: #ffffff;
                             background-color: #1d1d1da4;
-                            white-space: nowrap;
-                            transition: width 0.6s ease-in-out, color 0.6s ease-in-out;
 
                             &:hover {
                                 box-shadow: 0 0 0 0;
@@ -444,10 +389,8 @@ section {
 }
 
 @media (max-width:618px) {
-
     section {
         >div {
-
             .container {
                 padding: 100px 25px 0 25px;
 
@@ -456,8 +399,6 @@ section {
                         font-size: 40px;
                     }
                 }
-
-
             }
 
         }
@@ -465,29 +406,17 @@ section {
 }
 
 @media (max-width:460px) {
-
     section {
         #background {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 454%;
             height: 112%;
             background-size: contain;
-            background-position: top;
-            background-repeat: no-repeat;
             transform: rotate(90deg) translateX(191px);
-            position: fixed;
             top: 0;
             left: -356px;
-            right: 0;
         }
 
         >div {
-            .back-btn {
-                display: none;
-            }
-
             .container {
                 padding: 100px 20px 0 20px;
 
@@ -496,8 +425,6 @@ section {
                         font-size: 35px;
                     }
                 }
-
-
             }
 
         }
@@ -507,11 +434,10 @@ section {
 @media (max-width:420px) {
 
     section {
-
         >div {
-
             .container {
                 padding: 100px 15px 0 15px;
+
                 h1 {
                     font-size: 33px;
                 }
@@ -520,28 +446,17 @@ section {
                     font-size: 15px;
                 }
             }
-
         }
     }
 }
 
 @media (max-width:377px) {
-
     section {
         #background {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 1218vh;
             height: 155vh;
-            background-size:contain;
-            background-position: top;
-            background-repeat: no-repeat;
             transform: rotate(90deg) translateX(-10px);
-            position: fixed;
-            top: 0;
             left: -186%;
-            right: 0;
         }
 
         .blueline_content {
@@ -558,35 +473,20 @@ section {
     }
 
     .icon_content {
-        display: flex;
         flex-wrap: wrap;
-
-        span {
-            display: flex;
-            align-items: center;
-
-            .icon {
-                width: 24px;
-            }
-        }
     }
 }
 
 @media (max-width:305px) {
     section {
-
         >div {
-
             .container {
                 .content-left {
                     h1 {
                         font-size: 40px;
                     }
                 }
-
-
             }
-
         }
 
         .blueline_content {
