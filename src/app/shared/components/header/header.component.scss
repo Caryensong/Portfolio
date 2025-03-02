@@ -1,258 +1,115 @@
-header {
-    width: 100%;
-    max-width: 1440px;
-}
+@use "./header-responsive";
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 13px 72px;
+@media (max-width: 800px) {
+    .logo {
+        display: none;
+    }
 
-    img {
-        width: 38px;
-        height: 42px;
-        transition: filter 225ms ease-in-out;
+    nav {
+        padding: 10px 10px 10px 35px;
+    }
 
-        &:hover {
-            filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(3242%) hue-rotate(220deg) brightness(93%) contrast(108%);
+    .burger-menu-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .logo {
+            display: block;
+            z-index: 40;
+        }
+
+        .burger-menu {
+            display: block;
+            z-index: 1001;
         }
     }
 
     .menu {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        width: 100%;
-        justify-content: space-around;
-
-        a {
-            position: relative;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            font-family: 'Bricolage Grotesque';
-            transition: color 225ms ease-in-out;
-            display: inline-block;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: -50px;
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: 0;
-                transition: opacity 225ms ease-in-out;
-                clip-path: inset(100% 0 0 0);
-            }
-
-            &:hover::after {
-                opacity: 1;
-                animation: drawTopToBottom 0.5s ease-in-out forwards;
-                transform: translateX(-50%) translateY(-40px);
-            }
-        }
-
-        a:nth-child(1)::after {
-            background-image: url('/assets/toggle/B.1 1.png');
-            width: 105px;
-            height: 42px;
-        }
-
-        a:nth-child(2)::after {
-            background-image: url('/assets/toggle/B.1 2.png');
-            width: 68px;
-            height: 42px;
-        }
-
-        a:nth-child(3)::after {
-            background-image: url('/assets/toggle/B.1 4.png');
-            width: 105px;
-            height: 42px;
-        }
-
-        a:nth-child(4)::after {
-            background-image: url('/assets/toggle/B.1 3.png');
-            width: 90px;
-            height: 42px;
-            
-        }
-
-        a:hover::after {
-            animation: drawLeftToRight 225ms ease-in-out forwards;
-        }
-   
-
-    .active-nav {
-        color:#ffffff !important;
-        font-weight: bold;
-
-        &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%) translateY(-40px);
-        bottom: -50px;
-        width: 105px;
-        height: 42px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 1;
-        animation: drawTopToBottom 0.5s ease-in-out forwards;
-        }
-
-      
-        &:nth-child(1)::after {
-            background-image: url('/assets/toggle/B.1 1.png');
-            width: 105px;
-            height: 42px;
-        }
-
-        &:nth-child(2)::after {
-            background-image: url('/assets/toggle/B.1 2.png');
-            width: 68px;
-            height: 42px;
-        }
-
-        &:nth-child(3)::after {
-            background-image: url('/assets/toggle/B.1 4.png');
-            width: 105px;
-            height: 42px;
-        }
-
-        &:nth-child(4)::after {
-            background-image: url('/assets/toggle/B.1 3.png');
-            width: 90px;
-            height: 42px;
-        }
-    
-    }
- }
-    .translate-content {
-        display: flex;
-        gap: 10px;
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            font-family: 'Bricolage Grotesque';
-            position: relative;
-            display: inline-block;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: -50px;
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
-                clip-path: inset(100% 0 0 0);
-                width: 32px;
-                height: 32px;
-            }
-
-            &:hover::after {
-                opacity: 1;
-                animation: drawTopToBottom 0.5s ease-in-out forwards;
-                transform: translateX(-50%) translateY(-45px);
-                background-image: url('/assets/toggle/Toggle 1.png');
-                width: 32px;
-                height: 32px;
-            }
-        }
-
-        .active-language {
-            color: #ffffff;
-            font-weight: bold;
-            &::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%) translateY(-45px);
-                bottom: -50px;
-                width: 32px;
-                height: 32px;
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: 1;
-                animation: drawTopToBottom 0.5s ease-in-out forwards;
-                }
-        
-              
-                &:nth-child(1)::after {
-                    background-image: url('/assets/toggle/Toggle 1.png');
-                    width: 32px;
-                    height: 32px;
-                }
-        
-                &:nth-child(2)::after {
-                    background-image: url('/assets/toggle/Toggle 1.png');
-                    width: 32px;
-                    height: 32px;
-                }
-        }
-    }
-}
-
-
-/* Animationen */
-@keyframes drawTopToBottom {
-    0% {
-        clip-path: inset(100% 0 0 0);
-    }
-
-    100% {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-@keyframes drawLeftToRight {
-    0% {
-        clip-path: inset(0 100% 0 0);
-    }
-
-    100% {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-/* Projekt-Navigation */
-.project-nav img {
-    filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(3242%) hue-rotate(220deg) brightness(93%) contrast(108%);
-    transition: filter 0.3s ease-in-out;
-
-    &:hover {
-        filter: brightness(0.7) saturate(5.0) sepia(0.5) hue-rotate(7deg);
-    }
-}
-
-.black-link {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Burger-Menü */
-.burger-menu-container {
-    display: none;
-
-    .burger-menu {
         display: none;
-        background: none;
-        border: none;
-        font-size: 28px;
-        cursor: pointer;
+        flex-direction: column;
+        background-image: url(./../../../../../public/assets/img/background_hero.png);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: -4px;
+        right: 0;
+        width: 100%;
+        height: 600px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-150%);
+        padding-top: 50px;
+        z-index: 6;
+        visibility: hidden;
+        opacity: 0;
     }
-}
 
-.link_content {
-    display: none;
-}
+    .menu.open {
+        display: flex;
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0.4s ease-in-out, visibility 0s linear;
+    }
 
-@import "header-responsive";
+    .link_content {
+        display: flex;
+        gap: 30px;
+        padding: 40px 72px;
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid #fff;
+            margin-bottom: 8px;
+            padding: 3px;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+
+            img {
+                display: block;
+                width: 100%;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+                transition: transform 225ms ease-in-out;
+                filter: brightness(1);
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background-color: #3355ff;
+                transition: height 225ms ease-in-out;
+                border-radius: 100%;
+            }
+
+            &:hover .overlay {
+                height: 100%;
+
+                &:hover img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    nav:not(.project-nav) .menu a {
+        color: white !important; /* Text bleibt weiß */
+      }
+      
+    nav.project-nav .black-link {
+        color: rgb(250, 250, 250) !important;
+    } 
+}

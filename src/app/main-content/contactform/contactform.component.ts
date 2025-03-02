@@ -13,7 +13,7 @@ import { PolicyComponent } from '../policy/policy.component';
 @Component({
   selector: 'app-contactform',
   standalone:true,
-  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective, ImpressumComponent, PolicyComponent],
+  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })

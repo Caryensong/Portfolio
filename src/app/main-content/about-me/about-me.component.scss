@@ -114,6 +114,7 @@ section {
 
 @media (max-width: 900px) {
     section {
+        padding: 10px 52px;
         .location-content {
             display: none;
         }
@@ -134,10 +135,20 @@ section {
 
 @media (max-width: 600px) {
     section {
-        padding: 10px 40px;
-    }
+        padding: 10px 30px;
+        
+        div {
+            h1 {
+                font-size: 50px;
+            }
 
-}
+            p {
+                font-size: 17px;
+                padding-bottom: 15px;
+            }
+            }
+        }
+    }
 
 @media (max-width: 545px) {
     section {

@@ -6,12 +6,11 @@ import {
   TranslatePipe,
   TranslateDirective
 } from "@ngx-translate/core";
-import { GameComponent } from './main-content/projects/game/game.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TranslatePipe, TranslateDirective, GameComponent],
+  imports: [CommonModule, RouterOutlet, TranslatePipe, TranslateDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
