@@ -8,25 +8,23 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ImpressumComponent } from '../impressum/impressum.component';
 import { MatDialog } from '@angular/material/dialog';
 import { PolicyComponent } from '../policy/policy.component';
-
+import { SendDialogComponent } from '../send-dialog/send-dialog.component';
 
 @Component({
   selector: 'app-contactform',
-  standalone:true,
+  standalone: true,
   imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
-export class ContactformComponent { 
-  policyText: SafeHtml = ''; 
-  isHovered:boolean = false;
+export class ContactformComponent {
+  policyText: SafeHtml = '';
+  isHovered: boolean = false;
   showAnimation: boolean = false;
   isChecked: boolean = false;
 
   constructor(private sanitizer: DomSanitizer, private translate: TranslateService, public dialog: MatDialog) {
-   
     this.updatePolicyText();
-
     this.translate.onLangChange.subscribe(() => {
       this.updatePolicyText();
     });
@@ -38,12 +36,11 @@ export class ContactformComponent {
     });
   }
 
-  
   showImage() {
-    if (!this.showAnimation) { 
+    if (!this.showAnimation) {
       this.isHovered = true;
       this.showAnimation = true;
-      
+
       setTimeout(() => {
         this.isHovered = false;
         this.showAnimation = false;
@@ -51,79 +48,97 @@ export class ContactformComponent {
     }
   }
 
-  http = inject(HttpClient)
+  http = inject(HttpClient);
 
-contactData={
-  name:"",
-  email:"",
-  message:"",
-}
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+  };
 
-nameError: boolean = false;
-emailError: boolean = false;
-messageError: boolean = false;
-
-checkPlaceholder(field: string): void {
-  switch (field) {
+  mailTest = false;
+  nameError: boolean = false;
+  emailError: boolean = false;
+  messageError: boolean = false;
+ 
+  checkPlaceholder(field: string): void {
+    switch (field) {
       case 'name':
-          this.nameError = !this.contactData.name || this.contactData.name.trim() === '';
-          break;
+        this.nameError = !this.contactData.name || this.contactData.name.trim() === '';
+        break;
       case 'email':
-          this.emailError = !this.contactData.email || this.contactData.email.trim() === '';
-          break;
+        this.emailError = !this.contactData.email || this.contactData.email.trim() === '';
+        break;
       case 'message':
-          this.messageError = !this.contactData.message || this.contactData.message.trim() === '';
-          break;
+        this.messageError = !this.contactData.message || this.contactData.message.trim() === '';
+        break;
+    }
   }
-}
 
-
-mailTest = true;
-
-post = {
-  endPoint: 'https://caryen-song.com/sendMail.php',
-  body: (payload: any) => JSON.stringify(payload),
-  options: {
-    headers: {
-      'Content-Type': 'text/plain',
-      responseType: 'text',
+  isFormValid(): boolean {
+    return (
+      this.contactData.name.trim() !== '' &&
+      this.contactData.email.trim() !== '' &&
+      this.contactData.message.trim() !== '' &&
+      this.isChecked
+    );
+  }
+  
+  post = {
+    endPoint: 'https://caryen-song.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
     },
-  },
-};
+  };
 
-onSubmit(ngForm: NgForm) {
-  if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
 
-          ngForm.resetForm();
-          this.isChecked = false; 
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
-  } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+            ngForm.resetForm();
+            this.isChecked = false;
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-    ngForm.resetForm();
-    this.isChecked = false;  
+      ngForm.resetForm();
+      this.isChecked = false;
+    }
   }
-}
+
+  
   openImpressum(): void {
     this.dialog.open(ImpressumComponent, {
       width: '500px',
-      panelClass: 'custom-dialog-container' 
+      panelClass: 'custom-dialog-container'
     });
   }
 
-openPolicy(): void {
-  this.dialog.open(PolicyComponent, {
-    width: '500px',
-    panelClass: 'custom-dialog-container'
-  });
-}
-
+  openPolicy(): void {
+    this.dialog.open(PolicyComponent, {
+      width: '500px',
+      panelClass: 'custom-dialog-container'
+    });
+  }
+  
+  sendDialog(): void {
+    if (this.isFormValid()) {
+      this.dialog.open(SendDialogComponent, {
+        width: '500px',
+        panelClass: 'custom-dialog-container'
+      });
+    }
+  }
+  
 }
 

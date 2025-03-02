@@ -1,0 +1,44 @@
+section {
+    background-image: url('/assets/img/project_bg.png');
+    background-size: 250% 250%;
+    padding: 28px;
+    background-color: #131212d2;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    height: auto;
+    text-align: center;
+    scrollbar-color: #3355ff50 rgba(0, 0, 0, 0.041); 
+    div {
+        width: auto;
+        height: 270px;
+        h2{
+            color:#3355ff;
+        }
+
+        a{
+            text-decoration:#f87a55;
+            color: rgb(0, 0, 0);
+            overflow-wrap: break-word;
+        &:hover{
+            color: #f87a55;
+        }
+        }
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            background-color: #00000000;
+            cursor: pointer;
+
+            &:hover {
+                color: #f87a55;
+            }
+        }
+    }
+
+
+}
