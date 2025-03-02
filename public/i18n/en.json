@@ -66,7 +66,7 @@
         "name-input":"Your name goes here",
         "email-input":"youremail@email.com",
         "help-input":"Hello Caryen, I am interested in...",
-        "policy": "I've read the <a href='/privacy-policy' target='_blank' style='color: #3355ff ;font-weight: bold; text-decoration: none;' onmouseover='this.style.color=\"#f7c518\"' onmouseout='this.style.color=\"#3355ff\"'>privacy policy</a> privacy policy</a> and agree to the processing of my data as outlined.",
+        "policy": "I've read the <span style='color: #3355ff ;font-weight: bold;' onmouseover='this.style.color=\"#f7c518\"' onmouseout='this.style.color=\"#3355ff\"' >privacy policy</span> and agree to the processing of my data as outlined.",
         "send": "Send",
         "name-f": "Oops! it seems your name is missing",
         "email-f":"Hoppla! your email is required",
@@ -94,6 +94,76 @@
         "weeks": "Duration: 1 weeks",
         "headline": "Description",
         "subline": "Implementation Details"
-    }
+    },
+        "impressum": {
+            "title": "Legal Notice",
+            "subtitle": "Information about the service provider.",
+            "country": "Germany",
+            "email": "caryensong@googlemail.com",
+            "subtitle1": "EU Dispute Resolution",
+            "text": "In accordance with the Regulation on Online Dispute Resolution in Consumer Matters (ODR Regulation), we would like to inform you about the Online Dispute Resolution platform (ODR platform). Consumers have the opportunity to submit complaints to the European Commission’s Online Dispute Resolution platform at",
+            "text2": ". The necessary contact details can be found above in our legal notice. However, we would like to point out that we are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+            "subtitle2": "Image Credits",
+            "bildernachweis2": "The images, photos, and graphics on this website are protected by copyright. Image rights belong to:",
+            "text3": "All texts are protected by copyright.",
+            "quelle": "Source: Created with the Impressum Generator by AdSimple"
+    },
+    "privacyPolicy": {
+        "title": "Privacy Policy",
+        "description": "Your privacy is important to us. It is our policy to respect your privacy regarding any information we may collect from you across our website, www.caryen-song.com, and other sites we own and operate.",
+        
+        "section1": {
+          "title": "1. Information We Collect",
+          "content": "We only collect information about you if we have a reason to do so – for example, to provide our services, to communicate with you, or to make our services better. We collect information in three ways: if and when you provide information to us, automatically through operating our services, and from outside sources."
+        },
+    
+        "section2": {
+          "title": "2. How We Use Information",
+          "intro": "We use the information we collect in various ways, including to:",
+          "list": [
+            "Provide, operate, and maintain our website",
+            "Improve, personalize, and expand our website",
+            "Understand and analyze how you use our website",
+            "Develop new products, services, features, and functionality",
+            "Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes",
+            "Process your transactions",
+            "Send you emails",
+            "Find and prevent fraud"
+          ]
+        },
+    
+        "section3": {
+          "title": "3. Sharing Information",
+          "content": "We do not share your personal information publicly or with third parties except when required to by law."
+        },
+    
+        "section4": {
+          "title": "4. Data Retention",
+          "content": "We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies."
+        },
+    
+        "section5": {
+          "title": "5. Your Data Protection Rights",
+          "intro": "Depending on your location, you may have the following rights regarding your personal data:",
+          "list": [
+            "The right to access – You have the right to request copies of your personal data.",
+            "The right to rectification – You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.",
+            "The right to erasure – You have the right to request that we erase your personal data, under certain conditions.",
+            "The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.",
+            "The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.",
+            "The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions."
+          ]
+        },
+    
+        "section6": {
+          "title": "6. Changes to This Privacy Policy",
+          "content": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+        },
+    
+        "section7": {
+          "title": "7. Contact Us",
+          "content": "If you have any questions about this Privacy Policy, please contact us:"
+        }
+      }
 
 }

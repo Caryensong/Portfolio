@@ -1,0 +1,41 @@
+<section class="fontBricolageG">
+
+    <div>
+        <h2>{{ 'impressum.title' | translate }}</h2>
+        <br>
+        <p>{{ 'impressum.subtitle' | translate }}</p>
+
+        <p>Caryen Song <br>
+            Johannes-Wirtz-Str 19,<br>
+            47877 Willich,<br>
+            {{ 'impressum.country' | translate }}<br>
+            Tel.: 01789731129 <br>
+            E-Mail: {{ 'impressum.email' | translate }}</p>
+        <br>
+
+        <h2>{{ 'impressum.subtitle1' | translate }}</h2>
+        <br>
+        <p>{{ 'impressum.text' | translate }}
+            <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE"
+                target="_blank">https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE</a> 
+                {{ 'impressum.text2' | translate }}
+            <br>
+        </p>
+        <br>
+        <h2>{{ 'impressum.subtitle2' | translate }}</h2>
+        <br>
+        <p>{{ 'impressum.bildernachweis2' | translate }} Developer Akademie
+            <br>
+            {{ 'impressum.text3' | translate }}
+            <br>
+            <br>
+            {{ 'impressum.quelle' | translate }}
+        </p>
+
+
+        <button class="back-btn" mat-button (click)="closeDialog()"><img src="./assets/icons/Back.svg" alt="Back">{{ 'join.back' |
+            translate }}</button>
+        <br>
+        <br>
+    </div>
+</section>

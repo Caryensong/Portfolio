@@ -19,7 +19,6 @@
         "P": "L",
         "Eee": "E",
         "R": "R"
-    
     },
     "about-me": {
         "about": "Über Mich",
@@ -35,8 +34,8 @@
         "headline": "Fähigkeiten",
         "title": " Skill set",
         "sticker-default": "./assets/toggle/sticker-default-DE.svg",
-        "sticker-hover":"./assets/toggle/sticker-hover-DE.svg",
-        "text":"Ich habe umfassende Erfahrung in der Entwicklung von Projekten mit unterschiedlichen Frontend-Technologien und Konzepten. Mit meiner Neugier und Offenheit für Neues erweitere ich kontinuierlich mein Wissen, um meine Fähigkeiten gezielt auszubauen."
+        "sticker-hover": "./assets/toggle/sticker-hover-DE.svg",
+        "text": "Ich habe umfassende Erfahrung in der Entwicklung von Projekten mit unterschiedlichen Frontend-Technologien und Konzepten. Mit meiner Neugier und Offenheit für Neues erweitere ich kontinuierlich mein Wissen, um meine Fähigkeiten gezielt auszubauen."
     },
     "projects": {
         "headline": "Meine Leidenschaft",
@@ -65,10 +64,10 @@
         "name-input": "Dein Name ...",
         "email-input": "deineemail@email.com",
         "help-input": "Hallo Caryen, ich interessiere mich für...",
-        "policy": "Ich habe die <a href='/privacy-policy' target='_blank' style='color: #3355ff ;font-weight: bold; text-decoration: none;' onmouseover='this.style.color=\"#f7c518\"' onmouseout='this.style.color=\"#3355ff\"'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
+        "policy": "Ich habe die <span style='color: #3355ff ;font-weight: bold;' onmouseover='this.style.color=\"#f7c518\"' onmouseout='this.style.color=\"#3355ff\"'>Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu",
         "send": "Senden",
         "name-f": "Oops! Es scheint, als fehlt dein Name.",
-        "email-f":"Hoppla! Dein E-mail Adresse wird benötigt",
+        "email-f": "Hoppla! Dein E-mail Adresse wird benötigt",
         "help-f": "Was möchtest du entwickeln?"
     },
     "join": {
@@ -93,5 +92,75 @@
         "weeks": "Dauer: 1 Woche",
         "headline": "Beschreibung",
         "subline": "Implementierungsdetails"
+    },
+    "impressum": {
+        "title": "Impressum",
+        "subtitle": "Informationen über den Diensteanbieter.",
+        "country": "Deutschland",
+        "email": "caryensong@googlemail.com",
+        "subtitle1": "EU-Streitschlichtung",
+        "text": "Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren. Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter",
+        "text2": "zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum. Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+        "subtitle2": "Bildernachweis",
+        "bildernachweis2": "Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt. Die Bilderrechte liegen bei:",
+        "text3": "Alle Texte sind urheberrechtlich geschützt.",
+        "quelle": "Quelle: Erstellt mit dem Impressum Generator von AdSimple"
+    },
+    "privacyPolicy": {
+        "title": "Datenschutzbestimmungen",
+        "description": "Ihre Privatsphäre ist uns wichtig. Es ist unsere Richtlinie, Ihre Privatsphäre in Bezug auf alle Informationen zu respektieren, die wir von Ihnen über unsere Website www.caryen-song.com und andere von uns betriebene Websites sammeln.",
+    
+        "section1": {
+          "title": "1. Welche Informationen wir sammeln",
+          "content": "Wir erfassen nur dann Informationen über Sie, wenn wir einen Grund dazu haben – zum Beispiel, um unsere Dienstleistungen bereitzustellen, mit Ihnen zu kommunizieren oder unsere Dienstleistungen zu verbessern. Wir sammeln Informationen auf drei Arten: wenn Sie uns Informationen bereitstellen, automatisch durch die Nutzung unserer Dienste und aus externen Quellen."
+        },
+    
+        "section2": {
+          "title": "2. Wie wir Informationen nutzen",
+          "intro": "Wir nutzen die gesammelten Informationen auf verschiedene Weise, einschließlich:",
+          "list": [
+            "Bereitstellung, Betrieb und Wartung unserer Website",
+            "Verbesserung, Personalisierung und Erweiterung unserer Website",
+            "Verstehen und Analysieren der Nutzung unserer Website",
+            "Entwicklung neuer Produkte, Dienstleistungen, Funktionen und Technologien",
+            "Kommunikation mit Ihnen, entweder direkt oder über einen unserer Partner, einschließlich für den Kundenservice, um Ihnen Updates und andere Informationen zur Website bereitzustellen sowie für Marketing- und Werbezwecke",
+            "Verarbeitung Ihrer Transaktionen",
+            "Versand von E-Mails",
+            "Erkennung und Verhinderung von Betrug"
+          ]
+        },
+    
+        "section3": {
+          "title": "3. Weitergabe von Informationen",
+          "content": "Wir geben Ihre persönlichen Daten nicht öffentlich oder an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben."
+        },
+    
+        "section4": {
+          "title": "4. Speicherung von Daten",
+          "content": "Wir speichern Ihre persönlichen Daten nur so lange, wie es für die in dieser Datenschutzrichtlinie festgelegten Zwecke erforderlich ist. Wir werden Ihre Informationen im erforderlichen Umfang aufbewahren und verwenden, um unseren gesetzlichen Verpflichtungen nachzukommen, Streitigkeiten beizulegen und unsere Richtlinien durchzusetzen."
+        },
+    
+        "section5": {
+          "title": "5. Ihre Datenschutzrechte",
+          "intro": "Je nach Ihrem Standort haben Sie die folgenden Rechte in Bezug auf Ihre persönlichen Daten:",
+          "list": [
+            "Das Recht auf Zugriff – Sie haben das Recht, Kopien Ihrer persönlichen Daten anzufordern.",
+            "Das Recht auf Berichtigung – Sie haben das Recht, die Korrektur ungenauer oder unvollständiger Informationen zu verlangen.",
+            "Das Recht auf Löschung – Sie haben das Recht, unter bestimmten Bedingungen die Löschung Ihrer persönlichen Daten zu verlangen.",
+            "Das Recht auf Einschränkung der Verarbeitung – Sie haben das Recht, unter bestimmten Bedingungen eine Einschränkung der Verarbeitung Ihrer persönlichen Daten zu verlangen.",
+            "Das Recht auf Widerspruch gegen die Verarbeitung – Sie haben das Recht, der Verarbeitung Ihrer persönlichen Daten unter bestimmten Bedingungen zu widersprechen.",
+            "Das Recht auf Datenübertragbarkeit – Sie haben das Recht zu verlangen, dass wir die von uns gesammelten Daten an eine andere Organisation oder direkt an Sie übertragen, sofern bestimmte Bedingungen erfüllt sind."
+          ]
+        },
+    
+        "section6": {
+          "title": "6. Änderungen an dieser Datenschutzrichtlinie",
+          "content": "Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir werden Sie über alle Änderungen informieren, indem wir die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen. Sie werden gebeten, diese Datenschutzrichtlinie regelmäßig auf Änderungen zu überprüfen. Änderungen an dieser Datenschutzrichtlinie treten in Kraft, sobald sie auf dieser Seite veröffentlicht werden."
+        },
+    
+        "section7": {
+          "title": "7. Kontakt",
+          "content": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:"
+        }
     }
 }

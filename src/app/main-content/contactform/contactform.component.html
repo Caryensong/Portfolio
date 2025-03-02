@@ -24,8 +24,7 @@
 
             <div class="contact_container">
                 <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
-            
-                    <!-- NAME -->
+
                     <label for="name" [ngClass]="{'error': nameError}">{{ 'contactFrom.name' | translate }}</label>
                     <input class="input_contact" [(ngModel)]="contactData.name" name="name" type="text" id="name"
                         #nameModel="ngModel" required
@@ -33,7 +32,6 @@
                         [placeholder]="nameError ? ('contactFrom.name-f' | translate) : ('contactFrom.name-input' | translate)"
                         [ngClass]="{'error': nameError}">
             
-                    <!-- EMAIL -->
                     <label for="email" [ngClass]="{'error': emailError}">{{ 'contactFrom.email' | translate }}</label>
                     <input class="input_contact" [(ngModel)]="contactData.email" name="email" type="text" id="email"
                         #emailModel="ngModel" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
@@ -41,7 +39,6 @@
                         [placeholder]="emailError ? ('contactFrom.email-f' | translate) : ('contactFrom.email-input' | translate)"
                         [ngClass]="{'error': emailError}">
             
-                    <!-- MESSAGE -->
                     <label for="message" [ngClass]="{'error': messageError}">{{ 'contactFrom.help' | translate }}</label>
                     <textarea class="input_contact" [(ngModel)]="contactData.message" name="message" id="message"
                         #messageModel="ngModel" minlength="6"
@@ -53,7 +50,7 @@
                     <div class="check_box">
                         <label>
                           <input type="checkbox" [(ngModel)]="isChecked" name="check" id="check">
-                         <span class="policy-link" [innerHTML]="policyText"></span> 
+                         <span class="policy-link" [innerHTML]="policyText" (click)="openPolicy()"></span> 
                         </label>
                     
                         <input type="submit" value="{{ 'contactFrom.send' | translate }}" [disabled]="!isChecked"
@@ -64,7 +61,8 @@
             
         </div>
 
-        <app-footer></app-footer>
+        <app-footer (openDialogEvent)="openImpressum()"></app-footer>
+
         
     </section>
 </div>

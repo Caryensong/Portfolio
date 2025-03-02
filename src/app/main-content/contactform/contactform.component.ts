@@ -5,12 +5,15 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { ImpressumComponent } from '../impressum/impressum.component';
+import { MatDialog } from '@angular/material/dialog';
+import { PolicyComponent } from '../policy/policy.component';
 
 
 @Component({
   selector: 'app-contactform',
   standalone:true,
-  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective, ImpressumComponent, PolicyComponent],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -20,10 +23,10 @@ export class ContactformComponent {
   showAnimation: boolean = false;
   isChecked: boolean = false;
 
-  constructor(private sanitizer: DomSanitizer, private translate: TranslateService) {
-    this.updatePolicyText(); // Methode aufrufen, um den Text zu setzen
+  constructor(private sanitizer: DomSanitizer, private translate: TranslateService, public dialog: MatDialog) {
+   
+    this.updatePolicyText();
 
-    // Falls sich die Sprache ändert, wird der Text neu geladen
     this.translate.onLangChange.subscribe(() => {
       this.updatePolicyText();
     });
@@ -107,6 +110,19 @@ onSubmit(ngForm: NgForm) {
     ngForm.resetForm();
     this.isChecked = false;  
   }
+}
+  openImpressum(): void {
+    this.dialog.open(ImpressumComponent, {
+      width: '500px',
+      panelClass: 'custom-dialog-container' 
+    });
+  }
+
+openPolicy(): void {
+  this.dialog.open(PolicyComponent, {
+    width: '500px',
+    panelClass: 'custom-dialog-container'
+  });
 }
 
 }

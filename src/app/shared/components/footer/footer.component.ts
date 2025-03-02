@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -10,12 +10,19 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   hoverStates: { [key: string]: boolean } = {};
+  @Output() openDialogEvent = new EventEmitter<void>();
+
+  openImpressum(event: Event): void {
+    event.preventDefault();
+    this.openDialogEvent.emit(); 
+  }
+
 
   changeButtonState(link: string, hover: boolean) {
     this.hoverStates[link] = hover;
   }
 
-  activeSection: string = 'contact'; // Setze den aktiven Bereich hier
+  activeSection: string = 'contact'; 
 
   setActiveSection(section: string) {
     this.activeSection = section;
