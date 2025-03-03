@@ -5,21 +5,22 @@
                 <p>{{ 'my-stack.headline' | translate }}</p>
                 <h1>{{ 'my-stack.title' | translate }}</h1>
             </div>
+
             <div class="paper-content">
-                <img class="text" src="./assets/img/skill_paper.svg" alt="skill">
+                <img class="text" src="./assets/img/skill_paper.png" alt="skill">
                 <span  class="my-text">{{ 'my-stack.text' | translate }}</span>
             </div>
         </div>
 
+        <div class="blueline_content">
+            @if(showAnimation && isHovered){
+            <img class="hover-image" src="./assets/toggle/skillsline.svg" alt="Blueline">
+            }@else{
+            <img class="hover-image" src="./assets/toggle/skillslineD.svg" alt="Blueline">
+            }
+        </div>
+
         <div class="sub-content">
-            <div class="blueline_content">
-                @if(showAnimation && isHovered){
-                <img class="hover-image" src="./assets/toggle/skillsline.svg" alt="Blueline">
-                }@else{
-                <img class="hover-image" src="./assets/toggle/skillslineD.svg" alt="Blueline">
-                }
-            </div>
-            
             <div class="skills_content">
                 @for(skill of skills; track $index){
                 <div>
@@ -39,7 +40,7 @@
                 
                 <img src="{{ 'my-stack.sticker-hover' | translate }}" alt="Sticker" class="hover-image">
 
-                <img src="./assets/toggle/sticker2.svg" alt="Sticker" class="sticker2-image"
+                <img src="./assets/toggle/sticker2.png" alt="Sticker" class="sticker2-image"
                      [ngClass]="{'animate-diagonal': isClicked}"
                      [style.opacity]="isClicked ? '1' : '0'">
               </div>

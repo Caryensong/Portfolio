@@ -16,12 +16,11 @@ section {
         display: flex;
         flex-direction: column;
         padding: 19px 72px;
-        gap: 30px;
 
         .headline-container {
             display: flex;
-            flex-direction: row;
-            gap: 50px;
+            justify-content: flex-start;
+            gap: 10px;
             height: 130px;
 
             div {
@@ -47,10 +46,10 @@ section {
         }
 
         .sub-content {
-            display: flex;
-            flex-direction: row;
-            gap: 50px;
+            display: flex;justify-content: end;
             align-items: center;
+            position: relative;
+            top: -100px;;
 
             .skills_content {
                 width: 650px;
@@ -146,11 +145,12 @@ section {
     }
 
     .blueline_content {
-        width: 365px;
+        width: 320px;
         height: 90px;
         z-index: 1;
+        object-fit: cover;
         position: relative;
-        top: -260px;
+        top: -110px;
         left: -20px;
 
         @keyframes drawLeftToRight {
@@ -176,10 +176,8 @@ section {
         }
 
         .hover-image {
-            width: 365px;
+            width: 300px;
             height: 90px;
-            object-fit: cover;
-            opacity: 0;
             transition: opacity 300ms ease-in-out;
             animation: drawLeftToRight 4s ease-in-out forwards;
         }
@@ -189,7 +187,8 @@ section {
 .my-text {
     position: relative;
     top: -130px;
-    width: 550px;
+    width: 100%;
+    max-width: 610px;
     height: 60px;
     padding: 20px;
     left: -50px;

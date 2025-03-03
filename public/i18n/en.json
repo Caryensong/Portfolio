@@ -28,15 +28,15 @@
         "subtitle": "Let's collaborate and build something remarkable together!",
         "text": "Hi there! I'm Caryen, a frontend developer passionate about creating intuitive and efficient digital experiences. With a natural problem-solving mindset and a keen eye for detail, I specialize in transforming complex concepts into visually appealing and functional web solutions.",
         "btn": "Let's talk",
-        "img":"./assets/img/Location.svg",
-        "img-small": "./assets/img/location-respo.svg"
+        "img":"./assets/img/Location.png",
+        "img-small": "./assets/img/location-respo.png"
     },
     "my-stack": {
         "skill_img": "./assets/img/skill.svg",
         "headline": "MY STACK",
         "title": "Skill set",
-        "sticker-default": "./assets/toggle/sticker-default.svg",
-        "sticker-hover":"./assets/toggle/sticker-hover.svg",
+        "sticker-default": "./assets/toggle/sticker-default.png",
+        "sticker-hover":"./assets/toggle/sticker-hover.png",
         "text": "I have gained experience in building projects with a variety of frontend technologies and concepts. With a strong growth mindset, I'm always exploring new areas to enhance my skill set."
     },
     "projects": {

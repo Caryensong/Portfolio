@@ -1,341 +1,188 @@
 @use "./my-stack-style";
 @use "./my-stack-responsive";
 
-@media (max-width: 560px) {
 
+@media (max-width: 502px) {
     section {
         .content {
             .headline-container {
-                .headline {
-                    margin-right: 0px;
-                }
-
                 .paper-content {
-                    width: 480px;
-
                     img {
-                        height: 190px;
-                        width: 480px;
-                    }
-
-                    .my-text {
-                        top: -160px;
-                        width: 480px;
+                        height: 230px;
                     }
                 }
             }
 
             .sub-content {
-                top: 90px;
+                top: -105px;
 
                 .skills_content {
                     width: 100%;
-                    gap: 40px;
-                    top: -140px;
-                }
-
-                .sticker {
-                    left: 100px;
-                }
-            }
-
-            .blueline_content {
-                top: -390px;
-                left: 120px;
-            }
-        }
-    }
-}
-
-
-@media (max-width: 530px) {
-    section {
-        .content {
-            .headline-container {
-                .paper-content {
-                    width: 420px;
-
-                    img {
-                        height: 195px;
-                        width: 420px;
-                    }
-
-                    .my-text {
-                        top: -165px;
-                        width: 410px;
-                    }
-                }
-            }
-
-            .sub-content {
-                .skills_content {
-                    gap: 25px;
-                    top: -150px;
-                }
-            }
-
-            .blueline_content {
-                top: -390px;
-                left: 90px;
-            }
-        }
-    }
-
-}
-
-@media (max-width: 480px) {
-    section {
-        .content {
-            .sub-content {
-                .skills_content {
-                    justify-content: space-between;
-                    top: -110px;
-                }
-
-                .sticker {
-                    top: -190px;
-                    left: 100px;
-                    width: 150px;
-                    height: 150px;
-                }
-            }
-
-            .blueline_content {
-                left: 90px;
-            }
-        }
-    }
-
-}
-
-
-
-@media (max-width: 456px) {
-    section {
-        .content {
-            .headline-container {
-                .paper-content {
-                    width: 380px;
-                    position: relative;
-                    top: -50px;
-
-                    img {
-                        height: 230px;
-                        width: 380px;
-                    }
-
-                    .my-text {
-                        top: -195px;
-                        width: 370px;
-                    }
-                }
-            }
-
-            .sub-content {
-                top: 100px;
-
-                .skills_content {
-                    top: -160px;
-                }
-
-                .sticker {
-                    top: -220px;
-                    left: 60px;
-                }
-            }
-
-            .blueline_content {
-                top: -400px;
-                left: 70px;
-            }
-        }
-    }
-
-}
-
-@media (max-width: 420px) {
-    section {
-        .content {
-            gap: 218px;
-
-            .headline-container {
-                .paper-content {
-                    width: 340px;
-
-                    img {
-                        height: 250px;
-                        width: 340px;
-                    }
-
-                    .my-text {
-                        top: -210px;
-                        width: 320px;
-                    }
-                }
-            }
-
-            .blueline_content {
-                top: -420px;
-                left: 50px;
-            }
-        }
-    }
-}
-
-@media (max-width: 401px) {
-    section {
-
-        .content {
-            gap: 200px;
-
-            .headline-container {
-                .headline {
-                    h1 {
-                        font-size: 50px;
-                    }
-
-                    p {
-                        font-size: 16px;
-                    }
-                }
-            }
-
-            .sub-content {
-                .skills_content {
-                    gap: 20px;
-                    top: -140px;
-                }
-
-                .sticker {
-                    top: -190px;
-                    width: 162px;
-                }
-            }
-
-            .blueline_content {
-                top: -400px;
-                left: 80px;
-                width: 200px;
-                height: 60px;
-                object-fit: cover;
-
-                .hover-image {
-                    width: 200px;
-
-                }
-
-            }
-        }
-    }
-}
-
-
-@media (max-width: 381px) {
-    section {
-        .content {
-            padding: 19px 0px;
-
-        }
-    }
-}
-
-@media (max-width: 370px) {
-    section {
-        padding: 50px 10px;
-
-        .content {
-            .headline-container {
-                .paper-content {
-                    width: 310px;
-
-                    img {
-                        height: 250px;
-                        width: 310px;
-                    }
-
-                    span {
-                        font-size: 15px;
-                    }
-                }
-            }
-
-            .blueline_content {
-                left: 60px;
-            }
-        }
-    }
-}
-
-@media (max-width: 345px) {
-    section {
-        padding: 50px 10px;
-
-        .content {
-            .headline-container {
-                .paper-content {
-                    width: 290px;
-
-                    img {
-                        height: 250px;
-                        width: 290px;
-                    }
-                }
-            }
-
-        }
-    }
-}
-
-
-@media (max-width: 321px) {
-    section {
-        .content {
-            gap: 172px;
-
-            .headline-container {
-                .paper-content {
-                    width: 280px;
-
-                    img {
-                        height: 255px;
-                        width: 280px;
-                    }
-
-                    .my-text {
-                        top: -217px;
-                        width: 280px;
-                    }
-                }
-            }
-
-            .sub-content {
-                top: 100px;
-
-                .skills_content {
-                    gap: 30px;
-                    top: -90px;
 
                     div {
-                        justify-content: center;
-
                         p {
-                            width: 60px;
-                            font-size: 15px;
+                            font-size: 16px;
+                            width: 77px;
+                        }
+
+                        img {
+                            filter: grayscale(0%);
+                        }
+
+                        img:hover {
+                            transform: scale(1);
+                            filter: grayscale(0%);
                         }
                     }
                 }
 
                 .sticker {
-                    top: -160px;
-                    left: 40px;
+                    top: -70px;
+                }
+            }
+        }
+    }
+
+    .my-text {
+        top: -180px;
+    }
+}
+
+
+@media (max-width: 454px) {
+    section {
+        .content {
+            .headline-container {
+                .paper-content {
+                    img {
+                        height: 260px;
+                    }
                 }
             }
 
-            .blueline_content {
-                top: -380px;
-                left: 50px;
+            .sub-content {
+                top: -105px;
+
+                .skills_content {
+                    width: 105%;
+                }
+
+                .sticker {
+                    top: -70px;
+                    left: 100px;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    .my-text {
+        top: -200px;
+    }
+}
+
+
+@media (max-width: 436px) {
+    section {
+        height: 128vh;
+
+        .content {
+            .headline-container {
+                .paper-content {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+
+            .sub-content {
+                top: -24px;
+
+                .skills_content {
+                    width: 98%;
+                    justify-content: space-between;
+                }
+
+                .sticker {
+                    top: -20px;
+                    left: 70px;
+                }
+            }
+        }
+    }
+    .my-text {
+        top: -230px;
+    }
+}
+
+@media (max-width: 353px) {
+    section {
+        .content {
+            .headline-container {
+                .paper-content {
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+
+            .sub-content {
+                top: -17px;
+
+                .skills_content {
+                    width: 107%;
+                }
+
+                .sticker {
+                    top: -36px;
+                    left: 40px;
+                }
             }
         }
     }
 }
 
+@media (max-width: 328px) {
+    section {
+        .content {
+            .headline-container {
+                .paper-content {
+                    img {
+                        height: 338px;
+                    }
+                }
+            }
+
+            .sub-content {
+                top: -5px;
+
+                .skills_content {
+                    width: 109%;
+                    justify-content: space-between;
+
+                    div {
+                        p {
+                            font-size: 15px;
+                            width: 73px;
+                        }
+
+                        img {
+                            width: 55px;
+                            height: 50px;
+                        }
+                    }
+                }
+
+                .sticker {
+                    top: -50px;
+                    left: 38px;
+                }
+            }
+        }
+    }
+
+    .my-text {
+        top: -260px;
+    }
+}
