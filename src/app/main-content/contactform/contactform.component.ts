@@ -61,28 +61,29 @@ export class ContactformComponent {
   emailError: boolean = false;
   messageError: boolean = false;
  
-  checkPlaceholder(field: string): void {
-    switch (field) {
-      case 'name':
-        this.nameError = !this.contactData.name || this.contactData.name.trim() === '';
-        break;
-      case 'email':
-        this.emailError = !this.contactData.email || this.contactData.email.trim() === '';
-        break;
-      case 'message':
-        this.messageError = !this.contactData.message || this.contactData.message.trim() === '';
-        break;
-    }
-  }
-
   isFormValid(): boolean {
     return (
-      this.contactData.name.trim() !== '' &&
-      this.contactData.email.trim() !== '' &&
-      this.contactData.message.trim() !== '' &&
+      (this.contactData.name?.trim() !== '' || this.contactData.name === '') &&
+      (this.contactData.email?.trim() !== '' || this.contactData.email === '') &&
+      (this.contactData.message?.trim() !== '' || this.contactData.message === '') &&
       this.isChecked
     );
   }
+  
+  checkPlaceholder(field: string): void {
+    switch (field) {
+      case 'name':
+        this.nameError = !this.contactData.name || this.contactData.name?.trim() === '';
+        break;
+      case 'email':
+        this.emailError = !this.contactData.email || this.contactData.email?.trim() === '';
+        break;
+      case 'message':
+        this.messageError = !this.contactData.message || this.contactData.message?.trim() === '';
+        break;
+    }
+  }
+  
   
   post = {
     endPoint: 'https://caryen-song.com/sendMail.php',
@@ -118,7 +119,6 @@ export class ContactformComponent {
       this.sendDialog();
     }
   }
-
   
   openImpressum(): void {
     this.dialog.open(ImpressumComponent, {
