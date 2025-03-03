@@ -1,13 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { CommonModule, NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-game',
   standalone:true,
-  imports: [RouterModule, HeaderComponent, TranslateDirective, TranslatePipe, NgClass, CommonModule],
+  imports: [RouterModule, HeaderComponent, TranslatePipe, NgClass, CommonModule],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss'] 
 })

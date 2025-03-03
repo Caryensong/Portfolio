@@ -3,7 +3,7 @@
     <div>
        <app-header [ngClass]="{ 'hidden-header': isScrolledDown }" [projectPage]="true"></app-header>
 
-        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a href="#projects">{{ 'join.back' |
+        <div class="back-btn"><img src="./assets/icons/Back.svg" alt="Back"><a [routerLink]="['/']">{{ 'join.back' |
                 translate }}</a></div>
 
         <div class="container" (mouseover)="showImage()">

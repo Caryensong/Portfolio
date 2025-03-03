@@ -1,11 +1,12 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component, HostBinding, HostListener, Input } from '@angular/core';
-import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
+import {TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, TranslateDirective, NgClass],
+  imports: [CommonModule, TranslatePipe, NgClass, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

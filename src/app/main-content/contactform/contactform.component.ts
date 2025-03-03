@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
-import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ImpressumComponent } from '../impressum/impressum.component';
@@ -13,7 +13,7 @@ import { SendDialogComponent } from '../send-dialog/send-dialog.component';
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })

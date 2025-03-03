@@ -1,13 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-join',
   standalone: true,
-  imports: [RouterModule, HeaderComponent, TranslateDirective,NgClass, TranslatePipe],
+  imports: [RouterModule, HeaderComponent, NgClass, TranslatePipe],
   templateUrl: './join.component.html',
   styleUrl: './join.component.scss'
 })

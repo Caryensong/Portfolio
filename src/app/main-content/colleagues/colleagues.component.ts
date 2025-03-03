@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-colleagues',
   standalone: true,
-  imports: [CommonModule, TranslateDirective, TranslatePipe],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './colleagues.component.html',
   styleUrl: './colleagues.component.scss'
 })
