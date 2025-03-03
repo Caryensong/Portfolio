@@ -108,9 +108,9 @@ export class ContactformComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => {console.info('send post complete'),
-          this.sendDialog();}
+          complete: () => {console.info('send post complete'), this.sendDialog();}
         });
+       
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
