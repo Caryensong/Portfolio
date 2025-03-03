@@ -6,14 +6,14 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ImpressumComponent } from '../impressum/impressum.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PolicyComponent } from '../policy/policy.component';
 import { SendDialogComponent } from '../send-dialog/send-dialog.component';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe],
+  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, MatDialogModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -60,7 +60,7 @@ export class ContactformComponent {
   nameError: boolean = false;
   emailError: boolean = false;
   messageError: boolean = false;
- 
+
   isFormValid(): boolean {
     return (
       (this.contactData.name?.trim() !== '' || this.contactData.name === '') &&
@@ -69,7 +69,7 @@ export class ContactformComponent {
       this.isChecked
     );
   }
-  
+
   checkPlaceholder(field: string): void {
     switch (field) {
       case 'name':
@@ -83,8 +83,7 @@ export class ContactformComponent {
         break;
     }
   }
-  
-  
+
   post = {
     endPoint: 'https://caryen-song.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -104,22 +103,20 @@ export class ContactformComponent {
 
             ngForm.resetForm();
             this.isChecked = false;
-            this.sendDialog();
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => {console.info('send post complete'), this.sendDialog();}
+          complete: () => { console.info('send post complete'), this.sendDialog(); }
         });
-       
+
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
       this.isChecked = false;
-      this.sendDialog();
     }
   }
-  
+
   openImpressum(): void {
     this.dialog.open(ImpressumComponent, {
       width: '500px',
@@ -133,15 +130,12 @@ export class ContactformComponent {
       panelClass: 'custom-dialog-container'
     });
   }
-  
+
   sendDialog(): void {
-    if (this.isFormValid()) {
-      this.dialog.open(SendDialogComponent, {
-        width: '500px',
-        panelClass: 'custom-dialog-container'
-      });
-    }
+    this.dialog.open(SendDialogComponent, {
+      width: '500px',
+      panelClass: 'custom-dialog-container'
+    });
   }
-  
 }
 
