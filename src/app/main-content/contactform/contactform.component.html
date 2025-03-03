@@ -53,8 +53,7 @@
                         </label>
 
                         <input type="submit" value="{{ 'contactFrom.send' | translate }}" [disabled]="!isFormValid()"
-                            [ngClass]="{'enabled-button': isFormValid(), 'disabled-button': !isFormValid()}"
-                            (click)="sendDialog()">
+                            [ngClass]="{'enabled-button': isFormValid(), 'disabled-button': !isFormValid()}">
 
                     </div>
                 </form>

@@ -103,6 +103,7 @@ export class ContactformComponent {
 
             ngForm.resetForm();
             this.isChecked = false;
+            this.sendDialog();
           },
           error: (error) => {
             console.error(error);
@@ -113,6 +114,7 @@ export class ContactformComponent {
 
       ngForm.resetForm();
       this.isChecked = false;
+      this.sendDialog();
     }
   }
 
