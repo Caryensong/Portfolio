@@ -9,11 +9,12 @@ import { ImpressumComponent } from '../impressum/impressum.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PolicyComponent } from '../policy/policy.component';
 import { SendDialogComponent } from '../send-dialog/send-dialog.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, MatDialogModule],
+  imports: [CommonModule, FooterComponent, FormsModule, TranslatePipe, MatDialogModule, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -107,7 +108,7 @@ export class ContactformComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => { console.info('send post complete'), this.sendDialog(); }
+          complete: () => {this.sendDialog(); }
         });
 
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
@@ -115,20 +116,6 @@ export class ContactformComponent {
       ngForm.resetForm();
       this.isChecked = false;
     }
-  }
-
-  openImpressum(): void {
-    this.dialog.open(ImpressumComponent, {
-      width: '500px',
-      panelClass: 'custom-dialog-container'
-    });
-  }
-
-  openPolicy(): void {
-    this.dialog.open(PolicyComponent, {
-      width: '500px',
-      panelClass: 'custom-dialog-container'
-    });
   }
 
   sendDialog(): void {

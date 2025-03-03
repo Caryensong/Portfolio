@@ -1,5 +1,8 @@
+<div id="background">
 <section class="privacy-policy">
-    <div>
+    <app-header [ngClass]="{ 'hidden-header': isScrolledDown }"></app-header>
+
+    <div class="content">
         <h2>{{ 'privacyPolicy.title' | translate }}</h2>
         <br>
         <p>{{ 'privacyPolicy.description' | translate }}</p>
@@ -58,7 +61,11 @@
         <p>{{ 'privacyPolicy.section7.content' | translate }}</p>
         <p>Email: <a href="mailto:caryensong@googlemail.com">{{ 'impressum.email' | translate }}</a></p> 
         <br>
-      <button  class="back-btn"mat-button (click)="closeDialog()"><img src="./assets/icons/Back.svg" alt="Back">{{ 'join.back' |
-        translate }}</button>
-    </div>
+        <a href="#footer" class="back-btn" mat-button><img src="./assets/icons/Back.svg" alt="Back">{{ 'join.back' |
+            translate }}</a>
+    </div>  
+    <div class="footer-container">
+        <app-footer [routerLink]="['/impressum']"></app-footer> 
+         </div>
   </section>
+</div>

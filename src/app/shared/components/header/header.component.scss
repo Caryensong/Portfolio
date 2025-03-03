@@ -106,10 +106,15 @@
     }
 
     nav:not(.project-nav) .menu a {
-        color: white !important; /* Text bleibt weiß */
+        color: white !important;
       }
       
     nav.project-nav .black-link {
         color: rgb(250, 250, 250) !important;
     } 
 }
+@media (max-width: 512px) {
+
+    nav {
+        padding: 10px 10px 10px 15px;
+    }}

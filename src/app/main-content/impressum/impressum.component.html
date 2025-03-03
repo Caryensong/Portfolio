@@ -1,6 +1,8 @@
+<div id="background">
 <section class="fontBricolageG">
+    <app-header [ngClass]="{ 'hidden-header': isScrolledDown }"></app-header>
 
-    <div>
+    <div class="content">
         <h2>{{ 'impressum.title' | translate }}</h2>
         <br>
         <p>{{ 'impressum.subtitle' | translate }}</p>
@@ -32,10 +34,14 @@
             {{ 'impressum.quelle' | translate }}
         </p>
 
-
-        <button class="back-btn" mat-button (click)="closeDialog()"><img src="./assets/icons/Back.svg" alt="Back">{{ 'join.back' |
-            translate }}</button>
+       <a href="#footer" class="back-btn" mat-button><img src="./assets/icons/Back.svg" alt="Back">{{ 'join.back' |
+            translate }}</a>
         <br>
         <br>
     </div>
+
+    <div class="footer-container">
+   <app-footer [routerLink]="['/impressum']"></app-footer> 
+    </div>
 </section>
+</div>

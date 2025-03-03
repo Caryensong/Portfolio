@@ -49,7 +49,8 @@
                     <div class="check_box">
                         <label>
                             <input type="checkbox" [(ngModel)]="isChecked" name="check" id="check">
-                            <span class="policy-link" [innerHTML]="policyText" (click)="openPolicy()"></span>
+                           <span class="policy-link" [innerHTML]="policyText" [routerLink]="['/policy']"></span>
+
                         </label>
 
                         <input type="submit" value="{{ 'contactFrom.send' | translate }}" [disabled]="!isFormValid()"
@@ -61,7 +62,7 @@
 
         </div>
 
-        <app-footer (openDialogEvent)="openImpressum()"></app-footer>
+        <app-footer  [routerLink]="['/impressum']"></app-footer>
 
 
     </section>
