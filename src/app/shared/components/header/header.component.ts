@@ -95,8 +95,6 @@ export class HeaderComponent {
         this.activeSection = sectionId;
 
         menuLinks.forEach((link) => link.classList.remove('active-nav'));
-
-      // Füge die 'active-nav' Klasse zum entsprechenden Link hinzu
       const activeLink = Array.from(menuLinks).find((link) => link.getAttribute('href') === `#${this.activeSection}`);
       if (activeLink) {
         activeLink.classList.add('active-nav');
