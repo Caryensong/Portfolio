@@ -129,7 +129,7 @@
             "Erkennung und Verhinderung von Betrug"
           ]
         },
-    
+
         "section3": {
           "title": "3. Weitergabe von Informationen",
           "content": "Wir geben Ihre persönlichen Daten nicht öffentlich oder an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben."
@@ -162,5 +162,10 @@
           "title": "7. Kontakt",
           "content": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:"
         }
+    },
+    "sendDialog":{
+      "thx": "Vielen Dank für Ihre Nachricht! ",
+      "answer":"Wir haben Ihr Kontaktformular erhalten und werden uns so schnell wie möglich bei Ihnen melden.",
+      "regards":"Besten Grüße"
     }
 }
