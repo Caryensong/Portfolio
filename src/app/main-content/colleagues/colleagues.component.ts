@@ -21,9 +21,9 @@ export class ColleaguesComponent {
     text:string;
   }[]=[
  {   
-  name:'Thomas',
+  name:'Barbora Lambeinova',
   image:'./assets/img/cardB.png',
-  linkedIn:'http/w',
+  linkedIn:'https://www.linkedin.com/in/barbora-lambeinova-33706a35a/',
   job: 'Frontend Developer',
   text:'colleagues.card1',
  },
@@ -31,14 +31,14 @@ export class ColleaguesComponent {
   name:'Karl',
   image:'./assets/img/cardA.png',
   linkedIn:'http/w',
-  job: 'Designer',
+  job: 'Full-stack Developer',
   text:'colleagues.card2',
  },
  {   
-  name:'Sarah',
+  name:'Catalina Acosta Rivera',
   image:'./assets/img/cardB.png',
-  linkedIn:'http/w',
-  job: 'Project Manager',
+  linkedIn:'https://www.linkedin.com/in/catalina-acosta-rivera/',
+  job: 'Project Manager & Frontend Developer',
   text:'colleagues.card3',
  },
 

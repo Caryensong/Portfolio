@@ -18,6 +18,10 @@ section {
         p {
             font-size: 20px;
             font-weight: 500;
+            height: 133px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(238, 190, 59, 0.925) transparent; 
         }
 
         h1 {
