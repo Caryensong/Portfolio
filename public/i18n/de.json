@@ -48,9 +48,9 @@
     "colleagues": {
         "headline": "IHRE WORTE:",
         "title": "Feedback von Kollegen",
-        "card1": "Ich habe Caryen als eine fleißige, äußerst engagierte und leistungsstarke Teamkollegin erlebt, die sich gerne mit komplexen Lösungen auseinandersetzt. Sie arbeitet sehr strukturiert, verfügt über eine sehr schnelle Auffassungsgabe und denkt weit über den Rahmen ihrer zugewiesenen Aufgaben hinaus. Dabei behält sie stets den Überblick – selbst über Details, die anderen entgehen könnten. Dank ihres Einsatzes hat sich die Arbeitszeit für unser Projekt erheblich verkürzt. Ich würde jederzeit wieder gerne mit ihr zusammenarbeiten.",
+        "card1": "Ich habe Caryen als eine fleißige, äußerst engagierte und leistungsstarke Teamkollegin erlebt, die sich gerne mit komplexen Lösungen auseinandersetzt. Sie arbeitet sehr strukturiert, verfügt über eine sehr schnelle Auffassungsgabe und denkt weit über den Rahmen ihrer zugewiesenen Aufgaben hinaus. Dabei behält sie stets den Überblick –s selbst über Details, die anderen entgehen könnten. Dank ihres Einsatzes hat sich die Arbeitszeit für unser Projekt erheblich verkürzt. Ich würde jederzeit wieder gerne mit ihr zusammenarbeiten.",
         "card2": "Glücklich mit Caryen zu arbeiten.....",
-        "card3": "super Team kollegin...."
+        "card3": "Es war eine Freude, mit Caryen an mehreren Projekten zusammenzuarbeiten. Ich war beeindruckt davon, wie schnell sie vollständige Features in Angular entwickelt hat, wie geschickt sie Animationen umsetzt und wie sauber ihr Code ist. Wir haben oft gemeinsam im Pair Programming gearbeitet und Bugs behoben, und sie brachte immer wieder neue, hilfreiche Ansätze ein, um unseren Code zu verbessern. Ich würde jederzeit wieder gerne mit ihr zusammenarbeiten!"
     },
     "contactFrom": {
         "headline": "KONTAKTIERE MICH",
@@ -72,7 +72,7 @@
     },
     "join": {
         "description": "Ein Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",
-        "details": "Kurze Beschreibung deiner Rolle oder des Workflows für dieses spezifische Projekt. Zeige einem Recruiter deine Kenntnisse und deine Fähigkeit, eigenständig oder im Team strukturiert zu arbeiten.",
+        "details": "Als Hauptentwickler war ich verantwortlich für die vollständige Implementierung der Anwendung, einschließlich Frontend und Backend. Meine Aufgaben umfassten die Gestaltung der Benutzeroberfläche, die Integration der Echtzeit-Datenbank und die Implementierung der Authentifizierungslogik. Ich arbeitete mit einem kleinen Team von Entwicklern zusammen und stellte sicher, dass die Anwendung reibungslos funktioniert und die Benutzererfahrung sowohl intuitiv als auch effizient ist.",
         "weeks": "Dauer: 5 Wochen",
         "headline": "Beschreibung",
         "subline": "Implementierungsdetails",

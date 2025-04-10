@@ -52,7 +52,7 @@
         "title": "Colleagues' Thoughts",
         "card1": "I have experienced Caryen as an extremely diligent, highly committed, and exceptionally capable team member who enjoys tackling complex solutions. She works in a very structured manner, has an exceptionally quick grasp of new concepts, and thinks far beyond the scope of her assigned tasks. She always maintains an overview, even of details that might otherwise be overlooked. Thanks to her efforts, the time required for our project was significantly reduced. I would gladly work with her again at any time.",
         "card2": "It was a pleasure to work with Caryen...",
-        "card3": "Caryen was a great team colleague..."
+        "card3": "It was a pleasure working with Caryen on multiple projects. I was impressed by how quickly she developed complete features in Angular, how skilled she is at building animations, and how clean her code is. We often did pair programming and fixed bugs together, and she was always very resourceful in bringing new approaches to improve our code. I would love to work with her again!"
     },
     "contactFrom": {
         "headline": "CONTACT ME",
@@ -74,7 +74,7 @@
     },
     "join":{
         "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-        "details": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
+        "details": "As the lead developer, I was responsible for the complete implementation of the application, including both the frontend and backend. My tasks included designing the user interface, integrating the real-time database, and implementing the authentication logic. I worked with a small team of developers and ensured that the application functioned smoothly, providing a user experience that was both intuitive and efficient.",
         "weeks": "Duration: 5 weeks",
         "headline": "Description",
         "subline": "Implementation Details",
