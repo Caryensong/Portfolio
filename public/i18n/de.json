@@ -25,7 +25,7 @@
         "who": "WER IST CARYEN?",
         "subtitle": "Lass uns gemeinsam etwas Großartiges erschaffen!",
         "text": "Hey! Ich bin Caryen, eine Frontend-Entwicklerin mit Leidenschaft für intuitive und effiziente digitale Erlebnisse. Mit einem lösungsorientierten Ansatz und einem Blick fürs Detail verwandle ich komplexe Konzepte in ansprechende und funktionale Web-Lösungen.",
-        "btn": "Lass quatschen!",
+        "btn": "Lass uns reden",
         "img": "./assets/img/location_de.png",
         "img-small": "./assets/img/location-respo-de.png"
     },
@@ -41,15 +41,15 @@
         "headline": "Meine Leidenschaft",
         "title": "Projekte",
         "text": "In meinen Projekten lege ich großen Wert darauf, benutzerfreundliche und responsive Lösungen zu schaffen, die sowohl funktional als auch ästhetisch ansprechend sind. Jedes Projekt basiert auf effizientem und sauberem Code, um die Performance zu optimieren und eine reibungslose Nutzererfahrung zu gewährleisten. Werfen Sie einen Blick auf einige meiner Arbeiten und lassen Sie sich von der Qualität und Kreativität überzeugen.",
-        "join": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzern und Kategorien zu.",
+        "join": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
         "game": "Ein actionreiches Jump-'n'-Run-Spiel mit Schlagen und Werfen, basierend auf einem objektorientierten Ansatz.",
         "pokedex": "Eine interaktive Pokédex-Web-App, die Pokémon-Daten über eine API abruft, damit Nutzer Pokémon-Details einfach durchsuchen und erkunden können."
     },
     "colleagues": {
         "headline": "IHRE WORTE:",
         "title": "Feedback von Kollegen",
-        "card1": "Ich habe Caryen als eine fleißige, äußerst engagierte und leistungsstarke Teamkollegin erlebt, die sich gerne mit komplexen Lösungen auseinandersetzt. Sie arbeitet sehr strukturiert, verfügt über eine sehr schnelle Auffassungsgabe und denkt weit über den Rahmen ihrer zugewiesenen Aufgaben hinaus. Dabei behält sie stets den Überblick –s selbst über Details, die anderen entgehen könnten. Dank ihres Einsatzes hat sich die Arbeitszeit für unser Projekt erheblich verkürzt. Ich würde jederzeit wieder gerne mit ihr zusammenarbeiten.",
-        "card2": "Glücklich mit Caryen zu arbeiten.....",
+        "card1": "Ich habe Caryen als eine fleißige, äußerst engagierte und leistungsstarke Teamkollegin erlebt, die sich gerne mit komplexen Lösungen auseinandersetzt. Sie arbeitet sehr strukturiert, verfügt über eine sehr schnelle Auffassungsgabe und denkt weit über den Rahmen ihrer zugewiesenen Aufgaben hinaus. Dabei behält sie stets den Überblick – selbst über Details, die anderen entgehen könnten. Dank ihres Einsatzes hat sich die Arbeitszeit für unser Projekt erheblich verkürzt. Ich würde jederzeit wieder gerne mit ihr zusammenarbeiten.",
+        "card2": "Caryen überzeugt durch ihre zuverlässige und lösungsorientierte Arbeitsweise. Sie erfasst Herausforderungen schnell, entwickelt passende Lösungsansätze und setzt diese effizient um. Auch im Team zeigte sie großes Engagement, indem sie Kollegen aktiv unterstützte und zur positiven Teamdynamik beitrug. Neben ihrer strukturierten Arbeit am Board brachte sie im Bereich Design, Datenbankverknüpfungen und Animation kreative Impulse ein und trug maßgeblich zur hohen visuellen Qualität des Projekts bei",
         "card3": "Es war eine Freude, mit Caryen an mehreren Projekten zusammenzuarbeiten. Ich war beeindruckt davon, wie schnell sie vollständige Features in Angular entwickelt hat, wie geschickt sie Animationen umsetzt und wie sauber ihr Code ist. Wir haben oft gemeinsam im Pair Programming gearbeitet und Bugs behoben, und sie brachte immer wieder neue, hilfreiche Ansätze ein, um unseren Code zu verbessern. Ich würde jederzeit wieder gerne mit ihr zusammenarbeiten!"
     },
     "contactFrom": {
@@ -73,7 +73,7 @@
     "join": {
         "description": "Ein Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",
         "details": "Als Hauptentwickler war ich verantwortlich für die vollständige Implementierung der Anwendung, einschließlich Frontend und Backend. Meine Aufgaben umfassten die Gestaltung der Benutzeroberfläche, die Integration der Echtzeit-Datenbank und die Implementierung der Authentifizierungslogik. Ich arbeitete mit einem kleinen Team von Entwicklern zusammen und stellte sicher, dass die Anwendung reibungslos funktioniert und die Benutzererfahrung sowohl intuitiv als auch effizient ist.",
-        "weeks": "Dauer: 5 Wochen",
+        "weeks": "Dauer: 4 Wochen",
         "headline": "Beschreibung",
         "subline": "Implementierungsdetails",
         "back": "Zurück",

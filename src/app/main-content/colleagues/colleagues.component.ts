@@ -28,10 +28,10 @@ export class ColleaguesComponent {
   text:'colleagues.card1',
  },
  {   
-  name:'Karl',
+  name:'Albina Januzi',
   image:'./assets/img/cardA.png',
-  linkedIn:'http/w',
-  job: 'Full-stack Developer',
+  linkedIn:'https://www.linkedin.com/in/albina-januzi/',
+  job: 'B.Sc. in Computer Engineering',
   text:'colleagues.card2',
  },
  {   
