@@ -7,7 +7,7 @@
         <div class="container" (mouseover)="showImage()">
 
             <div class="content-left">
-                <h1>Pokédex</h1>
+                <h1>DA-Bubble</h1>
                 <div class="blueline_content">
                     @if(showAnimation && isHovered){
                     <img class="hover-image" src="./assets/toggle/Blue line.svg" alt="Blueline">
@@ -18,33 +18,35 @@
 
                 <h3>{{ 'pokedex.headline' | translate }}</h3>
                 <br>
-                <span>{{ 'pokedex.description' | translate }}</span>
+                <span>{{ 'da-bubble.description' | translate }}</span>
                 <br>
                 <br>
                 <h3>{{ 'pokedex.subline' | translate }}</h3>
                 <br>
-                <span>{{ 'pokedex.details' | translate }}</span>
+                <span>{{ 'da-bubble.details' | translate }}</span>
                 <br><br>
-                <p>{{ 'pokedex.weeks' | translate }}</p>
+                <p>{{ 'da-bubble.weeks' | translate }}</p>
                 <div class="icon_content">
-                    <span><img class="icon" src="./assets/icons/Js.svg" alt="JavaScript">JavaScript</span>
-                    <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
                     <span><img class="icon" src="./assets/icons/CSS.svg" alt="CSS">CSS</span>
-                    <span><img class="icon" src="./assets/icons/Api.svg" alt="CSS">Rest-Api</span>
+                    <span><img class="icon" src="./assets/icons/HTML.svg" alt="HTML">HTML</span>
+                    <span><img class="icon" src="./assets/icons/Firebase.svg" alt="Firebase">Firebase</span>
+                    <span><img class="icon" src="./assets/icons/Angular.svg" alt="Angular">Angular</span>
+                    <span><img class="icon" src="./assets/icons/Ts.svg" alt="TypeScript">TypeScript</span>
+                    <span><img class="icon" src="./assets/icons/Scrum.svg" alt="scrum">Scrum</span>
                 </div>
             </div>
 
             <div class="content-right">
-                <img src="./assets/img/Pokedex.png" alt="Pokedex">
+                <img src="./assets/img/DA-Bubble.png" alt="da-bubble">
                 <div class="btn-content">
-                    <a href="https://github.com/Caryensong/Pokedex" target="_blank"><button>GitHub</button></a>
-                    <a href="http://pokedex.caryen-song.com/" target="_blank" ><button>Live Test</button></a>
+                    <a href="https://github.com/catalina-acosta/da-bubble" target="_blank"><button>GitHub</button></a>
+                    <a href="#" target="_blank" ><button>Live Test</button></a>
                 </div>
             </div>
         </div>
 
         <div class="respo-btn">
-            <div class="next-btn"><a [routerLink]="['/da-bubble']">{{ 'join.next' | translate }}</a><img
+            <div class="next-btn"><a [routerLink]="['/join']">{{ 'join.next' | translate }}</a><img
                     src="./assets/icons/next.svg" alt="next"></div>
             <div class="back-btn-respo"><img src="./assets/icons/Back.svg" alt="Back"><a href="#projects">{{ 'join.back' |
                     translate }}</a></div>

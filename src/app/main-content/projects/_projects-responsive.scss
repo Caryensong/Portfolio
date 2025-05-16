@@ -191,12 +191,19 @@ section {
     }
 }
 
-
+.d-flex{
+    display: flex;
+align-items: baseline;
+gap: 5px;
+}
 
 section#projectsContainer {
     display: flex;
     padding: 19px 72px;
     gap: 50px;
+    display: flex;
+        justify-content: space-between;
+    flex-wrap: wrap;
 
     div {
         width: 560px;

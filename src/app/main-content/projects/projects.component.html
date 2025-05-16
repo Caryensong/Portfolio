@@ -66,4 +66,21 @@
             </a>
         </div>
     </div>
+
+    <div>
+        <div class="project_content" (mouseover)="onMouseOver('pokedex')">
+            <a [routerLink]="['/da-bubble']" class="project_link">
+                <img src="./assets/img/DA-Bubble.png" alt="DA-Bubble">
+
+                <span class="overlay" [class.show]="activeProject === 'pokedex'"></span>
+                <button class="details_button" [class.show]="activeProject === 'pokedex'">Project Details</button> </a>
+        </div>
+        <h3 class="d-flex">DA-Bubble <p>{{ 'projects.development' | translate }}</p></h3>
+        <p>{{ 'projects.da-bubble' | translate }}</p>
+        <div class="respo_btn">
+            <a [routerLink]="['/da-bubble']" class="project_link-respo">
+                <button class="button_respo" [class.show]="activeProject === 'pokedex'">Project Details</button>
+            </a>
+        </div>
+    </div>
 </section>

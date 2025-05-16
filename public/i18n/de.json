@@ -43,8 +43,10 @@
         "text": "In meinen Projekten lege ich großen Wert darauf, benutzerfreundliche und responsive Lösungen zu schaffen, die sowohl funktional als auch ästhetisch ansprechend sind. Jedes Projekt basiert auf effizientem und sauberem Code, um die Performance zu optimieren und eine reibungslose Nutzererfahrung zu gewährleisten. Werfen Sie einen Blick auf einige meiner Arbeiten und lassen Sie sich von der Qualität und Kreativität überzeugen.",
         "join": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
         "game": "Ein actionreiches Jump-'n'-Run-Spiel mit Schlagen und Werfen, basierend auf einem objektorientierten Ansatz.",
-        "pokedex": "Eine interaktive Pokédex-Web-App, die Pokémon-Daten über eine API abruft, damit Nutzer Pokémon-Details einfach durchsuchen und erkunden können."
-    },
+        "pokedex": "Eine interaktive Pokédex-Web-App, die Pokémon-Daten über eine API abruft, damit Nutzer Pokémon-Details einfach durchsuchen und erkunden können.",
+        "da-bubble":"Webbasierte Teams-Chat-Anwendung für Einzel- und Gruppenchats mit Emoji-Unterstützung und Echtzeitkommunikation über Firebase. Frontend mit Angular 19, responsiv für alle Endgeräte.",
+        "development":"(Aktuell in Entwicklung)"      
+      },
     "colleagues": {
         "headline": "IHRE WORTE:",
         "title": "Feedback von Kollegen",
@@ -93,6 +95,12 @@
         "headline": "Beschreibung",
         "subline": "Implementierungsdetails"
     },
+   "da-bubble": {
+        "description": "Team-Chat-Anwendung zur Optimierung der Zusammenarbeit, mit intuitiver Oberfläche, Echtzeitnachrichten über Firebase, Emojis und klar strukturierter Kanalorganisation.",
+        "details": "Die Anwendung wurde mit Angular 19 entwickelt und nutzt Firebase umfassend für Authentifizierung, Datenmanagement und Echtzeitkommunikation. Nachrichten werden in Firestore gespeichert und über Snapshot-Listener in Echtzeit synchronisiert. Die Benutzeranmeldung erfolgt über Firebase Authentication (E-Mail/Passwort oder Google Login). Die Benutzeroberfläche ist modular aufgebaut und besteht aus wiederverwendbaren Komponenten wie Chatfenster, Nachrichtenblasen und Teilnehmerlisten. Durch ein responsives Design auf Basis von CSS Grid und Flexbox ist die App für alle Gerätetypen optimiert. Ein Emoji-Picker wurde mithilfe einer externen Bibliothek integriert. Zur Optimierung der Performance bei umfangreichen Gruppen-Chats kommen Lazy Loading sowie ein reaktives State-Management mit RxJS zum Einsatz.",
+        "weeks": "Dauer: 4 Woche"
+    },
+
     "impressum": {
         "title": "Impressum",
         "subtitle": "Informationen über den Diensteanbieter.",

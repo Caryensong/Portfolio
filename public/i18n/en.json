@@ -45,7 +45,9 @@
         "text": "In my projects, I focus on creating user-friendly and responsive solutions that are both functional and visually appealing. Each project is built on efficient and clean code to optimize performance and ensure a seamless user experience. Take a look at some of my work and see for yourself the quality and creativity I bring to every project.",
         "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "game" :"An action-packed jump, run, slash, and throw game with an object-oriented approach",
-        "pokedex":"An interactive Pokédex web app that fetches Pokémon data via an API, allowing users to search and explore Pokémon details easily."
+        "pokedex":"An interactive Pokédex web app that fetches Pokémon data via an API, allowing users to search and explore Pokémon details easily.",
+        "da-bubble":"Web-based team chat application supporting one-on-one and group chats with emoji support and real-time communication via Firebase. Frontend built with Angular 19, fully responsive across all devices.",
+        "development":"(Currently in development)"
     },
     "colleagues": {
         "headline": "IN THEIR WORDS:",
@@ -94,6 +96,11 @@
         "weeks": "Duration: 1 weeks",
         "headline": "Description",
         "subline": "Implementation Details"
+    },
+      "da-bubble":{
+        "description": "Team chat application designed to enhance collaboration, featuring an intuitive interface, real-time messaging via Firebase, emoji support, and a well-structured channel organization.",
+        "details": "The application was developed using Angular 19 and leverages Firebase extensively for authentication, data management, and real-time communication. Messages are stored in Firestore and synchronized in real time via snapshot listeners. User authentication is handled through Firebase Authentication (email/password or Google login). The user interface is modular and built with reusable components such as chat windows, message bubbles, and participant lists. Thanks to a responsive design based on CSS Grid and Flexbox, the app is optimized for all device types. An emoji picker is integrated via a third-party library. To improve performance in large group chats, the application uses lazy loading and reactive state management with RxJS.",
+        "weeks": "Duration: 4 weeks"
     },
         "impressum": {
             "title": "Legal Notice",
